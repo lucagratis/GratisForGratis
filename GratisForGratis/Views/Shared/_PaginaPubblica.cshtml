@@ -1,0 +1,289 @@
+﻿@using System.Web.Configuration
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="author" content="Gratis Onlus" />
+    <meta name="robots" content="@( (ViewBag.Robots==null)?"INDEX,FOLLOW":ViewBag.Robots )" />
+    @RenderSection("MetaTags", false)
+    <meta name="description" content="@ViewBag.Description" />
+    <meta name="keywords" content="@ViewBag.Keywords" />
+    <!-- BING -->
+    <meta name="msvalidate.01" content="226F39118B8B7D348C07F1D8FEC695BD" />
+    <title>@((ViewBag.Title != null)? ViewBag.Title:MetaTag.TitleGeneric) - @WebConfigurationManager.AppSettings["nomeSito"]</title>
+
+    @Styles.Render("~/Content/css")
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    @Styles.Render("~/Content/JqueryUI/jquery-ui.min.css")
+    @Styles.Render("~/Scripts/Uploadify/uploadifive.css")
+    @Styles.Render("~/Scripts/loader/jquery.loader.min.css")
+    @RenderSection("styles", required: false)
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <script>
+
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '294838660866806',
+                xfbml: true,
+                cookie: true,  // enable cookies to allow the server to access 
+                version    : 'v2.5'
+            });
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/it_IT/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+    </script>
+    <div id="window">
+        <div id="menuMobileOverlay"></div>
+        <div id="menuMobile">
+            <img class="icona" src="~/Images/icone/menu.svg" alt="Menu" />
+            <ul class="menu">
+                <li role="presentation" class="login">
+                    @Html.ActionLink(Language.Login, "Login", "Utente")
+                </li>
+                <li role="presentation" class="register">
+                    @Html.ActionLink(Language.Register, "Registrazione", "Utente")
+                </li>
+                <li role="presentation" class="reporting">
+                    <a id="reportingMobile" href="javascript:void(0);">@Language.Reporting</a>
+                </li>
+                <li role="presentation" class="whatido">
+                    @Html.ActionLink(Language.TitleHowWork, "ComeFunziona", "Home")
+                </li>
+                <li role="presentation" class="siteWeb">
+                    @Html.ActionLink(Language.OurPartners, "Partners", "Home")
+                </li>
+                <li role="presentation" class="privacy">
+                    @Html.ActionLink(Language.PagePrivacy, "Privacy", "Home")
+                </li>
+                <li role="presentation" class="contacts">
+                    @Html.ActionLink(Language.Contacts, "Contatti", "Home")
+                </li>
+            </ul>
+        </div>
+        <ul id="linkLogin">
+            <li role="presentation" class="login">
+                @Html.ActionLink(Language.Login, "Login", "Utente")
+            </li>
+            <li role="presentation" class="register">
+                @Html.ActionLink(Language.Register, "Registrazione", "Utente")
+            </li>
+            <!--<li role="presentation" class="register loginFacebook">
+                @Html.ActionLink(Language.Login + " Facebook", "LoginFacebook", "Utente")
+            </li>-->
+        </ul>
+        <header>
+            <a id="logo" class="brand" href='@Url.Action("Index", "Home")'>
+                <img class="ico" src='@Url.Content("~/Images/logo.jpg")' alt="@WebConfigurationManager.AppSettings["nomeSito"]" />
+                <h1 class="slogan">@Html.Raw(@Language.Slogan)</h1>
+            </a>
+            <menu>
+                <ul class="nav-pills">
+                    <li role="presentation" class="reporting">
+                        <a id="reporting" href="javascript:void(0);">@Language.Reporting</a>
+                    </li>
+                    <li role="presentation" class="whatido">
+                        @Html.ActionLink(Language.TitleHowWork, "ComeFunziona", "Home")
+                    </li>
+                    <li role="presentation" class="siteWeb">
+                        @Html.ActionLink(Language.OurPartners, "Partners", "Home")
+                    </li>
+                    <li role="presentation" class="privacy">
+                        @Html.ActionLink(Language.PagePrivacy, "Privacy", "Home")
+                    </li>
+                    <li role="presentation" class="contacts">
+                        @Html.ActionLink(Language.Contacts, "Contatti", "Home")
+                    </li>
+                </ul>
+                <div id="toolbar">
+                    @using (Html.BeginForm("", "Cerca", FormMethod.Get, new { id = "cerca" }))
+                    {
+                        <div id="menuCategoriaRicerca" style="display: inline-block;margin-top: 12px;position: relative;vertical-align: top;">
+                            <div class="dropdown menuCategoria">
+                                <button class="btn dropdown-toggle categoria0" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <span class="categoriaSelezionata">@Response.Cookies["ricerca"]["Categoria"]</span>
+                                    <span class="caret"></span>
+                                </button>
+                                @{ List<GratisForGratis.Models.FINDSOTTOCATEGORIE_Result> categorie = (HttpContext.Current.Application["categorie"] as List<GratisForGratis.Models.FINDSOTTOCATEGORIE_Result>);
+                                    <ul id="menu" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                        @foreach (GratisForGratis.Models.FINDSOTTOCATEGORIE_Result categoria in categorie.Where(c => c.LIVELLO == -1 || c.LIVELLO == 0))
+                                        {
+                                            <li>
+                                                <a class="trigger" data-value="@categoria.ID" data-id="#Cerca_IDCategoria" data-name="#Cerca_Categoria" title="@(Language.Buy + ' ' + categoria.NOME)">@categoria.NOME</a>
+                                                @if (categoria.LIVELLO >= 0)
+                                                {
+                                                    <ul class="dropdown-menu sub-menu">
+                                                        @foreach (GratisForGratis.Models.FINDSOTTOCATEGORIE_Result sottoCategoria in categorie.Where(c => c.ID_PADRE == categoria.ID))
+                                                        {
+                                                            <li>
+                                                                <a class="trigger" data-value="@sottoCategoria.ID" data-id="#Cerca_IDCategoria" data-name="#Cerca_Categoria" title="@(Language.Buy + ' ' + sottoCategoria.NOME)">@sottoCategoria.NOME</a>
+                                                                @if (categorie.Count(item => item.ID_PADRE == sottoCategoria.ID) > 0)
+                                                                {
+                                                                    <ul class="dropdown-menu sub-menu">
+                                                                        @foreach (GratisForGratis.Models.FINDSOTTOCATEGORIE_Result sottoCategoria2 in categorie.Where(c => c.ID_PADRE == sottoCategoria.ID))
+                                                                        {
+                                                                            <li><a class="trigger" data-value="@sottoCategoria2.ID" data-id="#Cerca_IDCategoria" data-name="#Cerca_Categoria" title="@(Language.Buy + ' ' + sottoCategoria2.NOME)">@sottoCategoria2.NOME</a></li>
+                                                                        }
+                                                                    </ul>
+                                                                }
+                                                            </li>
+                                                        }
+                                                    </ul>
+                                                }
+                                            </li>
+                                        }
+                                    </ul>
+                                }
+                            </div>
+                            @Html.Hidden("Cerca_IDCategoria", Response.Cookies["ricerca"]["IDCategoria"])
+                            @Html.Hidden("Cerca_Categoria", Response.Cookies["ricerca"]["Categoria"])
+                            @Html.TextBox("Cerca_Nome", Response.Cookies["ricerca"]["Nome"], new { @class = "form-control", placeholder = Language.InputSearch })
+                            <input name="Cerca_Submit" class="btn-search" type="submit" value="search" data-toggle="tooltip" data-placement="top" title="@Language.SearchSubmit" />
+                            <!--<input name="Cerca_Submit" class="btnSearchSave" type="submit" value="save" data-toggle="tooltip" data-placement="top" title="@Language.SearchSave" />-->
+                        </div>
+                    }
+                </div>
+                <div id="subCategoryObjects" class="subCategory">
+                    @if ((HttpContext.Current.Application["categorie"] as List<GratisForGratis.Models.FINDSOTTOCATEGORIE_Result>).Where(c => c.ID_PADRE == Convert.ToInt32(Response.Cookies["ricerca"]["IDCategoria"])).ToList().Count > 0)
+                    {
+                        foreach (GratisForGratis.Models.FINDSOTTOCATEGORIE_Result sottoCategoria in (HttpContext.Current.Application["categorie"] as List<GratisForGratis.Models.FINDSOTTOCATEGORIE_Result>).Where(c => c.ID_PADRE == Convert.ToInt32(Response.Cookies["ricerca"]["IDCategoria"])))
+                        {
+                            if (sottoCategoria.LIVELLO == 0)
+                            {
+                                @Html.ActionLink(sottoCategoria.NOME, sottoCategoria.DESCRIZIONE, (sottoCategoria.TIPO_VENDITA == 0) ? "Oggetti" : "Servizi", new { categoria = sottoCategoria.ID }, new { @class = "link" })
+                            }
+                            else
+                            {
+                                @Html.ActionLink(sottoCategoria.NOME, Response.Cookies["ricerca"]["Categoria"] + "/" + sottoCategoria.DESCRIZIONE, (sottoCategoria.TIPO_VENDITA == 0) ? "Oggetti" : "Servizi", new { categoria = sottoCategoria.ID }, new { @class = "link" })
+                            }
+                        }
+                    }
+                    else
+                    {
+                        foreach (GratisForGratis.Models.FINDSOTTOCATEGORIE_Result sottoCategoria in (HttpContext.Current.Application["categorie"] as List<GratisForGratis.Models.FINDSOTTOCATEGORIE_Result>).Where(c => c.ID_PADRE == Convert.ToInt32(Response.Cookies["ricerca"]["IDCategoriaPadre"])))
+                        {
+                            if (sottoCategoria.LIVELLO == 0)
+                            {
+                                @Html.ActionLink(sottoCategoria.NOME, sottoCategoria.DESCRIZIONE, (sottoCategoria.TIPO_VENDITA == 0) ? "Oggetti" : "Servizi", new { categoria = sottoCategoria.ID }, new { @class = "link" })
+                            }
+                            else
+                            {
+                                @Html.ActionLink(sottoCategoria.NOME, Response.Cookies["ricerca"]["CategoriaPadre"] + "/" + sottoCategoria.DESCRIZIONE, (sottoCategoria.TIPO_VENDITA == 0) ? "Oggetti" : "Servizi", new { categoria = sottoCategoria.ID }, new { @class = "link" })
+                            }
+                        }
+                    }
+                </div>
+                <!--<div id="advertising" role="banner" class="banner">
+                    @if (TempData["advertising"] != null)
+                    {
+                        @Html.Raw(WebUtility.HtmlDecode(TempData["advertising"].ToString()))
+                    }
+                </div>
+                <div class="fb-like"
+                     data-share="true"
+                     data-width="260"
+                     data-show-faces="false">
+                </div>-->
+            </menu>
+            <!--<img id="betatesting" src='@Url.Content("~/Images/beta_testing.png")' alt="@WebConfigurationManager.AppSettings["nomeSito"] Beta" />-->
+        </header>
+        @RenderBody()
+        <section id="topServices">
+            <div class="content">
+
+            </div>
+        </section>
+    </div>
+    <footer>
+        <nav>
+            <ul id="footermenu">
+                <li role="presentation" class="whatido">
+                    @Html.ActionLink(Language.TitleHowWork, "ComeFunziona", "Home")
+                </li>
+                <li role="presentation" class="partners">
+                    @Html.ActionLink(Language.OurPartners, "Partners", "Home")
+                </li>
+                <li role="presentation" class="siteweb">
+                    @Html.ActionLink(Language.Siteweb, "SitiUtili", "Home")
+                </li>
+                <li role="presentation" class="privacy">
+                    @Html.ActionLink(Language.PagePrivacy, "Privacy", "Home")
+                </li>
+                <li role="presentation" class="contacts">
+                    @Html.ActionLink(Language.Contacts, "Contatti", "Home")
+                </li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h4>@WebConfigurationManager.AppSettings["nomeSito"] &copy; @DateTime.Now.Year</h4>
+            <h5>@Language.Footer</h5>
+            <h6><a href="http://www.davidemilitano.net/SviluppatoreDotNet" title="WebMaster C#" target="_blank">WebMaster C# - Davide Militano</a></h6>
+        </div>
+    </footer>
+
+    <!-- START POPUP -->
+    <form id="boxSegnalazione" class="popup">
+        @Html.AntiForgeryToken()
+        <input name="Controller" type="hidden" value="@ViewContext.RouteData.Values["controller"]" />
+        <input name="Vista" type="hidden" value="@ViewContext.RouteData.Values["action"]" />
+        <select name="Tipologia">
+            <option value="0">@Language.Bug</option>
+            <option value="1">@Language.Improvement</option>
+        </select>
+        <input type="email" name="EmailRisposta" placeholder="@Language.AnswerEmail" />
+        <input type="text" name="Oggetto" placeholder="@Language.Object" />
+        <textarea name="Testo" placeholder="@Language.Text"></textarea>
+        <input id="AllegatoSegnalazione" type="file" name="Allegato" placeholder="@Language.Attachment"/>
+        <a class="button btn" href="javascript:void(0);">@Language.Send</a>
+    </form>
+    @if (!this.Context.IsDebuggingEnabled)
+    {
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-82382944-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    }
+    <!-- END POPUP -->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/Scripts/jquery-ui-1.11.4.min.js")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Scripts/Uploadify/jquery.uploadifive.min.js")
+    @Scripts.Render("~/Scripts/loader/jquery.loader.min.js")
+    <script type="text/javascript">
+    $.validator.setDefaults({
+        ignore: null
+    });
+    $.validator.methods.range = function (value, element, param) {
+        var globalizedValue = value.replace(",", ".");
+        return this.optional(element) || (globalizedValue >= param[0] && globalizedValue <= param[1]);
+    }
+
+    $.validator.methods.number = function (value, element) {
+        return this.optional(element) || /^-?(?:\d+|\d{1,3}(?:[\s\.,]\d{3})+)(?:[\.,]\d+)?$/.test(value);
+    }
+    // variabili globali
+    var MONETA = '@(Language.Price + " (" + Language.Moneta + ")")';
+    </script>
+    @Scripts.Render("~/Scripts/Site.js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

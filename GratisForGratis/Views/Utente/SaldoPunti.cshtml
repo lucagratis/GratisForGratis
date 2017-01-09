@@ -1,0 +1,33 @@
+﻿@model List<GratisForGratis.Models.TRANSAZIONE>
+@using GratisForGratis.App_GlobalResources
+@Styles.Render("~/Content/Index.css")
+@Styles.Render("~/Content/saldoPunti.css")
+
+<section id="menuUser">
+    <h1 id="title">@Language.PointsBalance</h1>
+    <div class="points">
+        <h3>@Language.CurrentBalance: <a class="gpoints">@(((GratisForGratis.Models.PersonaModel)Session["utente"]).ContoCorrente.Count(m => m.STATO == (int)GratisForGratis.Models.StatoMoneta.ASSEGNATA)) @Language.Moneta</a></h3>
+        <h3>@Language.Points @Language.InSuspense: <a class="gpointsSuspense">@(((GratisForGratis.Models.PersonaModel)Session["utente"]).ContoCorrente.Count(m => m.STATO == (int)GratisForGratis.Models.StatoMoneta.SOSPESA)) @Language.Moneta</a></h3>
+    </div>
+    <div id="grid" class="content">
+        @foreach (GratisForGratis.Models.TRANSAZIONE bonus in Model)
+        {
+            <div id="@HttpUtility.UrlEncode(bonus.ID.ToString())" class="bonus">
+                <div class="detail">
+                    <h4 class="title plus">@bonus.NOME</h4>
+                    <div class="cella noMandatory">
+                        @Html.Label("Data", Language.InsertDate + ":")
+                        @bonus.DATA_INSERIMENTO
+                    </div>
+                    <div class="cella noMandatory">
+                        @Html.Label("Punti", Language.Moneta + ":")
+                        @bonus.PUNTI
+                    </div>
+                </div>
+            </div>
+
+        }
+        @Html.Partial("PartialPages/_ElencoPagine", new GratisForGratis.Models.ElencoPagine((int)ViewData["TotalePagine"], 
+            (int)ViewData["Pagina"], (((int)ViewData["Pagina"] - 5) < 1 ? 1 : (int)ViewData["Pagina"] - 5), "Utente", "SaldoPunti"))
+    </div>
+</section>

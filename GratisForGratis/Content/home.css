@@ -1,0 +1,49 @@
+﻿#home{
+    padding:0px;
+}
+
+#home > a:hover{
+    text-decoration:none;
+}
+
+#home .object{
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    margin:16px 20px;
+}
+
+#home .object .title{
+    color:#1899D2;
+    text-transform:uppercase;
+    margin-bottom:18px;
+    margin-top:0px;
+    width:200px;
+    height: 48px;
+    word-wrap: break-word;
+    overflow-y: hidden;
+    word-break: break-word;
+}
+
+#home .object > div{
+    display:inline-block;
+    vertical-align:top;
+}
+
+#home .object .left{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    height: 113px;
+    width: 200px;
+}
+
+#home .object .feedback{
+    background-image: url("../Images/Icone/rating.svg");
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    margin-top: 3px;
+    padding-bottom: 2px;
+    padding-left: 32px;
+    padding-top: 6px;
+}

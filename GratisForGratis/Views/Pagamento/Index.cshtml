@@ -1,0 +1,50 @@
+﻿@model GratisForGratis.Models.BonificoViewModel
+
+@{
+    ViewBag.Title = Resources.Language.TitlePayment + "-" + System.Configuration.ConfigurationManager.AppSettings["nomeSito"];
+}
+
+@section Styles {
+    @Styles.Render("~/Content/testPayment.css")
+}
+
+<section id="head">
+    <div class="content">
+        <h1 id="title">@Resources.Language.TitlePayment</h1>
+        @if (ViewData["messaggio"] != null)
+        {
+        <h2 class="message">@ViewData["messaggio"]</h2>
+        }
+    </div>
+</section>
+<section id="payment">
+    <div class="content">
+        @using (Html.BeginForm("Index", "Pagamento", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "test" }))
+            {
+            <div class="form-group">
+                @Html.LabelFor(m => m.Destinatario, new { @class = "col-md-2 control-label" })
+                <div class="col-md">
+                    @Html.TextBoxFor(m => m.Destinatario, new { @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(m => m.Destinatario, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.DescrizionePagamento, new { @class = "col-md-2 control-label" })
+                <div class="col-md">
+                    @Html.TextBoxFor(m => m.DescrizionePagamento, new { @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(m => m.DescrizionePagamento, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Punti, new { @class = "col-md-2 control-label" })
+                <div class="col-md">
+                    @Html.TextBoxFor(m => m.Punti, new { @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(m => m.Punti, "", new { @class = "text-danger" })
+            </div>
+            <div class="footer">
+                <input type="submit" value="Paga con GratisForGratis" class="btn btn-default" style="width:auto;" />
+            </div>
+        }
+    </div>
+</section>

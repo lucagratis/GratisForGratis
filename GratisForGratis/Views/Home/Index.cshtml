@@ -1,0 +1,46 @@
+﻿@Styles.Render("~/Content/Index.css")
+
+<!--<section id="filter"></section>-->
+
+<section id="index">
+    <div class="content">
+        <div id="subCategoryObjects" class="subCategory">
+            @foreach (GratisForGratis.Models.FINDSOTTOCATEGORIE_Result sottoCategoria in (HttpContext.Current.Application["categorie"] as List<GratisForGratis.Models.FINDSOTTOCATEGORIE_Result>).Where(c => c.ID_PADRE == Convert.ToInt32(Response.Cookies["ricerca"]["IDCategoria"]) && c.TIPO_VENDITA == 0))
+            {
+                <a class="category object" href="@Url.Content("/Oggetti/" + sottoCategoria.DESCRIZIONE + "?categoria=" + sottoCategoria.ID)" title="@(Language.Object + ' ' + sottoCategoria.NOME)">
+                    <div class="box" style="background-image:url(@Url.Content("/Images/categorie/" + sottoCategoria.IMMAGINE));">
+                        <div>
+                            <h3 class="text name">@sottoCategoria.NOME</h3>
+                            <h4 class="text link">@Language.BuyFree</h4>
+                        </div>
+                    </div>
+                </a>
+            }
+        </div>
+        <div id="subCategoryServices" class="subCategory">
+            @foreach (GratisForGratis.Models.FINDSOTTOCATEGORIE_Result sottoCategoria in (HttpContext.Current.Application["categorie"] as List<GratisForGratis.Models.FINDSOTTOCATEGORIE_Result>).Where(c => c.ID_PADRE == Convert.ToInt32(Response.Cookies["ricerca"]["IDCategoria"]) && c.TIPO_VENDITA == 1))
+            {
+                <a class="category service" href="@Url.Content("/Servizi/" + sottoCategoria.DESCRIZIONE + "?categoria=" + sottoCategoria.ID)" title="@(Language.Service + ' ' + sottoCategoria.NOME)">
+                    <div class="box" style="background-image:url(@Url.Content("/Images/categorie/" + sottoCategoria.IMMAGINE));">
+                        <div>
+                            <h3 class="text name">@sottoCategoria.NOME</h3>
+                            <h4 class="text link">@Language.PurchaseFree</h4>
+                        </div>
+                    </div>
+                </a>
+            }
+        </div>
+    </div>
+@if (!this.Context.IsDebuggingEnabled)
+{
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- gratisforgratis -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-5108424997424987"
+             data-ad-slot="6804074557"></ins>
+        <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+}
+</section>

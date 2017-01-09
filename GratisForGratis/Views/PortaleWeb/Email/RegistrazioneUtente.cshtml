@@ -1,0 +1,55 @@
+﻿@model GratisForGratis.Models.RegistrazioneEmailModel
+@using System.Web.Configuration
+<tr>
+    <td style="width:50px;">&nbsp;</td>
+    <td align="center" style="padding:30px 0px 0px;line-height:12px;">
+        @Html.Raw(string.Format(Email.Hello, Model.Nome + " " + Model.Cognome))
+    </td>
+    <td style="width:50px;">&nbsp;</td>
+</tr>
+<tr>
+    <td style="width:50px;">&nbsp;</td>
+    <td align="center" style="padding:12px 0px 0px;line-height:12px;">
+        @string.Format(Email.Welcome, WebConfigurationManager.AppSettings["nomeSito"])
+    </td>
+    <td style="width:50px;">&nbsp;</td>
+</tr>
+<tr>
+    <td style="width:50px;">&nbsp;</td>
+    <td align="center" style="padding:14px 0px 0px;line-height:12px;">
+        @Html.Raw(Email.RegistrationTextForLink)<br /><br />
+        <div bgcolor="#178fcc" width="160" style="width:160px;background-color:#178fcc;">
+            <p>&nbsp;</p>
+            @Html.ActionLink(Language.Confirm, "Iscrizione", "Utente", null, Request.Url.Host, null, new { token = HttpUtility.UrlEncode(GratisForGratis.Controllers.Utils.Encode(Model.Email + Model.PasswordCodificata)) }, new { style = "color:#FFF;" })
+            <p>&nbsp;</p>
+        </div>
+    </td>
+    <td style="width:50px;">&nbsp;</td>
+</tr>
+<tr>
+    <td style="width:50px;">&nbsp;</td>
+    <td align="center" style="padding:16px 0px 0px;line-height:12px;">
+        Login: <a style="color: #189CBB;font-weight:bold;" href="mailto:@Model.Email">@Model.Email</a><br /><br />
+        Password: @Model.Password
+    </td>
+    <td style="width:50px;">&nbsp;</td>
+</tr>
+<tr>
+    <td style="width:50px;">&nbsp;</td>
+    <td align="center" style="padding:20px 0px 0px;line-height:12px;">
+        @Html.Raw(string.Format(Email.RegistrationText1, WebConfigurationManager.AppSettings["nomeSito"], System.Configuration.ConfigurationManager.AppSettings["bonusPubblicazioniIniziali"], Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["bonusPubblicazioniIniziali"])*Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["Euro"])))
+    </td>
+    <td style="width:50px;">&nbsp;</td>
+</tr>
+<tr>
+    <td style="width:50px;">&nbsp;</td>
+    <td align="center" style="padding:20px 0px 0px;line-height:12px;">
+        @Html.Raw(@Email.RegistrationText2)
+        <span style="font-style:italic;">Team @WebConfigurationManager.AppSettings["nomeSito"].</span>
+    </td>
+    <td style="width:50px;">&nbsp;</td>
+</tr>
+<tr>
+    <td colspan="3">&nbsp;</td>
+</tr>
+

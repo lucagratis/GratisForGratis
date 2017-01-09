@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="author" content="Gratis Onlus" />
+    <meta name="robots" content="@( (ViewBag.Robots==null)?"INDEX,FOLLOW":ViewBag.Robots )" />
+    @RenderSection("MetaTags", false)
+    <title>@((@ViewBag.Title != null)? ViewBag.Title:MetaTag.TitleGeneric) - @System.Web.Hosting.HostingEnvironment.ApplicationHost.GetSiteName()</title>
+
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/JqueryUI/jquery-ui.min.css")
+    @Styles.Render("~/Scripts/Uploadify/uploadifive.css")
+    @RenderSection("styles", required: false)
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <div id="window">
+        <ul id="linkLogin">
+            <li id="cart" class="dropdown profilo">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    @( ((GratisForGratis.Models.PORTALEWEB)Session["utente"]).NOME ) -
+                    <span id="userPoints">@( Language.Welcome + " " + (Session["utente"] as GratisForGratis.Models.PORTALEWEB).PUNTI + " " + @Language.Points) </span>
+                    <img class="ico" src="@Url.Content("~/Images/icone/cart.svg")" alt="@Resources.Language.Cart" title="@Resources.Language.Cart" />
+                    <div class="preview"></div>
+                </a>
+            </li>
+        </ul>
+        <header>
+            <a id="logo" class="brand" href='@Url.Action("Index", "Home")'>
+                <img class="ico" src='@Url.Content("~/Images/logo.jpg")' alt="@System.Web.Hosting.HostingEnvironment.ApplicationHost.GetSiteName()" />
+            </a>
+            <menu>
+                <ul class="nav-pills">
+                    <li role="presentation" class="dropdown pubblication">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">@Language.Public <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                @Html.ActionLink(Language.TitlePublicationObjects, "Oggetto", "Pubblica")
+                            </li>
+                            <li>
+                                @Html.ActionLink(Language.TitleServices, "Servizio", "Pubblica")
+                            </li>
+                            <li>
+                                @Html.ActionLink(Language.TitleTest, "TestPayment", "Pagamento")
+                            </li>
+                        </ul>
+                    </li>
+                    <li role="presentation" class="dropdown trattative">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">@Language.Negotiations <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                @Html.ActionLink(Language.Purchases, "Effettuate", "Offerte")
+                            </li>
+                            <li>
+                                @Html.ActionLink(Language.Sales, "Ricevute", "Offerte")
+                            </li>
+                            <li>
+                                @Html.ActionLink(Language.TitleTransactionHistorical, "StoricoPagamenti", "Offerte")
+                            </li>
+                        </ul>
+                    </li>
+                    <li role="presentation">
+                        @Html.ActionLink(Language.Settings, "Impostazioni", "Utente")
+                    </li>
+                    <li role="presentation">
+                        @Html.ActionLink(Language.ChangePassword, "CambioPassword", "Utente")
+                    </li>
+                    <li role="presentation" class="reporting">
+                        <a id="reporting" href="javascript:void(0);">@Language.Reporting</a>
+                    </li>
+                    <li role="presentation">
+                        @Html.ActionLink(Language.Logout, "Logout", "Utente")
+                    </li>
+                </ul>
+                <div id="toolbar">
+                    @using (Html.BeginForm("", "Cerca", FormMethod.Get, new { id = "cerca" }))
+                    {
+                        <div class="tipoAcquisto btn object" data-value="@((int)GratisForGratis.Models.TipoAcquisto.Oggetto)">
+                            @Language.Object
+                        </div>
+                        <div class="tipoAcquisto btn service" data-value="@((int)GratisForGratis.Models.TipoAcquisto.Servizio)">
+                            @Language.Service
+                        </div>
+                        @Html.DropDownList("Cerca_TipoAcquisto", new SelectList(
+                                     Enum.GetValues(typeof(GratisForGratis.Models.TipoAcquisto)).Cast<GratisForGratis.Models.TipoAcquisto>().Select(p => new SelectListItem()
+                                     {
+                                         Text = p.ToString(),
+                                         Value = ((int)p).ToString()
+                                     }
+                                     ), "Value", "Text", Response.Cookies["ricerca"]["TipoAcquisto"]
+                                     ),
+                                     new { @class = "form-control hide" })
+                        <div style="position:relative;display:inline-block;vertical-align:top;">
+                            <div class="dropdown menuCategoria">
+                                <button class="btn dropdown-toggle categoria0" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <span class="categoriaSelezionata">@((Convert.ToInt32(Response.Cookies["ricerca"]["TipoAcquisto"]) == 0)?Response.Cookies["ricerca"]["Categoria"]:Language.All)</span>
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    @foreach (GratisForGratis.Models.FINDSOTTOCATEGORIE_Result categoria in (Session["categorie"] as List<GratisForGratis.Models.FINDSOTTOCATEGORIE_Result>).Where(c => c.LIVELLO == -1 || (c.TIPO_VENDITA == 0 && c.LIVELLO == 0)))
+                                    {
+                                        <li><a data-value="@categoria.ID" data-id="#Cerca_IDCategoria" data-name="#Cerca_Categoria" title="@(Language.Buy + ' ' + categoria.NOME)">@categoria.NOME</a></li>
+                                    }
+                                </ul>
+                            </div>
+                            <div class="dropdown menuCategoria">
+                                <button class="btn dropdown-toggle categoria1" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <span class="categoriaSelezionata">@((Convert.ToInt32(Response.Cookies["ricerca"]["TipoAcquisto"]) == 1) ? Response.Cookies["ricerca"]["Categoria"] : Language.All)</span>
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    @foreach (GratisForGratis.Models.FINDSOTTOCATEGORIE_Result categoria in (Session["categorie"] as List<GratisForGratis.Models.FINDSOTTOCATEGORIE_Result>).Where(c => c.LIVELLO == -1 || (c.TIPO_VENDITA == 1 && c.LIVELLO == 0)))
+                                    {
+                                        <li><a data-value="@categoria.ID" data-id="#Cerca_IDCategoria" data-name="#Cerca_Categoria" title="@(Language.Buy + ' ' + categoria.NOME)">@categoria.NOME</a></li>
+                                    }
+                                </ul>
+                            </div>
+                            @Html.Hidden("Cerca_IDCategoria", Response.Cookies["ricerca"]["IDCategoria"])
+                            @Html.Hidden("Cerca_Categoria", Response.Cookies["ricerca"]["Categoria"])
+                            @Html.TextBox("Cerca_Nome", Response.Cookies["ricerca"]["Nome"], new { @class = "form-control", placeholder = Language.Name })
+                            <input class="btn-search" type="submit" value="" />
+                        </div>
+                    }
+                </div>
+                <div id="subCategoryObjects" class="subCategory">
+                    @foreach (GratisForGratis.Models.FINDSOTTOCATEGORIE_Result sottoCategoria in (Session["categorie"] as List<GratisForGratis.Models.FINDSOTTOCATEGORIE_Result>).Where(c => c.ID_PADRE == Convert.ToInt32(Response.Cookies["ricerca"]["IDCategoria"])))
+                    {
+                        if (sottoCategoria.LIVELLO == 0)
+                        {
+                            @Html.ActionLink(sottoCategoria.NOME, sottoCategoria.DESCRIZIONE, (sottoCategoria.TIPO_VENDITA == 0)?"Oggetti":"Servizi", null, new { @class = "link" })
+                        }
+                        else
+                        {
+                            string nomePadre = (Session["categorie"] as List<GratisForGratis.Models.FINDSOTTOCATEGORIE_Result>).Where(c => c.ID == sottoCategoria.ID_PADRE).FirstOrDefault().DESCRIZIONE;
+                            @Html.ActionLink(sottoCategoria.NOME, nomePadre + "/" + sottoCategoria.DESCRIZIONE, (sottoCategoria.TIPO_VENDITA == 0) ? "Oggetti" : "Servizi", new { i = sottoCategoria.ID }, new { @class = "link" })
+                        }
+                    }
+                </div>
+            </menu>
+            <img id="betatesting" src='@Url.Content("~/Images/beta_testing.png")' alt="@System.Web.Hosting.HostingEnvironment.ApplicationHost.GetSiteName() Beta" />
+        </header>
+
+        @RenderBody()
+        <section id="topServices">
+            <div class="content">
+
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="content">
+            <h4>&copy; @DateTime.Now.Year</h4>
+            <h5>@Language.Footer</h5>
+        </div>
+    </footer>    
+    
+    <!-- START POPUP -->
+    <form id="boxSegnalazione" class="popup">
+        @Html.AntiForgeryToken()
+        <input name="Controller" type="hidden" value="@ViewContext.RouteData.Values["controller"]" />
+        <input name="Vista" type="hidden" value="@ViewContext.RouteData.Values["action"]" />
+        <select name="Tipologia">
+            <option value="0">@Language.Bug</option>
+            <option value="1">@Language.Improvement</option>
+        </select>
+        <input type="email" name="EmailRisposta" placeholder="@Language.AnswerEmail" />
+        <input type="text" name="Oggetto" placeholder="@Language.Object" />
+        <textarea name="Testo" placeholder="@Language.Text"></textarea>
+        <input id="AllegatoSegnalazione" type="file" name="Allegato" placeholder="@Language.Attachment"/>
+        <a class="button btn" href="javascript:void(0);">@Language.Send</a>
+    </form>
+    <!-- END POPUP -->
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+    $.validator.setDefaults({
+        ignore: null
+    });
+    $.validator.methods.range = function (value, element, param) {
+        var globalizedValue = value.replace(",", ".");
+        return this.optional(element) || (globalizedValue >= param[0] && globalizedValue <= param[1]);
+    }
+
+    $.validator.methods.number = function (value, element) {
+        return this.optional(element) || /^-?(?:\d+|\d{1,3}(?:[\s\.,]\d{3})+)(?:[\.,]\d+)?$/.test(value);
+    }
+    </script>
+    @Scripts.Render("~/Scripts/jquery-ui-1.11.4.min.js")
+    @Scripts.Render("~/Scripts/LazyLoad/jquery.lazyload.min.js")
+    @Scripts.Render("~/Scripts/Uploadify/jquery.uploadifive.min.js")
+    @Scripts.Render("~/Scripts/Site.js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

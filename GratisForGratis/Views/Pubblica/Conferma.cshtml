@@ -1,0 +1,25 @@
+﻿@model GratisForGratis.Models.PubblicaViewModel
+
+@section Styles {
+    @Styles.Render("~/Content/pubblicazioneConfermata.css")
+}
+
+<section id="head">
+    <div class="content">
+        <h1 id="title">@Language.TitlePublication</h1>
+    </div>
+</section>
+<section id="pubblicazione">
+    @if (Model.GetType() == typeof(GratisForGratis.Models.PubblicaOggettoViewModel))
+    {
+        <h4 id="description">@Language.DescriptionPubblicationObjectConfirmed</h4>
+        <p>@Language.ConfirmPubblicationObject</p>
+    }
+    else
+    {
+        <h4 id="description">@Language.DescriptionPubblicationServiceConfirmed</h4>
+        <p>@Language.ConfirmPubblicationService</p>
+    }
+
+</section>
+

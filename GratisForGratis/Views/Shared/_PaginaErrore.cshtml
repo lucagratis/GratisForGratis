@@ -1,0 +1,88 @@
+﻿@using System.Web.Configuration
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="author" content="Gratis Onlus" />
+    <meta name="robots" content="@( (ViewBag.Robots==null)?"INDEX,FOLLOW":ViewBag.Robots )" />
+    @RenderSection("MetaTags", false)
+    <title>@((@ViewBag.Title != null)? ViewBag.Title:MetaTag.TitleGeneric) - @WebConfigurationManager.AppSettings["nomeSito"]</title>
+
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/JqueryUI/jquery-ui.min.css")
+    @RenderSection("styles", required: false)
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <div id="window">
+        <ul id="linkLogin">
+            <li role="presentation" class="login">
+                @Html.ActionLink(Language.Login, "Login", "Utente")
+            </li>
+            <li role="presentation" class="register">
+                @Html.ActionLink(Language.Register, "Registrazione", "Utente")
+            </li>
+            <li role="presentation" class="loginSite">
+                @Html.ActionLink(Language.LoginForPartners, "Login", "PortaleWeb")
+            </li>
+        </ul>
+        <header>
+            <a id="logo" class="brand" href='@Url.Action("Index", "Home")'>
+                <img class="ico" src='@Url.Content("~/Images/logo.jpg")' alt="@WebConfigurationManager.AppSettings["nomeSito"]" />
+            </a>
+            <menu>
+                <ul class="nav-pills">
+                    <li role="presentation" class="contacts">
+                        @Html.ActionLink(Language.WhatIDo, "CosaFacciamo", "Home")
+                    </li>
+                    <li role="presentation" class="siteWeb">
+                        @Html.ActionLink(Language.OurPartners, "Partners", "Home")
+                    </li>
+                    <li role="presentation" class="contacts">
+                        @Html.ActionLink(Language.Contacts, "Contatti", "Home")
+                    </li>
+                </ul>
+            </menu>
+            <img id="betatesting" src='@Url.Content("~/Images/beta_testing.png")' alt="@WebConfigurationManager.AppSettings["nomeSito"] Beta" />
+        </header>
+
+        @RenderBody()
+        <section id="topServices">
+            <div class="content">
+
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="content">
+            <h4>&copy; @DateTime.Now.Year</h4>
+            <h5>@Language.Footer</h5>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+    $.validator.setDefaults({
+        ignore: null
+    });
+    $.validator.methods.range = function (value, element, param) {
+        var globalizedValue = value.replace(",", ".");
+        return this.optional(element) || (globalizedValue >= param[0] && globalizedValue <= param[1]);
+    }
+
+    $.validator.methods.number = function (value, element) {
+        return this.optional(element) || /^-?(?:\d+|\d{1,3}(?:[\s\.,]\d{3})+)(?:[\.,]\d+)?$/.test(value);
+    }
+    </script>
+    @Scripts.Render("~/Scripts/jquery-ui-1.11.4.min.js")
+    @Scripts.Render("~/Scripts/LazyLoad/jquery.lazyload.min.js")
+    @Scripts.Render("~/Scripts/Site.js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

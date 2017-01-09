@@ -1,0 +1,47 @@
+﻿@model GratisForGratis.Models.ElencoPagine
+<footer>
+    <div>
+        @(Language.Page + " " + (Model.NumeroPagine < Model.PaginaAttuale ? 1 : Model.PaginaAttuale) + " " + Language.Of + " " + Model.NumeroPagine)
+    </div>
+    <ul class="pagination">
+        @for (int i = Model.PaginaIniziale; i <= Model.NumeroPagine; i++)
+        {
+            string classe = "pagina";
+            if (i == Model.PaginaAttuale)
+            {
+                classe = "active";
+            }
+
+            if (i == Model.PaginaIniziale)
+            {
+                if (i > 1)
+                {
+                    <li>@Html.ActionLink("<<", Model.Action, Model.Controller, new { pagina = 1 }, new { @class = classe })</li>
+                            <li>@Html.ActionLink("<", Model.Action, Model.Controller, new { pagina = i - 1 }, new { @class = classe })</li>
+                }
+            }
+
+            if (i <= (Model.PaginaAttuale + 4))
+            {
+                if (i == Model.PaginaAttuale)
+                {
+                    <li class=@classe><a>@i</a></li>
+                }
+                else
+                {
+                    <li class="@classe">@Html.ActionLink(i.ToString(), Model.Action, Model.Controller, new { pagina = i }, new { @class = classe }) </li>
+                }
+            }
+            else
+            {
+                if (i < Model.NumeroPagine)
+                {
+                    <li>@Html.ActionLink(">", Model.Action, Model.Controller, new { pagina = i + 1 }, new { @class = classe })</li>
+                            <li>@Html.ActionLink(">>", Model.Action, Model.Controller, new { pagina = Model.NumeroPagine }, new { @class = classe })</li>
+                }
+                break;
+            }
+        }
+    </ul>
+</footer>
+

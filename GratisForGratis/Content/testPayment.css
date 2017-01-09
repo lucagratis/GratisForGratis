@@ -1,0 +1,26 @@
+﻿#test{
+    width: 90%;
+    margin: 0px auto;
+}
+
+.form-horizontal .form-group{
+    width:auto;
+    padding:20px 0px;
+    text-align:center;
+}
+
+.form-horizontal .form-group .form-control{
+    margin: 0px auto;
+}
+
+.col-md-10{
+    width:auto;
+}
+
+.quantity{
+    width:90px;
+}
+
+.form-control{
+    width: 200px;
+}

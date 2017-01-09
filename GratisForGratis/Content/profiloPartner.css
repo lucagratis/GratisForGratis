@@ -1,0 +1,44 @@
+﻿#partners, #partners .dati
+{
+    padding-top:0px;
+}
+
+#settings, #info
+{
+    display:inline-block;
+    vertical-align:top;
+    border:2px solid #337ab7;
+    padding:14px;
+    max-width:49%;
+}
+
+#settings
+{
+}
+
+#info
+{
+    min-height:300px;
+    min-width:240px;
+}
+
+#info ul
+{
+    list-style:none;
+    padding:0px;
+    text-align:left;
+}
+
+#info ul .campo
+{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    vertical-align: top;
+    width: 120px;
+}
+
+#info ul li
+{
+    margin-bottom:12px;
+}

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:ServizioWebControllerwsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="ServizioWebController" targetNamespace="urn:ServizioWebControllerwsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types />
+  <wsdl:message name="getBannerRequest">
+    <wsdl:part name="token" type="xsd:string" />
+    <wsdl:part name="tipo" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="getBannerResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getBannerRandomRequest">
+    <wsdl:part name="token" type="xsd:string" />
+    <wsdl:part name="tipo" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="getBannerRandomResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getBannerByTokenRequest">
+    <wsdl:part name="token" type="xsd:string" />
+    <wsdl:part name="pubblicita" type="xsd:string" />
+    <wsdl:part name="tipo" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="getBannerByTokenResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="ServizioWebControllerPortType">
+    <wsdl:operation name="getBanner">
+      <wsdl:documentation>
+      </wsdl:documentation>
+      <wsdl:input message="tns:getBannerRequest" />
+      <wsdl:output message="tns:getBannerResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getBannerRandom">
+      <wsdl:documentation>
+      </wsdl:documentation>
+      <wsdl:input message="tns:getBannerRandomRequest" />
+      <wsdl:output message="tns:getBannerRandomResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getBannerByToken">
+      <wsdl:documentation>
+      </wsdl:documentation>
+      <wsdl:input message="tns:getBannerByTokenRequest" />
+      <wsdl:output message="tns:getBannerByTokenResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServizioWebControllerBinding" type="tns:ServizioWebControllerPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="getBanner">
+      <soap:operation soapAction="urn:ServizioWebControllerwsdl#getBanner" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ServizioWebControllerwsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ServizioWebControllerwsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBannerRandom">
+      <soap:operation soapAction="urn:ServizioWebControllerwsdl#getBannerRandom" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ServizioWebControllerwsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ServizioWebControllerwsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBannerByToken">
+      <soap:operation soapAction="urn:ServizioWebControllerwsdl#getBannerByToken" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:ServizioWebControllerwsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:ServizioWebControllerwsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServizioWebControllerService">
+    <wsdl:port name="ServizioWebControllerPort" binding="tns:ServizioWebControllerBinding">
+      <soap:address location="http://www.davidemilitano.net/servizioweb/quote?ws=1" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

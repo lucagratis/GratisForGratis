@@ -1,0 +1,10 @@
+﻿@{
+    if (this.Context.Request.IsAuthenticated)
+    {
+        Layout = "~/Views/Shared/_PaginaPrivata.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_PaginaPubblica.cshtml";
+    }
+}

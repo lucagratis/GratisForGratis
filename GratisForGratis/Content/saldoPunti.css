@@ -1,0 +1,62 @@
+﻿#menuUser .btn{
+    margin: 2% 1%;
+    padding: 40px 0;
+    width: 240px;
+    word-wrap: break-word;
+    word-break:normal;
+}
+
+#menuUser .btn .link{
+    color:#fff;
+    display:block;
+    height:100%;
+    width:100%;
+    font-size:20px;
+    text-transform:uppercase;
+}
+
+#grid{
+    width:100%;
+}
+
+#grid header .cella {
+    padding:6px;
+}
+
+#grid .bonus{
+    display: inline-block;
+    vertical-align:top;
+    margin-bottom: 12px;
+    margin-right: 12px;
+    padding: 0px 16px;
+    width:200px;
+    border-radius:6px;
+}
+
+#grid .bonus .title{
+    text-decoration:underline;
+}
+
+#grid .bonus .plus{
+    color: #337ab7;
+    font-style: italic;
+}
+
+#grid .table{
+    display: table;
+    height: 114px;
+}
+
+#grid .table .cell{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#grid .cella{
+    padding:6px 0px;
+}
+
+#grid .cella .btn{
+    width:148px;
+    margin:10px 0px;
+}

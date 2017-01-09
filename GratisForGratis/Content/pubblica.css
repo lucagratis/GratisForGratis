@@ -1,0 +1,131 @@
+﻿.btnUpload{
+    width:80px !important;
+    height:32px !important;
+    background-image:none;
+    border-radius:6px;
+    background-color:#a5c71b;
+    border: 2px solid #337ab7;
+}
+
+.btnUpload:hover, .btnUpload.selected{
+    background-image:none;
+    background-color:#178fcc;
+    color:#fff;
+    box-shadow: 0 0.05em 0.25em 0 rgba(0, 0, 0, 0.35), inset 0 0 0 2em rgba(0, 0, 0, 0.3);
+}
+
+#formPubblica{
+    width: 90%;
+    margin: 0px auto;
+    text-align:center;
+}
+
+.form-horizontal .control-label{
+    display:block;
+}
+
+.form-horizontal .form-group{
+    width:24%;
+    padding:12px 0px;
+    min-width: 200px;
+    margin-right: 4%;
+}
+
+#menuCategoriaPubblicazione .dropdown-toggle{
+    display:block;
+}
+
+#menuCategoriaPubblicazione .btn{
+    width:256px;
+    /*box-shadow: 0 0.05em 0.25em 0 rgba(0, 0, 0, 0.35), inset 0 0 0 2em rgba(0, 0, 0, 0.3);*/  
+    background-color:#a5c71b;
+    border: 2px solid #337ab7;
+}
+
+#menuCategoriaPubblicazione .btn:hover{
+    background-color:#178fcc;
+    color:#fff;
+    box-shadow: 0 0.05em 0.25em 0 rgba(0, 0, 0, 0.35), inset 0 0 0 2em rgba(0, 0, 0, 0.3);
+}
+
+#menuCategoriaPubblicazione .btn .categoriaSelezionata{
+    min-width:200px;
+    max-width:unset;
+}
+
+#menuCategoriaPubblicazione .btn span, #menuCategoriaPubblicazione .btn .caret{
+    color:#fff;
+}
+
+#menuCategoriaPubblicazione .dropdown-menu > li{
+    width:256px;
+}
+
+.dropdown-menu > li > div.trigger {
+  clear: both;
+  color: #333;
+  display: block;
+  font-weight: normal;
+  line-height: 1.42857;
+  padding: 3px 20px;
+  white-space: nowrap;
+}
+
+.col-md-10{
+    display: inline-block;
+    vertical-align: top;
+    width:auto;
+    float:none;
+    padding:0px;
+}
+
+.col-md-10.field{
+    width:32%;
+}
+
+.quantity, .time{
+    width:90px;
+}
+
+#file{
+    border: medium none;
+    font-size: 12px;
+    height: 32px;
+    padding: 0px;
+    width: 72px;
+}
+
+#progress {
+    margin-top: 10px;
+    display:none;
+}
+
+#dropZone{
+    border: 2px solid #b4bdbf;
+    height: 200px;
+    width: 300px;
+}
+
+.uploadifive-queue-item .chiudi{
+    background: rgba(0, 0, 0, 0) url("../Scripts/Uploadify/uploadifive-cancel.png") no-repeat scroll 0 0;
+    display: block;
+    float: right;
+    height: 16px;
+    text-indent: -9999px;
+    width: 16px;
+    color: #000;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    opacity: 0.2;
+    text-shadow: 0 1px 0 #fff;
+    cursor:pointer;
+}
+
+#pubblicazione{
+    text-align:left;
+}
+
+#ErroreGenerico{
+    text-align:center;
+}

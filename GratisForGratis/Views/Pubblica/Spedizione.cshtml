@@ -1,0 +1,61 @@
+﻿@model GratisForGratis.Models.PubblicaSpedizioneViewModel
+
+@section Styles {
+    @Styles.Render("~/Content/pubblicaSpedizione.css")
+}
+
+<section id="head">
+    <div class="content">
+        <h1 id="title">@Language.TitlePublication</h1>
+    </div>
+</section>
+<section id="pubblicazione">
+    @using (Html.BeginForm("Conferma", "Pubblica", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "formPubblica" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            @Html.LabelFor(m => m.CorriereNazione, new { @class = "col-md-2 control-label" })
+            @Html.DropDownListFor(m => m.CorriereNazione, null, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.CorriereNazione, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.NomeMittente, new { @class = "col-md-2 control-label" })
+            @Html.TextBoxFor(m => m.NomeMittente, null, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.NomeMittente, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.TelefonoMittente, new { @class = "col-md-2 control-label" })
+            @Html.TextBoxFor(m => m.TelefonoMittente, null, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.TelefonoMittente, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.EmailMittente, new { @class = "col-md-2 control-label" })
+            @Html.TextBoxFor(m => m.EmailMittente, null, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.EmailMittente, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.IndirizzoMittente, new { @class = "col-md-2 control-label" })
+            @Html.TextBoxFor(m => m.IndirizzoMittente, null, new { @class = "form-control" })
+            @Html.HiddenFor(m => m.IdIndirizzoMittente)
+            @Html.ValidationMessageFor(m => m.IndirizzoMittente, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.ComuneMittente, new { @class = "col-md-2 control-label" })
+            @Html.TextBoxFor(m => m.ComuneMittente, null, new { @class = "form-control", data_autocomplete_url = "/Home/FindCitta", data_autocomplete_id = "IdComuneMittente" })
+            @Html.HiddenFor(m => m.IdComuneMittente)
+            @Html.ValidationMessageFor(m => m.ComuneMittente, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.CivicoMittente, new { @class = "col-md-2 control-label" })
+            @Html.TextBoxFor(m => m.CivicoMittente, null, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.CivicoMittente, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.SezioneMittente, new { @class = "col-md-2 control-label" })
+            @Html.TextBoxFor(m => m.SezioneMittente, null, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.SezioneMittente, "", new { @class = "text-danger" })
+        </div>
+    }
+
+</section>
+

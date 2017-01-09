@@ -1,0 +1,54 @@
+﻿#title{
+    margin-bottom:20px;
+}
+
+#grid{
+    width:100%;
+}
+
+#grid header .cella {
+    padding:6px;
+}
+
+#grid .ricerca{
+    display: inline-block;
+    vertical-align:top;
+    margin-bottom: 12px;
+    margin-right: 12px;
+    padding: 0px 16px;
+    width:200px;
+    border:1px solid;
+    border-radius:6px;
+}
+
+#grid .ricerca .title{
+    text-decoration:underline;
+}
+
+#grid .ricerca .plus{
+    color: #337ab7;
+    font-style: italic;
+}
+
+#grid .table{
+    display: table;
+    height: 114px;
+}
+
+#grid .table .cell{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#grid .cella{
+    padding:6px 0px;
+}
+
+#grid .cella.categoria{
+    height:50px;
+}
+
+#grid .cella .btn{
+    width:148px;
+    margin:10px 0px;
+}

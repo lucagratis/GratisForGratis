@@ -1,0 +1,21 @@
+﻿@model GratisForGratis.Models.ViewModels.FeedbackViewModel
+@{
+    ViewBag.Title = Resources.Language.TitleSendFeedback + " " + Model.Nome;
+}
+@Styles.Render("~/Content/feedback.css")
+
+<section id="head">
+    <div class="content">
+        <h1 id="title">@ViewBag.Title</h1>
+    </div>
+</section>
+<section id="feedback">
+    <h4 class="text">
+        @Html.Raw(string.Format(Language.DescriptionSendFeedback, Model.Ricevente, Model.PuntiBonus + " " + Language.Moneta))
+    </h4>
+    <div class="details">
+        <p><strong>@Language.FeedbackVote</strong>: @Model.Voto </p>
+        <p><strong>@Language.FeedbackComment</strong>: @Model.Opinione </p>
+        <p><strong>@Language.FeedbackDate</strong>: @Model.DataInvio </p>
+    </div>
+</section>

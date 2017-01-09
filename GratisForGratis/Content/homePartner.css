@@ -1,0 +1,39 @@
+﻿#partners, #partners .dati
+{
+    padding-top:0px;
+}
+
+#partners .dati ul
+{
+    display:inline-block;
+    vertical-align:top;
+    max-width:400px;
+    border:2px solid #337ab7;
+    padding:14px;
+    text-align:left;
+    list-style:none;
+}
+
+#partners .dati ul .campo
+{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    vertical-align: top;
+    width: 120px;
+}
+
+#partners .dati ul .title
+{
+    background-color: #337ab7;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding: 6px;
+}
+
+#partners .dati ul li
+{
+    margin-bottom:12px;
+}

@@ -1,0 +1,18 @@
+﻿@model GratisForGratis.Models.ListaVendite
+
+@section Styles {
+    @Styles.Render("~/Content/home.css")
+    @Styles.Render("~/Content/ricerca.css")
+}
+<aside id="ricerca">
+    @Html.Partial("Filtri/Tutti", new GratisForGratis.Models.RicercaViewModel(Model.TotalNumber))
+</aside>
+<section id="page">
+    <section id="home" class="content">
+        @Html.Partial("Elenco/Tutti", Model)
+    </section>
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/ricerca.js")
+}

@@ -1,0 +1,23 @@
+﻿#page .category
+{
+    width: 70%;
+    margin: 20px auto 0px;
+    font-weight:bold;
+}
+
+#page .info{
+    font-size: 16px;
+    line-height: 32px;
+    margin: 0px auto 12px;
+    width: 70%;
+}
+
+#page .footer
+{
+    width: 70%;
+    margin:0px auto;
+    font-size:11px;
+    font-weight:bold;
+    font-style:italic;
+    text-align:right;
+}

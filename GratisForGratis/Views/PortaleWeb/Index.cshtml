@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = Language.TitlePartnerHome;
+}
+@Styles.Render("~/Content/homePartner.css")
+<section id="head">
+    <div class="content">
+        <h1 id="title">@ViewBag.Title</h1>
+    </div>
+</section>
+<section id="partners">
+    @foreach (GratisForGratis.Models.PortaleWebViewModel portale in (Session["portaleweb"] as List<GratisForGratis.Models.PortaleWebViewModel>))
+    {
+    <!-- dati per il sito -->
+        <section id="@("dati"+portale.Token)" class="dati">
+            <ul>
+                <li class="title"><span class="campo">@Language.Name:</span> @portale.Nome</li>
+                <li><span class="campo">@Language.Token:</span> @portale.Token</li>
+                <li><span class="campo">@Language.Domain:</span> @portale.Dominio</li>
+                <li><span class="campo">@Language.Bonus:</span> @portale.Bonus</li>
+                <li><span class="campo">@Language.Telephone:</span> @portale.Telefono</li>
+                <li><span class="campo">@Language.Email:</span> @portale.Email</li>
+                <li>@Html.ActionLink(Language.Settings, "Profilo", "PortaleWeb", new { token = portale.Token }, new { @class = "btn" })</li>
+            </ul>
+        </section>
+    }
+</section>

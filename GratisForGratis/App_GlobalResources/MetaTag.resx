@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="TitleGeneric" xml:space="preserve">
+    <value>Il primo e-commerce che non vende, ma regala!</value>
+  </data>
+  <data name="DescriptionContatti" xml:space="preserve">
+    <value>Hai dei dubbi o vuoi partecipare con noi a quest'avventura? Inviaci una richiesta di colloquio. Amiamo la partecipazione sociale.</value>
+  </data>
+  <data name="DescriptionCosaFacciamo" xml:space="preserve">
+    <value>{0} elimina disuguaglianze, rivaluta l'usato e rivaluta le qualità personali dell'individuo. Proponiamo un motore sociale per la crescita.</value>
+  </data>
+  <data name="DescriptionHome" xml:space="preserve">
+    <value>Acquista gratuitamente gli oggetti che desideri. Compra servizi personali, aziendali o domestici e aumenta il tuo tempo libero.</value>
+  </data>
+  <data name="DescriptionPartners" xml:space="preserve">
+    <value>Ecco l'elenco delle grandi realtà che hanno deciso di incamminarsi insieme a noi! Progetti che migliorano la persona e il gruppo sociale.</value>
+  </data>
+  <data name="KeywordsContatti" xml:space="preserve">
+    <value>Contatti, dubbi, partecipare, partecipazione sociale, inviaci un tuo contatto</value>
+  </data>
+  <data name="KeywordsCosaFacciamo" xml:space="preserve">
+    <value>Elimina le disuguaglianze, rivaluta oggetto, rivaluta servizi, crescita umana, spazio culturale, rinnovo dei beni</value>
+  </data>
+  <data name="KeywordsHome" xml:space="preserve">
+    <value>Compra gratis, acquista gratuitamente, oggetti, compra servizi, compra arredamento,compra abbigliamento, compra musica, compra giochi, compra sport e tempo libero, compra elettronica, compra videoteca, compra cartoleria e libreria, compra veicoli, compra fai da te, compra servizi domestici, compra servizi aziendali, compra servizi per la persona</value>
+  </data>
+  <data name="KeywordsPartners" xml:space="preserve">
+    <value>Grandi realtà, miglioramento della persona, gruppo sociale, Jadenka, DavideMilitano, PsicologiADomicilio, AvvocatoClick, Totallympics, CultID Studio</value>
+  </data>
+  <data name="DescriptionPrivacy" xml:space="preserve">
+    <value>Il rispetto della privacy per noi è fondamentale. Ci teniamo a tutelare ogni vostro interesse prima del nostro.</value>
+  </data>
+  <data name="KeywordsPrivacy" xml:space="preserve">
+    <value>Privacy, condizioni, persona, {0}, tutela legale, informazioni</value>
+  </data>
+  <data name="DescriptionSearch" xml:space="preserve">
+    <value>Grandi offerte su {1} della categoria {0}. Scopri le migliori novità gratuite o acquistabili con baratto. Regala, compra o scambia liberamente!</value>
+  </data>
+  <data name="KeywordsSearch" xml:space="preserve">
+    <value>Gratis, offerte, oggetti, cerca, beni, servizi, baratto, scambio, {0}</value>
+  </data>
+  <data name="TitleSearch" xml:space="preserve">
+    <value>Cerca {0} GRATIS o BARATTO</value>
+  </data>
+  <data name="DescriptionGood" xml:space="preserve">
+    <value>Compra gratuitamente {0} della categoria {1}. In vendita a {2} con {3} crediti o prova con il baratto.</value>
+  </data>
+  <data name="KeywordsGood" xml:space="preserve">
+    <value>Compra gratuitamente, categoria, vendita, baratto, acquista, {0}, {1}, {2}, {3} crediti</value>
+  </data>
+  <data name="TitleGood" xml:space="preserve">
+    <value>Gratis {0} della categoria {1}. Acquista o Baratta.</value>
+  </data>
+  <data name="DescriptionService" xml:space="preserve">
+    <value>Compra gratuitamente {0} della categoria {1}. In vendita a {2} con {3} crediti o prova con il baratto.</value>
+  </data>
+  <data name="KeywordsService" xml:space="preserve">
+    <value>Compra gratuitamente, categoria, vendita, baratto, acquista, {0}, {1}, {2}, {3} crediti</value>
+  </data>
+  <data name="TitleService" xml:space="preserve">
+    <value>Gratis {0} della categoria {1}. Acquista o Baratta.</value>
+  </data>
+  <data name="DescriptionGift" xml:space="preserve">
+    <value>Oggetti rotti, inutilizzati, utili per hobby o per la creazione di nuove idee, fantastici da regalare. Se vuoi puoi anche proporti per il volontariato e regalare un pò del tuo tempo.</value>
+  </data>
+  <data name="DescriptionGratis" xml:space="preserve">
+    <value>Acquista gratuitamente oggetti o servizi di qualsiasi tipo! Le migliori vendite gratuite del nostro portale.</value>
+  </data>
+  <data name="KeywordsGift" xml:space="preserve">
+    <value>oggetti rotti, oggetti inutilizzati, hobby, nuove idee, regalare, volontariato, tempo</value>
+  </data>
+  <data name="KeywordsGratis" xml:space="preserve">
+    <value>Tutto gratis, oggetti gratis, servizi gratis, acquista gratuitamente, vendite gratuite</value>
+  </data>
+  <data name="TitleGift" xml:space="preserve">
+    <value>Regala ciò che non usi più o fai volontariato!</value>
+  </data>
+  <data name="TitleSellGratis" xml:space="preserve">
+    <value>Tutto gratis! oggetti e servizi gratis con gli {0}!</value>
+  </data>
+  <data name="TitleOnlineMoney" xml:space="preserve">
+    <value>Una nuovissima e unica moneta virtuale!</value>
+  </data>
+  <data name="DescriptionSiteWeb" xml:space="preserve">
+    <value>Siti web di utilità sociale ed umana</value>
+  </data>
+  <data name="KeywordsSiteWeb" xml:space="preserve">
+    <value>Siti utili, Utilità sociale, Utilità umana, JustKnock, TaskyJob, GeniUp, WikiLeaks</value>
+  </data>
+  <data name="TitleSiteWeb" xml:space="preserve">
+    <value>Siti utili</value>
+  </data>
+  <data name="TitleSearchSaved" xml:space="preserve">
+    <value>Ricerche salvate</value>
+  </data>
+</root>

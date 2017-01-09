@@ -1,0 +1,9 @@
+﻿#riepilogo .row {
+    border-bottom: 1px solid #337ab7;
+}
+#riepilogo .cell{
+    display:inline-block;
+    vertical-align:middle;
+    text-align:left;
+    padding:6px;
+}

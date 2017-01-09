@@ -1,0 +1,35 @@
+﻿#sceltaCategoria{
+    text-align: left;
+}
+
+#sceltaCategoria .categoria{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#sceltaCategoria > li {
+    display: inline-block;
+    margin-bottom: 40px;
+    vertical-align: top;
+    width: 200px;
+}
+
+#sceltaCategoria .sottomenu{
+    padding:0px;
+}
+
+#sceltaCategoria .sottomenu ul {
+    
+}
+
+#sceltaCategoria .sottomenu li{
+    list-style: outside none none;
+    margin: 6px 0px;
+}
+
+#sceltaCategoria .sottomenu li a{
+    color: #333;
+    cursor: pointer;
+    letter-spacing: 1px;
+    text-decoration: underline;
+}

@@ -1,0 +1,26 @@
+﻿@model GratisForGratis.Models.UtenteRicercaViewModel
+@{
+    ViewBag.Title = Language.TitleSearchSave;
+}
+@Styles.Render("~/Content/saveRicerca.css")
+
+<section id="head">
+    <div class="content">
+        <h1 id="title">@ViewBag.Title</h1>
+    </div>
+</section>
+<section id="searchSave">
+    <h2 id="description">@Language.DescriptionSearchSave</h2>
+    <p>
+        <strong>@Language.Category : </strong>@Model.Categoria
+    </p>
+    @if (!string.IsNullOrWhiteSpace(Model.Testo)) {
+    <p>
+        <strong>@Language.Name : </strong>@Model.Testo
+    </p>
+    }
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

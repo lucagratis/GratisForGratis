@@ -1,0 +1,136 @@
+﻿/*#ricerca{
+    display: inline-block;
+    vertical-align: top;
+    width:30%;
+}*/
+
+#page .content{
+    text-align:center;
+    /*display: inline-block;
+    vertical-align: top;
+    margin-left: 4%;
+    max-width: 62%;*/
+}
+
+#ricerca{
+    padding:0% 3%;
+}
+
+#ricerca .title, #ricerca .advancedSearch{
+    color: #337ab7;
+    text-align: center;
+    text-transform: uppercase;
+    cursor:pointer;
+}
+
+#ricerca .advancedSearch .ico{
+    width:20px;
+    vertical-align:top;
+}
+
+#FormRicerca{
+    display:none;
+    margin: 0px auto 20px;
+    text-align: center;
+    vertical-align: top;
+}
+
+#FormRicerca .form-group{
+    width:auto;
+    max-width:220px;
+    margin:1% 2%;
+    text-align:center;
+    vertical-align:middle;
+}
+
+#FormRicerca .form-group .number{
+    width:60px;
+}
+
+#FormRicerca .form-group.giorno{
+    min-width:0px;
+}
+
+#FormRicerca .form-group.button{
+    vertical-align:bottom;
+}
+
+#FormRicerca .slider .range{
+    min-width:120px;
+    margin:8px;
+}
+
+#FormRicerca .form-group.slider{
+    /*margin-bottom:12px;*/
+}
+
+.ui-slider-range{
+    background-color:#337ab7;
+    background-image:none;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+    background-image:none;
+    background-color:#337ab7;
+}
+
+#FormRicerca .col-md-10 {
+    float:none;
+    width: auto;
+    padding:0px;
+}
+
+#FormRicerca label{
+    text-decoration:none;
+    text-transform:uppercase;
+}
+
+#FormRicerca .control-label{
+    padding-bottom:0px;
+}
+
+#FormRicerca input[type="text"],#FormRicerca input[type="time"], #FormRicerca select{
+    display:initial;
+    height: 24px;
+    width: 100%;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform:uppercase;
+    border-color:#337ab7;
+    /*border-radius:10px;*/
+}
+
+#FormRicerca .form-group .left{
+    margin-left:0px;
+}
+
+#FormRicerca .btn{
+    width:80px;
+    text-transform:uppercase;
+    margin-top:20px;
+}
+
+#advancedFields{
+    display:none;
+}
+
+#alertNotFound{
+    margin: 36px 0px;
+    text-transform: uppercase;
+}
+
+#searchNotFound a{
+    font-size:26px;
+    font-style:italic;
+    font-weight:900;
+    text-decoration:none;
+}
+
+#searchNotFound img{
+    max-width: 46px;
+    margin-left:20px;
+}
+
+#page{
+    padding-top:0px;
+}

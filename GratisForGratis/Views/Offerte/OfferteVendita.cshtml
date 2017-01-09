@@ -1,0 +1,73 @@
+﻿@using GratisForGratis.Models
+@model OfferteVenditaViewModel
+
+@{
+    ViewBag.Title = Language.TitleBidsList + " " + Model.NomeVendita;
+}
+
+@Styles.Render("~/Content/trattative.css")
+<section id="head">
+    <div class="content">
+        <h1 id="title">@ViewBag.Title</h1>
+    </div>
+</section>
+<section id="purchases">
+    <div id="grid" class="content">
+        @foreach (OffertaViewModel offerta in Model.Offerte)
+        {
+            <div id="@HttpUtility.UrlEncode(offerta.Id)" class="purchase">
+                <div class="preview">
+                    <div class="cella noMandatory">
+                        @Html.Label("Compratore", Language.Buyer + ":")
+                        @offerta.Compratore.Nominativo
+                    </div>
+                    <div class="cella">
+                        @Html.Label("Contatti", Language.Contacts + ":")
+                        @offerta.Compratore.Email @(offerta.Compratore.Telefono.IsEmpty()?"":"- " + offerta.Compratore.Telefono)
+                    </div>
+                    <div class="cella">
+                        @Html.Label("Punti", Language.Moneta + ":")
+                        @offerta.Punti (€ @offerta.Soldi)
+                    </div>
+                    @if (offerta.Baratti.Count > 0)
+                    {
+                        <div class="cella">
+                            @Html.Label("Baratti", Language.Barters + ":")
+                            <!-- lista link ad oggetti barattati -->
+                            @foreach (VenditaViewModel baratto in offerta.Baratti)
+                            {
+                                @Html.ActionLink(baratto.Nome, "Barattato", (baratto.TipoAcquisto == TipoAcquisto.Servizio) ? TipoAcquisto.Servizio.ToString() : TipoAcquisto.Oggetto.ToString(), new { nome = HttpUtility.UrlEncode(baratto.Nome), token = HttpUtility.UrlEncode(baratto.Token) }, new { @class = "link" }) <br />
+                            }
+                        </div>
+                    }
+                    <div class="cella noMandatory">
+                        @Html.Label("DataOfferta", Language.InsertDate + ":")
+                        @offerta.DataInserimento
+                    </div>
+                    <div class="cella stateText">
+                        @if (offerta.StatoOfferta == StatoOfferta.ATTIVA)
+                        {
+                            <a class="btn ok" href="javascript:void(0);">@Language.AcceptBid</a>
+                            <a class="btn ko" href="javascript:void(0);">@Language.RefuseBid</a>
+                        }
+                        else
+                        {
+                            <span>
+                                @Html.Label("StatoOfferta", Language.StateBid + ":")
+                                @offerta.StatoOfferta
+                            </span>
+                        }
+                    </div>
+
+                </div>
+            </div>
+        }
+        @Html.Partial("PartialPages/_ElencoPagine", new ElencoPagine((int)ViewData["TotalePagine"],
+            (int)ViewData["Pagina"], (((int)ViewData["Pagina"] - 5) < 1 ? 1 : (int)ViewData["Pagina"] - 5), "Offerte", "OfferteVendita"))
+    </div>
+</section>
+
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/offerteVendita.js")
+}

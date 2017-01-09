@@ -1,0 +1,29 @@
+﻿@model GratisForGratis.Models.NotificaRicercaViewModel
+@using System.Web.Configuration
+<tr>
+    <td style="width:50px;">&nbsp;</td>
+    <td align="center" style="padding:12px 0px 0px;line-height:12px;">
+        @Html.Raw(string.Format(Email.SearchNotifyText1, "{0}"))
+    </td>
+    <td style="width:50px;">&nbsp;</td>
+</tr>
+<tr>
+    <td style="width:50px;">&nbsp;</td>
+    <td align="center" style="padding:12px 0px 0px;line-height:12px;">
+        @Html.ActionLink(Url.Action("Acquista", "{1}",
+            new RouteValueDictionary { { "nome", "{4}" }, { "token", "{2}" } }, Request.Url.Scheme, Request.Url.Host), "Acquista", "{1}", null, Request.Url.Host, null, new { nome = "{4}", token = "{2}" }, new { style = "color:#189CBB;" })
+    </td>
+    <td style="width:50px;">&nbsp;</td>
+</tr>
+<tr>
+    <td style="width:50px;">&nbsp;</td>
+    <td align="center" style="padding:20px 0px 0px;line-height:12px;">
+        @Html.Raw(string.Format(Email.SearchNotifyFooter, Html.ActionLink(Url.Action("DeleteRicerca", "Cerca", new RouteValueDictionary { { "token", "{3}" }, { "emailUtente", "{5}" } }, Request.Url.Scheme, Request.Url.Host), "DeleteRicerca", "Cerca", null, Request.Url.Host, null, new { token = "{3}", emailUtente = "{5}" }, new { style = "color:#189CBB;" })))
+        <span style="font-style:italic;">Team @WebConfigurationManager.AppSettings["nomeSito"].</span>
+    </td>
+    <td style="width:50px;">&nbsp;</td>
+</tr>
+<tr>
+    <td colspan="3">&nbsp;</td>
+</tr>
+

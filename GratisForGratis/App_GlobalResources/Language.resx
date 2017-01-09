@@ -1,0 +1,1494 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Surname" xml:space="preserve">
+    <value>Cognome</value>
+  </data>
+  <data name="Support" xml:space="preserve">
+    <value>Supporto</value>
+  </data>
+  <data name="TitlePublicationObjects" xml:space="preserve">
+    <value>Bene / Oggetto</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Benvenuto</value>
+  </data>
+  <data name="CurrentBalance" xml:space="preserve">
+    <value>Saldo attuale</value>
+  </data>
+  <data name="ErrorTypeSale" xml:space="preserve">
+    <value>Tipo vendita errato</value>
+  </data>
+  <data name="ShippingCivic" xml:space="preserve">
+    <value>Civico di spedizione</value>
+  </data>
+  <data name="Negotiations" xml:space="preserve">
+    <value>Trattative</value>
+  </data>
+  <data name="ErrorDistrict" xml:space="preserve">
+    <value>Provincia obbligatoria (Selezionare provincia suggerita)</value>
+  </data>
+  <data name="TitleRegisterForSite" xml:space="preserve">
+    <value>Registrazione portale web</value>
+  </data>
+  <data name="Barters" xml:space="preserve">
+    <value>Oggetti barattati</value>
+  </data>
+  <data name="OnlyPrivateSwitch" xml:space="preserve">
+    <value>Solo scambio privato</value>
+  </data>
+  <data name="TitleSummary" xml:space="preserve">
+    <value>Riepilogo</value>
+  </data>
+  <data name="Available" xml:space="preserve">
+    <value>Disponibile</value>
+  </data>
+  <data name="ErrorPhoneNumber" xml:space="preserve">
+    <value>Numero di telefono errato</value>
+  </data>
+  <data name="ErrorTypePurchase" xml:space="preserve">
+    <value>Tipologia errata</value>
+  </data>
+  <data name="Accept" xml:space="preserve">
+    <value>Accetta</value>
+  </data>
+  <data name="PurchaseFree" xml:space="preserve">
+    <value>Gratis subito</value>
+  </data>
+  <data name="RefuseBid" xml:space="preserve">
+    <value>Rifiuta offerta</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Autore</value>
+  </data>
+  <data name="Artist" xml:space="preserve">
+    <value>Artista</value>
+  </data>
+  <data name="NumberLimitFile" xml:space="preserve">
+    <value>Puoi selezionare fino a 4 file</value>
+  </data>
+  <data name="OptionalNote" xml:space="preserve">
+    <value>Note aggiuntive</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Filtra</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>Beni e servizi gratuiti per tutti!</value>
+  </data>
+  <data name="Format" xml:space="preserve">
+    <value>Formato</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>Venerdì</value>
+  </data>
+  <data name="ErrorEndTime" xml:space="preserve">
+    <value>L'orario non può essere inferiore a quello di partenza</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>Martedì</value>
+  </data>
+  <data name="Gratis" xml:space="preserve">
+    <value>Regalo</value>
+  </data>
+  <data name="TypeNegotation" xml:space="preserve">
+    <value>Tipo trattativa</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Elimina</value>
+  </data>
+  <data name="Detail" xml:space="preserve">
+    <value>Dettaglio</value>
+  </data>
+  <data name="TotalCost" xml:space="preserve">
+    <value>Costo totale</value>
+  </data>
+  <data name="StoresUser" xml:space="preserve">
+    <value>Memorizza utente</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>Lunedì</value>
+  </data>
+  <data name="ErrorSaveObject" xml:space="preserve">
+    <value>Errore salvataggio oggetto</value>
+  </data>
+  <data name="Barter" xml:space="preserve">
+    <value>Baratto</value>
+  </data>
+  <data name="BuyNow" xml:space="preserve">
+    <value>Compra subito!</value>
+  </data>
+  <data name="Browse" xml:space="preserve">
+    <value>Cerca nel pc</value>
+  </data>
+  <data name="Broken" xml:space="preserve">
+    <value>Rotto</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>Giovedì</value>
+  </data>
+  <data name="ErrorObjectState" xml:space="preserve">
+    <value>Oggetto non comprabile</value>
+  </data>
+  <data name="TitleBuy" xml:space="preserve">
+    <value>Home Acquisto</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Annulla</value>
+  </data>
+  <data name="ChooseSubCategory" xml:space="preserve">
+    <value>Scegli la sotto categoria</value>
+  </data>
+  <data name="Service" xml:space="preserve">
+    <value>Servizio</value>
+  </data>
+  <data name="TypeBid" xml:space="preserve">
+    <value>Tipo offerta</value>
+  </data>
+  <data name="PaymentMethods" xml:space="preserve">
+    <value>Tipo pagamento</value>
+  </data>
+  <data name="BuyFree" xml:space="preserve">
+    <value>Tutto gratis</value>
+  </data>
+  <data name="TitleForgotPasswordForSite" xml:space="preserve">
+    <value>Password dimenticata di un portale web</value>
+  </data>
+  <data name="OfferKind" xml:space="preserve">
+    <value>Tipo offerta</value>
+  </data>
+  <data name="ErrorTypePayment" xml:space="preserve">
+    <value>Tipo pagamento errato</value>
+  </data>
+  <data name="WebAddress" xml:space="preserve">
+    <value>Indirizzo web</value>
+  </data>
+  <data name="DescriptionLogin" xml:space="preserve">
+    <value>Usa il tuo account personale per accedere e comprare.</value>
+  </data>
+  <data name="SystemOperating" xml:space="preserve">
+    <value>Sistema operativo</value>
+  </data>
+  <data name="QuantityRequest" xml:space="preserve">
+    <value>Quantità ordine</value>
+  </data>
+  <data name="Object" xml:space="preserve">
+    <value>Oggetto</value>
+  </data>
+  <data name="ResidenceCap" xml:space="preserve">
+    <value>Cap residenza</value>
+  </data>
+  <data name="ResidenceAddress" xml:space="preserve">
+    <value>Indirizzo (Via,Viale,Piazza)</value>
+  </data>
+  <data name="ErrorNotSaved" xml:space="preserve">
+    <value>Offerta non salvata</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Esci</value>
+  </data>
+  <data name="Length" xml:space="preserve">
+    <value>Lunghezza</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Modifica</value>
+  </data>
+  <data name="DescriptionPassword" xml:space="preserve">
+    <value>Inserisci l'email di accesso per recuperare le credenziali.</value>
+  </data>
+  <data name="LoginForPartners" xml:space="preserve">
+    <value>Login per partners</value>
+  </data>
+  <data name="ErrorPayment" xml:space="preserve">
+    <value>Errore durante il pagamento</value>
+  </data>
+  <data name="TitleAccess" xml:space="preserve">
+    <value>Accedi e acquista tutto gratuitamente</value>
+  </data>
+  <data name="Generic" xml:space="preserve">
+    <value>Generico</value>
+  </data>
+  <data name="OperatingSystem" xml:space="preserve">
+    <value>Sistema operativo</value>
+  </data>
+  <data name="ErrorPaymentObjectState" xml:space="preserve">
+    <value>Oggetto da pagare non trovato</value>
+  </data>
+  <data name="AdvancedSearch" xml:space="preserve">
+    <value>Ricerca Avanzata</value>
+  </data>
+  <data name="ErrorFormatEmail" xml:space="preserve">
+    <value>Formato email errato</value>
+  </data>
+  <data name="DescriptionRegister" xml:space="preserve">
+    <value>Crea un &lt;strong&gt;nuovo account&lt;/strong&gt; e compra ciò che desideri! All'iscrizione &lt;strong&gt;riceverai {0}&lt;/strong&gt; e riceverai &lt;strong&gt;altri {1}&lt;/strong&gt; con le prime {2} pubblicazioni! L'iscrizione è totalmente gratuita!</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>Alto</value>
+  </data>
+  <data name="ErrorPaymentUserPoints" xml:space="preserve">
+    <value>Punti utente non sufficienti</value>
+  </data>
+  <data name="ErrorGenericBid" xml:space="preserve">
+    <value>Compilare correttamente i campi dell'offerta</value>
+  </data>
+  <data name="DescriptionContacts" xml:space="preserve">
+    <value>Se hai bisogno di informazioni, hai delle proposte da fare o semplicemente hai bisogno di assistenza, contattaci ad uno dei riferimenti che trovi qui sotto:</value>
+  </data>
+  <data name="MoreDetails" xml:space="preserve">
+    <value>Maggiori dettagli</value>
+  </data>
+  <data name="TitlePartners" xml:space="preserve">
+    <value>I nostri maggiori partners</value>
+  </data>
+  <data name="NotSaved" xml:space="preserve">
+    <value>Non salvata</value>
+  </data>
+  <data name="Weight" xml:space="preserve">
+    <value>Peso</value>
+  </data>
+  <data name="Whoare" xml:space="preserve">
+    <value>&lt;b&gt;La 1° piattaforma web mondiale&lt;/b&gt;, che si occupa di offrire servizi e beni gratuiti per tutti. &lt;b&gt;Promuoviamo tutti i servizi web&lt;/b&gt; che decidono di collaborare con la nostra piattaforma!</value>
+  </data>
+  <data name="Whatdo" xml:space="preserve">
+    <value>Promuoviamo tutti i servizi web che decidono di collaborare con la nostra piattaforma e di dare a tutti voi un metodo semplice e veloce per acquistare gratuitamente sul web.</value>
+  </data>
+  <data name="ErrorAddress" xml:space="preserve">
+    <value>Errore formato indirizzo web (http://www.dominio.it)</value>
+  </data>
+  <data name="OfferPoints" xml:space="preserve">
+    <value>Punti</value>
+  </data>
+  <data name="Region" xml:space="preserve">
+    <value>Regione</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>Domenica</value>
+  </data>
+  <data name="Seller" xml:space="preserve">
+    <value>Venditore</value>
+  </data>
+  <data name="Slogan" xml:space="preserve">
+    <value>&lt;strong&gt;L'e-commerce che non vende, ma regala&lt;/strong&gt;!</value>
+  </data>
+  <data name="Public" xml:space="preserve">
+    <value>Pubblica</value>
+  </data>
+  <data name="ErrorUserState" xml:space="preserve">
+    <value>Utente non attivo</value>
+  </data>
+  <data name="Points" xml:space="preserve">
+    <value>Punti</value>
+  </data>
+  <data name="TitleOnSale" xml:space="preserve">
+    <value>Beni / Servizi - In vendita</value>
+  </data>
+  <data name="FeedbackMessage" xml:space="preserve">
+    <value>Affidabilità {0} %</value>
+  </data>
+  <data name="AddBarter" xml:space="preserve">
+    <value>Aggiungi baratto</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Categoria</value>
+  </data>
+  <data name="ErrorUserPoints" xml:space="preserve">
+    <value>Punti insufficienti</value>
+  </data>
+  <data name="SliderHome3" xml:space="preserve">
+    <value>Acquisisci ulteriori punti attraverso siti partners!</value>
+  </data>
+  <data name="SliderHome2" xml:space="preserve">
+    <value>Bonus punti per acquistare immediatamente!</value>
+  </data>
+  <data name="SliderHome1" xml:space="preserve">
+    <value>Beni e servizi gratuiti per tutti!</value>
+  </data>
+  <data name="TitleBidsList" xml:space="preserve">
+    <value>Offerte vendita</value>
+  </data>
+  <data name="ErrorQuantityObject" xml:space="preserve">
+    <value>Numero pezzi superiore a quello disponibile</value>
+  </data>
+  <data name="TitleAccessForSite" xml:space="preserve">
+    <value>Login portale web</value>
+  </data>
+  <data name="AdvSecurity1" xml:space="preserve">
+    <value>Transazione definitiva solo se entro una settimana viene accettata la spedizione creata in automatico con il corriere o se la consegna avverrà privatamente.</value>
+  </data>
+  <data name="AdvSecurity2" xml:space="preserve">
+    <value>&lt;b&gt;Rimborso&lt;/b&gt; solo se il venditore non riesce a certificare la spedizione (tramite fattura) entro 2 settimane dall’invio.</value>
+  </data>
+  <data name="AdvSecurity3" xml:space="preserve">
+    <value>&lt;b&gt;Verifica delle transazioni&lt;/b&gt; fatte da e per un account e verifica degli accessi di tutti gli utenti.</value>
+  </data>
+  <data name="TitleTest" xml:space="preserve">
+    <value>Test pagamento</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Conferma</value>
+  </data>
+  <data name="Courier" xml:space="preserve">
+    <value>Corriere</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Paese</value>
+  </data>
+  <data name="ChooseCategory" xml:space="preserve">
+    <value>Scegli la categoria</value>
+  </data>
+  <data name="StartTime" xml:space="preserve">
+    <value>Dalle</value>
+  </data>
+  <data name="ShipmentDate" xml:space="preserve">
+    <value>Data spedizione</value>
+  </data>
+  <data name="Partners" xml:space="preserve">
+    <value>Partners</value>
+  </data>
+  <data name="ErrorNothingBarter" xml:space="preserve">
+    <value>Inserire almeno un baratto</value>
+  </data>
+  <data name="ErrorLengthEmail" xml:space="preserve">
+    <value>Email troppo lunga (Max 200 caratteri)</value>
+  </data>
+  <data name="InsertDate" xml:space="preserve">
+    <value>Data inserimento</value>
+  </data>
+  <data name="ExchangeObject" xml:space="preserve">
+    <value>Oggetto da sambiare</value>
+  </data>
+  <data name="AcceptBid" xml:space="preserve">
+    <value>Accetta offerta</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>Mercoledì</value>
+  </data>
+  <data name="PointsMoney" xml:space="preserve">
+    <value>Punti + Soldi</value>
+  </data>
+  <data name="Holidays" xml:space="preserve">
+    <value>Festivi</value>
+  </data>
+  <data name="TitleServices" xml:space="preserve">
+    <value>Servizi</value>
+  </data>
+  <data name="AddToCart" xml:space="preserve">
+    <value>Aggiungi al carrello</value>
+  </data>
+  <data name="TitleContacts" xml:space="preserve">
+    <value>Contacts</value>
+  </data>
+  <data name="TitlePayment" xml:space="preserve">
+    <value>Pagamento</value>
+  </data>
+  <data name="UserPoints" xml:space="preserve">
+    <value>Punti utente</value>
+  </data>
+  <data name="ErrorMaxBarters" xml:space="preserve">
+    <value>Hai superato il numero di baratti consentiti</value>
+  </data>
+  <data name="ConfirmPubblicationObject" xml:space="preserve">
+    <value>L'oggetto è stato pubblicato con successo. Potrai vederlo nella lista degli oggetti, sulla pagina delle offerte effettuate.</value>
+  </data>
+  <data name="Marketing" xml:space="preserve">
+    <value>Marketing</value>
+  </data>
+  <data name="FilterSearch" xml:space="preserve">
+    <value>Filtra per</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Cambia password</value>
+  </data>
+  <data name="ShippingAddress" xml:space="preserve">
+    <value>Indirizzo di spedizione</value>
+  </data>
+  <data name="TitleConfirmPurchase" xml:space="preserve">
+    <value>Beni / Servizi - In Acquisto</value>
+  </data>
+  <data name="EndTime" xml:space="preserve">
+    <value>Alle</value>
+  </data>
+  <data name="PointsBarter" xml:space="preserve">
+    <value>Baratto + Punti</value>
+  </data>
+  <data name="Of" xml:space="preserve">
+    <value>Di</value>
+  </data>
+  <data name="PointsBalance" xml:space="preserve">
+    <value>Saldo punti</value>
+  </data>
+  <data name="AddToTheSledge" xml:space="preserve">
+    <value>Aggiungi alla slitta</value>
+  </data>
+  <data name="ErrorComparePassword" xml:space="preserve">
+    <value>Le password non coincidono</value>
+  </data>
+  <data name="ErrorWidth" xml:space="preserve">
+    <value>Formato larghezza errato (130 cm)</value>
+  </data>
+  <data name="ErrorPrice" xml:space="preserve">
+    <value>Punti errati</value>
+  </data>
+  <data name="ErrorOwner" xml:space="preserve">
+    <value>Non puoi comprare un tuo oggetto</value>
+  </data>
+  <data name="ErrorMoney" xml:space="preserve">
+    <value>Errore formato soldi</value>
+  </data>
+  <data name="ErrorCap" xml:space="preserve">
+    <value>Cap errato</value>
+  </data>
+  <data name="ErrorBid" xml:space="preserve">
+    <value>Campo obbligatorio</value>
+  </data>
+  <data name="ErrorEmail" xml:space="preserve">
+    <value>Email errata</value>
+  </data>
+  <data name="ErrorBuyer" xml:space="preserve">
+    <value>Hai già fatto un offerta per questo oggetto!</value>
+  </data>
+  <data name="OurPartners" xml:space="preserve">
+    <value>Chi ha aderito</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Tutti</value>
+  </data>
+  <data name="Fix" xml:space="preserve">
+    <value>Da Aggiustare</value>
+  </data>
+  <data name="Min" xml:space="preserve">
+    <value>Min</value>
+  </data>
+  <data name="Max" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="Bid" xml:space="preserve">
+    <value>Offerta</value>
+  </data>
+  <data name="Buy" xml:space="preserve">
+    <value>Compra</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>Nuovo</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Errore</value>
+  </data>
+  <data name="Model" xml:space="preserve">
+    <value>Modello</value>
+  </data>
+  <data name="Money" xml:space="preserve">
+    <value>Contanti</value>
+  </data>
+  <data name="Bonus" xml:space="preserve">
+    <value>Premi</value>
+  </data>
+  <data name="Buyer" xml:space="preserve">
+    <value>Compratore</value>
+  </data>
+  <data name="Brand" xml:space="preserve">
+    <value>Marca</value>
+  </data>
+  <data name="Civic" xml:space="preserve">
+    <value>Civico</value>
+  </data>
+  <data name="Owner" xml:space="preserve">
+    <value>Proprietario</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Width" xml:space="preserve">
+    <value>Larghezza</value>
+  </data>
+  <data name="Token" xml:space="preserve">
+    <value>Token</value>
+  </data>
+  <data name="TitleIndex" xml:space="preserve">
+    <value>Home profilo</value>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>Pausa</value>
+  </data>
+  <data name="Place" xml:space="preserve">
+    <value>Luogo</value>
+  </data>
+  <data name="Phote" xml:space="preserve">
+    <value>Foto</value>
+  </data>
+  <data name="TitleRegister" xml:space="preserve">
+    <value>Registrazione</value>
+  </data>
+  <data name="TitleSales" xml:space="preserve">
+    <value>Lista Vendite</value>
+  </data>
+  <data name="Shipment" xml:space="preserve">
+    <value>Spedizione</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>Qui di seguito trovate la lista di chi ha deciso di unirsi alla nostra causa!</value>
+  </data>
+  <data name="DescriptionLoginForSite" xml:space="preserve">
+    <value>Usa il tuo account aziendale per accedere e comprare.</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Indirizzo</value>
+  </data>
+  <data name="Contacts" xml:space="preserve">
+    <value>Contatti</value>
+  </data>
+  <data name="OrdersPaid" xml:space="preserve">
+    <value>Ordini pagati</value>
+  </data>
+  <data name="MandatoryPhoto" xml:space="preserve">
+    <value>Inserire almeno una foto!</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Quantità</value>
+  </data>
+  <data name="NameObject" xml:space="preserve">
+    <value>Nome oggetto</value>
+  </data>
+  <data name="ErrorWeight" xml:space="preserve">
+    <value>Formato peso errato (150 g)</value>
+  </data>
+  <data name="TitleTransactionHistorical" xml:space="preserve">
+    <value>Pagamenti conclusi</value>
+  </data>
+  <data name="ShippingKind" xml:space="preserve">
+    <value>Tipo spedizione</value>
+  </data>
+  <data name="Director" xml:space="preserve">
+    <value>Regista</value>
+  </data>
+  <data name="SecondHand" xml:space="preserve">
+    <value>Usato</value>
+  </data>
+  <data name="ErrorPoints" xml:space="preserve">
+    <value>Errore sui punti</value>
+  </data>
+  <data name="StartUpload" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="ErrorPassword" xml:space="preserve">
+    <value>Email o password errati</value>
+  </data>
+  <data name="AllDays" xml:space="preserve">
+    <value>Tutti i giorni</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Impostazioni</value>
+  </data>
+  <data name="DescriptionPubblication" xml:space="preserve">
+    <value>Vendi ciò che non usi più o baratta semplicemente un oggetto per ciò che desideri di più.</value>
+  </data>
+  <data name="Nominative" xml:space="preserve">
+    <value>Nominativo</value>
+  </data>
+  <data name="ErrorMaxYear" xml:space="preserve">
+    <value>Errore anno massimo</value>
+  </data>
+  <data name="ErrorPaymentBid" xml:space="preserve">
+    <value>Offerta da confermare non trovata</value>
+  </data>
+  <data name="TitleForgotPassword" xml:space="preserve">
+    <value>Password Dimenticata</value>
+  </data>
+  <data name="Telephone" xml:space="preserve">
+    <value>Telefono</value>
+  </data>
+  <data name="Exchange" xml:space="preserve">
+    <value>Scambio / Baratto</value>
+  </data>
+  <data name="TitlePurchasesList" xml:space="preserve">
+    <value>Lista Acquisti (Da Confermare)</value>
+  </data>
+  <data name="ErrorLength" xml:space="preserve">
+    <value>Formato lunghezza errato (130 cm)</value>
+  </data>
+  <data name="MaxBarters" xml:space="preserve">
+    <value>Massimo baratti consentiti</value>
+  </data>
+  <data name="ErrorRegion" xml:space="preserve">
+    <value>Regione obbligatoria (Selezionare regione suggerita)</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Registra</value>
+  </data>
+  <data name="EmailNotExist" xml:space="preserve">
+    <value>Email inesistente</value>
+  </data>
+  <data name="Security" xml:space="preserve">
+    <value>Sicurezza</value>
+  </data>
+  <data name="Auction" xml:space="preserve">
+    <value>Vendita all'asta</value>
+  </data>
+  <data name="ErrorYear" xml:space="preserve">
+    <value>Anno errato</value>
+  </data>
+  <data name="ErrorHigh" xml:space="preserve">
+    <value>Formato altezza errato (130 cm)</value>
+  </data>
+  <data name="ErrorDate" xml:space="preserve">
+    <value>Errore formato data</value>
+  </data>
+  <data name="ErrorCity" xml:space="preserve">
+    <value>Città obbligatoria (Selezionare città suggerita)</value>
+  </data>
+  <data name="ErrorHeight" xml:space="preserve">
+    <value>Formato altezza errato (130 cm)</value>
+  </data>
+  <data name="PaymentIn" xml:space="preserve">
+    <value>Pagamento in</value>
+  </data>
+  <data name="Platform" xml:space="preserve">
+    <value>Piattaforma</value>
+  </data>
+  <data name="InsertOtherData" xml:space="preserve">
+    <value>Inserisci ulteriori dati (Campi non obbligatori)</value>
+  </data>
+  <data name="H2RSearch" xml:space="preserve">
+    <value>Specifica la tua ricerca</value>
+  </data>
+  <data name="TitlePurchaseCompleted" xml:space="preserve">
+    <value>Acquisto QUASI concluso!</value>
+  </data>
+  <data name="AdvBuyGratis" xml:space="preserve">
+    <value>Potrai comprare quello che vuoi &lt;b&gt;senza spendere un centesimo&lt;/b&gt;! Cerca tra le varie categorie, con gli appositi filtri, gli oggetti o i servizi che preferisci e &lt;b&gt;spendi i tuoi G-Points&lt;/b&gt;. L’unico costo saranno le eventuali spedizioni.</value>
+  </data>
+  <data name="ErrorMinYear" xml:space="preserve">
+    <value>Errore anno minimo</value>
+  </data>
+  <data name="FooterPurchaseCompleted" xml:space="preserve">
+    <value>Saluti da Gratis For Gratis!</value>
+  </data>
+  <data name="ObjectState" xml:space="preserve">
+    <value>Stato oggetto</value>
+  </data>
+  <data name="Purchases" xml:space="preserve">
+    <value>Acquisti</value>
+  </data>
+  <data name="TypePayment" xml:space="preserve">
+    <value>Tipo pagamento</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>Sabato</value>
+  </data>
+  <data name="DescriptionPubblicationObjectConfirmed" xml:space="preserve">
+    <value>Oggetto pubblicato</value>
+  </data>
+  <data name="ErrorTypePubblication" xml:space="preserve">
+    <value>Tipo pubblicazione errato</value>
+  </data>
+  <data name="ErrorFormat" xml:space="preserve">
+    <value>Errore formato</value>
+  </data>
+  <data name="Results" xml:space="preserve">
+    <value>Risultati</value>
+  </data>
+  <data name="MoneyBarter" xml:space="preserve">
+    <value>Baratto + Contanti</value>
+  </data>
+  <data name="TitlePublicationServices" xml:space="preserve">
+    <value>Servizi</value>
+  </data>
+  <data name="ErrorBarter" xml:space="preserve">
+    <value>Baratto non riuscito</value>
+  </data>
+  <data name="AdvBonus3" xml:space="preserve">
+    <value>Verranno effettuati controlli sull’IP, sul MAC Address, sul nome, ma soprattutto verificando il numero di telefono.</value>
+  </data>
+  <data name="AdvBonus2" xml:space="preserve">
+    <value>Ottieni &lt;b&gt;altri {0}&lt;/b&gt; se inserisci almeno 4 prodotti di categorie differenti.</value>
+  </data>
+  <data name="AdvBonus1" xml:space="preserve">
+    <value>Ottieni un &lt;b&gt;bonus di partenza di {0}&lt;/b&gt; per fare il primo acquisto e provare il servizio.</value>
+  </data>
+  <data name="GratisPurchase" xml:space="preserve">
+    <value>Acquisti gratuiti</value>
+  </data>
+  <data name="UserState" xml:space="preserve">
+    <value>Stato utente</value>
+  </data>
+  <data name="ShippingCap" xml:space="preserve">
+    <value>Cap di spedizione</value>
+  </data>
+  <data name="AdvNoTax2" xml:space="preserve">
+    <value>Oppure se vuoi continuare lo stesso ad avere un guadagno, aprire la partita iva e &lt;b&gt;aumentare i tuoi guadagni&lt;/b&gt; senza pagare ulteriori tasse, tutto legalmente.</value>
+  </data>
+  <data name="AdvNoTax1" xml:space="preserve">
+    <value>Puoi realizzare la tua attività senza &lt;b&gt;crearti una partita iva e senza pagare tasse&lt;/b&gt;!</value>
+  </data>
+  <data name="TypePurchase" xml:space="preserve">
+    <value>Tipo Acquisto</value>
+  </data>
+  <data name="GoToStep2" xml:space="preserve">
+    <value>Avanti</value>
+  </data>
+  <data name="AdvModes2" xml:space="preserve">
+    <value>&lt;b&gt;Baratto con oggetti o servizi&lt;/b&gt;, o anche aggiungendo dei G-Points in cambio.</value>
+  </data>
+  <data name="AdvModes3" xml:space="preserve">
+    <value>&lt;b&gt;Regalo&lt;/b&gt;, quindi con la possibilità di cedere senza scambio di alcun tipo un servizio o un oggetto (A sorpresa dopo tot. regali l’utente potrà ricevere un bonus di G-Points).</value>
+  </data>
+  <data name="AdvModes1" xml:space="preserve">
+    <value>Punti acquisiti vendendo, offrendo servizi o tramite portali esterni certificati.</value>
+  </data>
+  <data name="StateObject" xml:space="preserve">
+    <value>Stato oggetto</value>
+  </data>
+  <data name="Whatever" xml:space="preserve">
+    <value>Qualunque</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Conferma password</value>
+  </data>
+  <data name="InfoPurchaseCompleted" xml:space="preserve">
+    <value>Sono stati &lt;b&gt;sospesi {0}&lt;/b&gt; per l'acquisto &lt;b&gt;"{1}"&lt;/b&gt;.&lt;br /&gt;Potrai confermare il pagamento dalla pagina &lt;b&gt;{2}&lt;/b&gt;</value>
+  </data>
+  <data name="MoreSecurityPurchaseCompleted" xml:space="preserve">
+    <value>Per una &lt;b&gt;maggior sicurezza&lt;/b&gt;, ti consigliamo di &lt;b&gt;pagare a scambio concluso&lt;/b&gt;!</value>
+  </data>
+  <data name="AcceptConditions" xml:space="preserve">
+    <value>Accetto le &lt;a class="condizioni" href="/Home/Privacy" title="Accetto le condizioni sulla privacy" target="_blank"&gt;condizioni sulla privacy&lt;/a&gt;</value>
+  </data>
+  <data name="ErrorMinBarters" xml:space="preserve">
+    <value>Inserire almeno un oggetto!</value>
+  </data>
+  <data name="FreeTax" xml:space="preserve">
+    <value>Nessuna tassa</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Modifica</value>
+  </data>
+  <data name="Feed" xml:space="preserve">
+    <value>Alimentazione</value>
+  </data>
+  <data name="Find" xml:space="preserve">
+    <value>Cerca</value>
+  </data>
+  <data name="Gift" xml:space="preserve">
+    <value>Regalo</value>
+  </data>
+  <data name="Cart" xml:space="preserve">
+    <value>Carrello</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Città</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Kind" xml:space="preserve">
+    <value>Genere</value>
+  </data>
+  <data name="High" xml:space="preserve">
+    <value>Altezza</value>
+  </data>
+  <data name="Test" xml:space="preserve">
+    <value>Test</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Salva</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Taglia</value>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>Pagina</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Anno</value>
+  </data>
+  <data name="TitlePublication" xml:space="preserve">
+    <value>Pubblicazione Beni / Servizi</value>
+  </data>
+  <data name="InSuspense" xml:space="preserve">
+    <value>In sospeso</value>
+  </data>
+  <data name="OrdersCompleted" xml:space="preserve">
+    <value>Ordini completati</value>
+  </data>
+  <data name="ErrorMaxUpload" xml:space="preserve">
+    <value>Numero upload non consentito!</value>
+  </data>
+  <data name="ErrorFormatFile" xml:space="preserve">
+    <value>Formato file non consentito</value>
+  </data>
+  <data name="TextTooLong" xml:space="preserve">
+    <value>Testo troppo lungo</value>
+  </data>
+  <data name="ErrorQuantity" xml:space="preserve">
+    <value>Quantità errata</value>
+  </data>
+  <data name="ErrorRange" xml:space="preserve">
+    <value>{0} dev'essere un numero tra {1} e {2}.</value>
+  </data>
+  <data name="BusinessHour" xml:space="preserve">
+    <value>Feriale</value>
+  </data>
+  <data name="DescriptionPubblicationService" xml:space="preserve">
+    <value>Metti in gioco le tue esperienze, il tuo sapere e le tue passioni e guadagna nuovi g-points da spendere.</value>
+  </data>
+  <data name="HolidaysHour" xml:space="preserve">
+    <value>Festivo</value>
+  </data>
+  <data name="NameService" xml:space="preserve">
+    <value>Nome servizio</value>
+  </data>
+  <data name="ResidenceCity" xml:space="preserve">
+    <value>Città di residenza</value>
+  </data>
+  <data name="ShippingCity" xml:space="preserve">
+    <value>Città di spedizione</value>
+  </data>
+  <data name="ErrorTermsAndConditions" xml:space="preserve">
+    <value>Accettare prima le condizioni</value>
+  </data>
+  <data name="RegistrazioneOK" xml:space="preserve">
+    <value>Registrazione effettuata con successo. Accedi alla tua casella di posta, ti è stata inviata una mail per confermare l'iscrizione!</value>
+  </data>
+  <data name="SaveOK" xml:space="preserve">
+    <value>Dati salvati correttamente!</value>
+  </data>
+  <data name="Power" xml:space="preserve">
+    <value>Alimentazione</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>Giorni</value>
+  </data>
+  <data name="ConfirmWait" xml:space="preserve">
+    <value>Sono stati sospesi {0} per l'acquisto "{1}".&lt;br /&gt;Potrai &lt;b&gt;contattare il venditore&lt;/b&gt; e verificare anche lo stato dell'offerta alla pagina {2}.</value>
+  </data>
+  <data name="InfoBidCompleted" xml:space="preserve">
+    <value>Hai barattato anche</value>
+  </data>
+  <data name="Moneta" xml:space="preserve">
+    <value>Happy-Coin</value>
+  </data>
+  <data name="TitleBidCompleted" xml:space="preserve">
+    <value>Offerta inviata con successo!</value>
+  </data>
+  <data name="GoBackOnSite" xml:space="preserve">
+    <value>Ci auguriamo che ti sia trovato/a bene con noi e che il servizio sia stato di tuo gradimento! =)</value>
+  </data>
+  <data name="StateSelling" xml:space="preserve">
+    <value>Stato vendita</value>
+  </data>
+  <data name="ErrorSailing" xml:space="preserve">
+    <value>Errore stato vendita</value>
+  </data>
+  <data name="Sales" xml:space="preserve">
+    <value>Vendite</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Cerca</value>
+  </data>
+  <data name="ConfirmPubblicationService" xml:space="preserve">
+    <value>Il servizio è stato pubblicato con successo. Potrai vederlo nella lista servizi, sulla pagina delle offerte effettuate.</value>
+  </data>
+  <data name="DescriptionPubblicationServiceConfirmed" xml:space="preserve">
+    <value>Servizio pubblicato</value>
+  </data>
+  <data name="ErrorAcceptBid" xml:space="preserve">
+    <value>Impossibile accettare l'offerta!</value>
+  </data>
+  <data name="ErrorRefuseBid" xml:space="preserve">
+    <value>Impossibile rifiutare l'offerta!</value>
+  </data>
+  <data name="AcceptedBid" xml:space="preserve">
+    <value>Offerta accettata! Ora puoi concordare come effettuare lo scambio e ricevere il pagamento.</value>
+  </data>
+  <data name="RefusedBid" xml:space="preserve">
+    <value>Offerta rifiutata! Riceverai presto una nuova offerta.</value>
+  </data>
+  <data name="StateBid" xml:space="preserve">
+    <value>Stato offerta</value>
+  </data>
+  <data name="StateAccept" xml:space="preserve">
+    <value>Accettato</value>
+  </data>
+  <data name="StateActive" xml:space="preserve">
+    <value>Attivo</value>
+  </data>
+  <data name="StateBidAccepted" xml:space="preserve">
+    <value>Approvata</value>
+  </data>
+  <data name="StateBidActive" xml:space="preserve">
+    <value>In attesa di approvazione</value>
+  </data>
+  <data name="StateBidDelete" xml:space="preserve">
+    <value>Rifiutata</value>
+  </data>
+  <data name="StateBidInactive" xml:space="preserve">
+    <value>Inattiva</value>
+  </data>
+  <data name="StateBidPause" xml:space="preserve">
+    <value>In sospeso</value>
+  </data>
+  <data name="StateCancel" xml:space="preserve">
+    <value>Annullato</value>
+  </data>
+  <data name="StateDelete" xml:space="preserve">
+    <value>Eliminato</value>
+  </data>
+  <data name="StateInactive" xml:space="preserve">
+    <value>Inattivo</value>
+  </data>
+  <data name="StatePause" xml:space="preserve">
+    <value>Sospeso</value>
+  </data>
+  <data name="StateSellActive" xml:space="preserve">
+    <value>In corso</value>
+  </data>
+  <data name="StateSellBarter" xml:space="preserve">
+    <value>Baratto concluso</value>
+  </data>
+  <data name="StateSellDelete" xml:space="preserve">
+    <value>Eliminata</value>
+  </data>
+  <data name="StateSellInactive" xml:space="preserve">
+    <value>Inattiva</value>
+  </data>
+  <data name="StateSellPause" xml:space="preserve">
+    <value>In attesa di pagamento</value>
+  </data>
+  <data name="StateSellProgressBarter" xml:space="preserve">
+    <value>Baratto in corso</value>
+  </data>
+  <data name="StateSellSold" xml:space="preserve">
+    <value>Conclusa</value>
+  </data>
+  <data name="Offers" xml:space="preserve">
+    <value>Offerte</value>
+  </data>
+  <data name="TitlePrivacy" xml:space="preserve">
+    <value>Condizioni privacy utente</value>
+  </data>
+  <data name="ErrorPaymentLogin" xml:space="preserve">
+    <value>Non puoi accedere con la stessa mail a cui effettuare il pagamento. Mail a cui pagare:</value>
+  </data>
+  <data name="LoginAndBuy" xml:space="preserve">
+    <value>Accedi / Compra</value>
+  </data>
+  <data name="TitleError" xml:space="preserve">
+    <value>Errore inatteso</value>
+  </data>
+  <data name="DescriptionAccessDenied" xml:space="preserve">
+    <value>Accesso negato alla pagina da te richiesta</value>
+  </data>
+  <data name="TitleAccessDenied" xml:space="preserve">
+    <value>Accesso negato</value>
+  </data>
+  <data name="Attachment" xml:space="preserve">
+    <value>Allegato</value>
+  </data>
+  <data name="MailObject" xml:space="preserve">
+    <value>Oggetto</value>
+  </data>
+  <data name="Text" xml:space="preserve">
+    <value>Testo</value>
+  </data>
+  <data name="ActivatedUser" xml:space="preserve">
+    <value>L'utente è stato &lt;strong&gt;attivato con successo con {0} di partenza!&lt;/strong&gt; Ora potrai accedere al portale e ottenere ulteriori &lt;strong&gt;{1}&lt;/strong&gt; se pubblicherai 4 vendite di tipo categoria differente. Inizia a far parte del circuito che &lt;strong&gt;cambierà il tuo modo di commerciare!&lt;/strong&gt;</value>
+  </data>
+  <data name="ErrorActiveUser1" xml:space="preserve">
+    <value>L'utente &lt;strong&gt;non esiste più&lt;/strong&gt; o non è mai stato presente. Verificare di aver inserito il link correttamente.</value>
+  </data>
+  <data name="ErrorActiveUser2" xml:space="preserve">
+    <value>Errore attivazione utente. L'utente potrebbe &lt;strong&gt;essere già attivo&lt;/strong&gt;, si prega di &lt;strong&gt;verificare l'accesso&lt;/strong&gt; prima di ritentare la conferma dell'attivazione.</value>
+  </data>
+  <data name="TitleActivatedUser" xml:space="preserve">
+    <value>Iscrizione utente</value>
+  </data>
+  <data name="ErrorRemoveUser1" xml:space="preserve">
+    <value>L'utente &lt;strong&gt;non esiste più&lt;/strong&gt; o non è mai stato presente. Verificare di aver inserito il link correttamente.</value>
+  </data>
+  <data name="ErrorRemoveUser2" xml:space="preserve">
+    <value>Errore disattivazione utente. L'utente potrebbe &lt;strong&gt;essere già stato disattivato&lt;/strong&gt;, si prega di &lt;strong&gt;verificare l'accesso&lt;/strong&gt; prima di ritentare ancora la disiscrizione. Nel caso il problema persista, contattare l'assistenza.</value>
+  </data>
+  <data name="RemoveUser" xml:space="preserve">
+    <value>L'utente è stato &lt;strong&gt;eliminato con successo!&lt;/strong&gt;&lt;br /&gt; &lt;strong&gt;Ci spiace&lt;/strong&gt; che tu abbia deciso di non continuare l'esperienza nella realtà che &lt;strong&gt;abbiamo realizzato per te&lt;/strong&gt;. I tuoi dati rimarrano &lt;strong&gt;salvati per un anno&lt;/strong&gt;, dopo il quale saranno cancellati definitivamente dai nostri database.</value>
+  </data>
+  <data name="TitleRemoveUser" xml:space="preserve">
+    <value>Eliminazione utente</value>
+  </data>
+  <data name="ErrorNotPartner" xml:space="preserve">
+    <value>Il sito non è configurato nei nostri database.</value>
+  </data>
+  <data name="ErrorNotUser" xml:space="preserve">
+    <value>L'utente non risulta registrato.</value>
+  </data>
+  <data name="ErrorPaymentUser" xml:space="preserve">
+    <value>Stai eseguendo un pagamento al seguente utente: {0}, non puoi accedere con la stessa mail.</value>
+  </data>
+  <data name="ErrorSendForgotPassword" xml:space="preserve">
+    <value>Errore durante l'invio della nuova password</value>
+  </data>
+  <data name="ErrorForgotPassword" xml:space="preserve">
+    <value>Email inesistente o profilo non attivo</value>
+  </data>
+  <data name="AnswerEmail" xml:space="preserve">
+    <value>Email (per essere eventualmente ricontattati)</value>
+  </data>
+  <data name="Reporting" xml:space="preserve">
+    <value>Segnalazione</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Invia</value>
+  </data>
+  <data name="Stamp" xml:space="preserve">
+    <value>Salva immagine schermata</value>
+  </data>
+  <data name="Tipology" xml:space="preserve">
+    <value>Tipologia</value>
+  </data>
+  <data name="Bug" xml:space="preserve">
+    <value>Bug</value>
+  </data>
+  <data name="Improvement" xml:space="preserve">
+    <value>Suggerimento</value>
+  </data>
+  <data name="ErrorReporting" xml:space="preserve">
+    <value>Errore durante il salvataggio della segnalazione!</value>
+  </data>
+  <data name="SuccessReporting" xml:space="preserve">
+    <value>Segnalazione inviata con successo!</value>
+  </data>
+  <data name="SendPasswordOk" xml:space="preserve">
+    <value>Password spedita via e-mail. Controlla la tua posta elettronica per recuperarla. (In caso non venga visualizzata tra la posta in arrivo, controlla anche la cartella dello spam / posta indesiderata)</value>
+  </data>
+  <data name="Sold" xml:space="preserve">
+    <value>Venduto</value>
+  </data>
+  <data name="CompletedPurchase" xml:space="preserve">
+    <value>Acquisto concluso</value>
+  </data>
+  <data name="TitleBarter" xml:space="preserve">
+    <value>Baratta oggetti, baratta servizi comodamente da casa tua!</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Utente</value>
+  </data>
+  <data name="Domain" xml:space="preserve">
+    <value>Indirizzo web</value>
+  </data>
+  <data name="Subscription" xml:space="preserve">
+    <value>Abbonamento</value>
+  </data>
+  <data name="TitltePartnerSettings" xml:space="preserve">
+    <value>Impostazioni sito web</value>
+  </data>
+  <data name="DescriptionPartnerProfile" xml:space="preserve">
+    <value>Da questa sezione puoi impostare le informazioni del sito web e puoi verificare le statistiche, come quelle sui bonus a disposizione.</value>
+  </data>
+  <data name="TitlePartnerHome" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="TitlePartnerProfile" xml:space="preserve">
+    <value>Sito Web</value>
+  </data>
+  <data name="ModePublication" xml:space="preserve">
+    <value>Pubblica come</value>
+  </data>
+  <data name="DateSubscription" xml:space="preserve">
+    <value>Data iscrizione</value>
+  </data>
+  <data name="BonusForUser" xml:space="preserve">
+    <value>Bonus per utente</value>
+  </data>
+  <data name="DurationSubscription" xml:space="preserve">
+    <value>Durata abbonamento</value>
+  </data>
+  <data name="RoleUser" xml:space="preserve">
+    <value>Ruolo utente</value>
+  </data>
+  <data name="BonusNow" xml:space="preserve">
+    <value>Bonus totale</value>
+  </data>
+  <data name="BonusUsed" xml:space="preserve">
+    <value>Bonus usato (nell'anno)</value>
+  </data>
+  <data name="DateEndSubscription" xml:space="preserve">
+    <value>Scadenza</value>
+  </data>
+  <data name="Unlimited" xml:space="preserve">
+    <value>Illimitato</value>
+  </data>
+  <data name="Private" xml:space="preserve">
+    <value>Privato</value>
+  </data>
+  <data name="DescriptionFeedback" xml:space="preserve">
+    <value>Inserisci un feedback per il pagamento. Ricorda prima di parlare con la controparte se hai intenzione di inserire un feedback negativo. Una volta salvata la tua opinione, non potrai più modificarla.</value>
+  </data>
+  <data name="ErrorFeedback" xml:space="preserve">
+    <value>Errore durante il salvataggio del voto</value>
+  </data>
+  <data name="SavedFeedback" xml:space="preserve">
+    <value>Feedback salvato con successo</value>
+  </data>
+  <data name="SeeFeedback" xml:space="preserve">
+    <value>Vedi / Inserisci feedback</value>
+  </data>
+  <data name="TitleFeedback" xml:space="preserve">
+    <value>Feedback pagamento</value>
+  </data>
+  <data name="DescriptionSendFeedback" xml:space="preserve">
+    <value>Il feedback all'utente &lt;strong&gt;{0}&lt;/strong&gt; è stato inviato. &lt;br/&gt; Ti ringraziamo per la tua disponibilità nel valutare l'utente e per questo ti abbiamo regalato &lt;strong&gt;{1}&lt;/strong&gt;.</value>
+  </data>
+  <data name="FeedbackComment" xml:space="preserve">
+    <value>Opinione aggiuntiva</value>
+  </data>
+  <data name="FeedbackDate" xml:space="preserve">
+    <value>Data invio</value>
+  </data>
+  <data name="FeedbackVote" xml:space="preserve">
+    <value>Voto</value>
+  </data>
+  <data name="GoToFeedback" xml:space="preserve">
+    <value>Votazione pagamento</value>
+  </data>
+  <data name="PaymentName" xml:space="preserve">
+    <value>Pagamento</value>
+  </data>
+  <data name="TitleSendFeedback" xml:space="preserve">
+    <value>Feedback Inviato</value>
+  </data>
+  <data name="Rate" xml:space="preserve">
+    <value>Tariffa</value>
+  </data>
+  <data name="CompleteService" xml:space="preserve">
+    <value>Servizio completo</value>
+  </data>
+  <data name="DailyRate" xml:space="preserve">
+    <value>Giornaliera</value>
+  </data>
+  <data name="HourlyRate" xml:space="preserve">
+    <value>Oraria</value>
+  </data>
+  <data name="MounthlyRate" xml:space="preserve">
+    <value>Mensile</value>
+  </data>
+  <data name="ConfirmPurchase" xml:space="preserve">
+    <value>In acquisto</value>
+  </data>
+  <data name="OnSale" xml:space="preserve">
+    <value>In vendita</value>
+  </data>
+  <data name="PaymentHistory" xml:space="preserve">
+    <value>Pagamenti conclusi</value>
+  </data>
+  <data name="PublicationObjects" xml:space="preserve">
+    <value>Pubblica oggetti</value>
+  </data>
+  <data name="PublicationServices" xml:space="preserve">
+    <value>Pubblica servizi</value>
+  </data>
+  <data name="PageGratis" xml:space="preserve">
+    <value>Gratis</value>
+  </data>
+  <data name="Siteweb" xml:space="preserve">
+    <value>Siti interessanti</value>
+  </data>
+  <data name="InputSearch" xml:space="preserve">
+    <value>Cosa desideri?</value>
+  </data>
+  <data name="SearchSave" xml:space="preserve">
+    <value>Ti avviserà appena verrà pubblicato l'oggetto o il servizio che stai cercando</value>
+  </data>
+  <data name="SearchSubmit" xml:space="preserve">
+    <value>Avvia la ricerca</value>
+  </data>
+  <data name="SearchTooltipKidSale" xml:space="preserve">
+    <value>Seleziona il tipo di ricerca e poi clicca invio</value>
+  </data>
+  <data name="DescriptionSearchDelete" xml:space="preserve">
+    <value>La tua ricerca è stata annullata come richiesto</value>
+  </data>
+  <data name="DescriptionSearchRegister" xml:space="preserve">
+    <value>Inserendo la tua mail, avrai la possibilità di essere avvertito, quando il bene o il servizio da te cercato verrà messo in vendita.&lt;br /&gt;Approfitta di questa nuova funzionalità, che ti permetterà comodamente, di risparmiare tempo prezioso per la tua vita.</value>
+  </data>
+  <data name="DescriptionSearchSave" xml:space="preserve">
+    <value>La tua ricerca è stata salvata con successo! Potrai annullare la ricerca dal link presente nelle mail di notifica che riceverai oppure, se possiedi un profilo d'accesso, direttamente dalla tua area privata.</value>
+  </data>
+  <data name="ErrorSearchDelete" xml:space="preserve">
+    <value>Eliminazione ricerca già avvenuta</value>
+  </data>
+  <data name="ErrorSearchRegister" xml:space="preserve">
+    <value>Errore durante la registrazione, contattare l'assistenza</value>
+  </data>
+  <data name="TitleSearchDelete" xml:space="preserve">
+    <value>Ricerca annullata</value>
+  </data>
+  <data name="TitleSearchRegister" xml:space="preserve">
+    <value>Registrazione rapida</value>
+  </data>
+  <data name="TitleSearchSave" xml:space="preserve">
+    <value>Ricerca salvata</value>
+  </data>
+  <data name="ErrorRegister" xml:space="preserve">
+    <value>L'email già presente a database. Cambiare indirizzo di registrazione o richiedere il recupera password.</value>
+  </data>
+  <data name="PagePrivacy" xml:space="preserve">
+    <value>Privacy</value>
+  </data>
+  <data name="PageSell" xml:space="preserve">
+    <value>Vendita</value>
+  </data>
+  <data name="ErrorRangeVote" xml:space="preserve">
+    <value>Il voto dev'essere tra 0 e 10</value>
+  </data>
+  <data name="ErrorRangeOpinion" xml:space="preserve">
+    <value>Inserire massimo 8000 caratteri</value>
+  </data>
+  <data name="CancelBarter" xml:space="preserve">
+    <value>Annulla baratto in corso</value>
+  </data>
+  <data name="DeleteSell" xml:space="preserve">
+    <value>Elimina vendita</value>
+  </data>
+  <data name="TitleWhySite" xml:space="preserve">
+    <value>Perchè {0}</value>
+  </data>
+  <data name="Purchase" xml:space="preserve">
+    <value>Acquisto</value>
+  </data>
+  <data name="TitleExtraServices" xml:space="preserve">
+    <value>Servizi supplementari</value>
+  </data>
+  <data name="TitleGuideSecurity" xml:space="preserve">
+    <value>Guida alla sicurezza</value>
+  </data>
+  <data name="TitleHowWork" xml:space="preserve">
+    <value>Come funziona</value>
+  </data>
+  <data name="TitleShipment" xml:space="preserve">
+    <value>Spedizione</value>
+  </data>
+  <data name="ErrorCancelBarter" xml:space="preserve">
+    <value>Errore annullando il baratto</value>
+  </data>
+  <data name="ErrorCancelSell" xml:space="preserve">
+    <value>Errore eliminazione vendita</value>
+  </data>
+  <data name="StateCanceledBarter" xml:space="preserve">
+    <value>Baratto annullato</value>
+  </data>
+  <data name="Note" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="MexSearchSave" xml:space="preserve">
+    <value>Salva categoria e nome della ricerca!</value>
+  </data>
+  <data name="Moneta2" xml:space="preserve">
+    <value>Happy</value>
+  </data>
+  <data name="ErrorObjectPublish" xml:space="preserve">
+    <value>Errore di sistema nel pubblicare l'oggetto. Segnalarlo al sito web.</value>
+  </data>
+  <data name="ErrorServicePublish" xml:space="preserve">
+    <value>Errore di sistema nel pubblicare il servizio. Segnalarlo al sito web.</value>
+  </data>
+  <data name="ErrorPublish" xml:space="preserve">
+    <value>Errore grave sulla pubblicazione. Avvertire il supporto tecnico!</value>
+  </data>
+  <data name="ErrorTimeOutSessionPublish" xml:space="preserve">
+    <value>Sessione scaduta! Rifare la procedura di pubblicazione.</value>
+  </data>
+  <data name="ErrorRequiredCategory" xml:space="preserve">
+    <value>Categoria obbligatoria</value>
+  </data>
+  <data name="ErrorCancelUpload" xml:space="preserve">
+    <value>File non trovato!</value>
+  </data>
+  <data name="Moneta3" xml:space="preserve">
+    <value>HC</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Prezzo</value>
+  </data>
+  <data name="TitleSearch" xml:space="preserve">
+    <value>Ricerca in {0} ({1} annunci trovati)</value>
+  </data>
+  <data name="TitleSearchGeneric" xml:space="preserve">
+    <value>Ricerca generica ({0} annunci trovati)</value>
+  </data>
+  <data name="MenuSearchSaved" xml:space="preserve">
+    <value>Ricerche salvate</value>
+  </data>
+  <data name="LastDate" xml:space="preserve">
+    <value>Ultima modifica</value>
+  </data>
+  <data name="LnkTransfer" xml:space="preserve">
+    <value>Bonifico istantaneo</value>
+  </data>
+  <data name="StateMoneyActive" xml:space="preserve">
+    <value>Attiva</value>
+  </data>
+  <data name="StateMoneyAssigned" xml:space="preserve">
+    <value>Assegnata</value>
+  </data>
+  <data name="StateMoneyDelete" xml:space="preserve">
+    <value>Eliminata</value>
+  </data>
+  <data name="StateMoneyInactive" xml:space="preserve">
+    <value>Inattiva</value>
+  </data>
+  <data name="StateMoneyPause" xml:space="preserve">
+    <value>Sospesa</value>
+  </data>
+  <data name="ErrorRequiredField" xml:space="preserve">
+    <value>Campo obbligatorio</value>
+  </data>
+  <data name="LnkNegotationSuggested" xml:space="preserve">
+    <value>Suggerite automaticamente</value>
+  </data>
+  <data name="LnkOwn" xml:space="preserve">
+    <value>Possiedo</value>
+  </data>
+  <data name="LnkPayments" xml:space="preserve">
+    <value>Pagamenti</value>
+  </data>
+  <data name="LnkPaymentsHistory" xml:space="preserve">
+    <value>Storico</value>
+  </data>
+  <data name="LnkWouldWant" xml:space="preserve">
+    <value>Vorrei</value>
+  </data>
+  <data name="TransactionOK" xml:space="preserve">
+    <value>La tua transazione è avvenuta con successo!</value>
+  </data>
+  <data name="ErrorRecoveryPoints" xml:space="preserve">
+    <value>Errore recupero crediti</value>
+  </data>
+  <data name="Feedback" xml:space="preserve">
+    <value>Feedback</value>
+  </data>
+  <data name="FeedbackNothing" xml:space="preserve">
+    <value>Nessun feedback</value>
+  </data>
+  <data name="FeedbackUser" xml:space="preserve">
+    <value>Affidabilità venditore</value>
+  </data>
+</root>
