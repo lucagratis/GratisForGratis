@@ -182,6 +182,26 @@ namespace GratisForGratis.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ActionResult Team()
+        {
+            ViewBag.Title = App_GlobalResources.MetaTag.TitleSiteWeb;
+            ViewBag.Description = App_GlobalResources.MetaTag.DescriptionSiteWeb;
+            ViewBag.Keywords = App_GlobalResources.MetaTag.KeywordsSiteWeb;
+
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult BandiRicevuti()
+        {
+            ViewBag.Title = App_GlobalResources.MetaTag.TitleSiteWeb;
+            ViewBag.Description = App_GlobalResources.MetaTag.DescriptionSiteWeb;
+            ViewBag.Keywords = App_GlobalResources.MetaTag.KeywordsSiteWeb;
+
+            return View();
+        }
+
         #endregion
 
         #region SERVIZI

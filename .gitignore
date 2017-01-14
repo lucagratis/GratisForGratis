@@ -210,3 +210,6 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
+/GratisForGratis/App_Data/Error
+/GratisForGratis/Scripts/ColorPicker/images
+/GratisForGratis.Tests

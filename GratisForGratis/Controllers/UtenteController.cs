@@ -613,6 +613,75 @@ namespace GratisForGratis.Controllers
             return Json(true);
         }
 
+        [HttpPost]
+        [ValidateAjax]
+        public JsonResult AddToCarrello(int idAnnuncio)
+        {
+            // verifico esistenza annuncio
+            // salvo tra gli acquisti ma nello stato inattivo (poi andare a verificare procedura di acquisto immediato)
+            // lato client riporto nei cookie l'annuncio nel carrello (ogni )
+            return Json(true);
+        }
+
+        [HttpDelete]
+        [ValidateAjax]
+        public JsonResult DeleteFromCarrello(int idAnnuncio)
+        {
+            // verifico esistenza annuncio
+            // salvo tra gli acquisti ma nello stato inattivo (poi andare a verificare procedura di acquisto immediato)
+            // lato client riporto nei cookie l'annuncio nel carrello (ogni )
+            return Json(true);
+        }
+
+        [HttpPost]
+        [ValidateAjax]
+        public JsonResult SaveCarrello(int idAnnuncio)
+        {
+            // da fare solo se l'utente... boh
+            // Aggiungo nel carrello dell'utente gli annunci in lista
+            return Json(true);
+        }
+
+        [HttpPost]
+        [ValidateAjax]
+        public JsonResult AddToPossiedo(int idAnnuncio)
+        {
+            // verifico esistenza annuncio
+            // salvo tra gli acquisti ma nello stato inattivo (poi andare a verificare procedura di acquisto immediato)
+            // lato client riporto nei cookie l'annuncio nel carrello (ogni )
+            return Json(true);
+        }
+
+        [HttpPost]
+        [ValidateAjax]
+        public JsonResult AddToDesidero(int idAnnuncio)
+        {
+            // verifico esistenza annuncio
+            // salvo tra gli acquisti ma nello stato inattivo (poi andare a verificare procedura di acquisto immediato)
+            // lato client riporto nei cookie l'annuncio nel carrello (ogni )
+            return Json(true);
+        }
+
+        [HttpDelete]
+        [ValidateAjax]
+        public JsonResult DeleteFromPossiedo(int idAnnuncio)
+        {
+            // verifico esistenza annuncio
+            // salvo tra gli acquisti ma nello stato inattivo (poi andare a verificare procedura di acquisto immediato)
+            // lato client riporto nei cookie l'annuncio nel carrello (ogni )
+            return Json(true);
+        }
+
+        [HttpDelete]
+        [ValidateAjax]
+        public JsonResult DeleteFromDesidero(int idAnnuncio)
+        {
+            // verifico esistenza annuncio
+            // salvo tra gli acquisti ma nello stato inattivo (poi andare a verificare procedura di acquisto immediato)
+            // lato client riporto nei cookie l'annuncio nel carrello (ogni )
+            return Json(true);
+        }
+
         #region METODI PRIVATI
 
         private bool isValid(string email, string password, ref string errore, ref PERSONA utente)
