@@ -36,6 +36,19 @@
     background-size:contain;
     height: 113px;
     width: 200px;
+    position:relative;
+}
+
+#home .object .left .lblBarter{
+    background-color: red;
+    color: yellow;
+    padding: 4px;
+    border-radius: 4px;
+    font-size: 12px;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
 }
 
 #home .object .feedback{

@@ -2050,6 +2050,15 @@ namespace GratisForGratis.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Solo baratto.
+        /// </summary>
+        public static string LblBarter {
+            get {
+                return ResourceManager.GetString("LblBarter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Lunghezza.
         /// </summary>
         public static string Length {

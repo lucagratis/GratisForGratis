@@ -23,6 +23,10 @@ else
             <div id="Token+@vendita.Token" class="object">
                 <h3 class="title">@vendita.Nome</h3>
                 <div class="left" style="background-image:url('@Url.Content("~/Uploads/Images/" + vendita.Venditore.VenditoreToken + "/" + @vendita.DataInserimento.Value.Year + "/" + "Normal/" + vendita.Foto.FirstOrDefault())')">
+                    @if (vendita.TipoPagamento == TipoPagamento.Baratto)
+                    {
+                        <label class="lblBarter">@Language.LblBarter</label>
+                    }
                 </div>
                 <h5 class="points"><b>@Language.Moneta2 :</b> @vendita.Punti => € @vendita.Soldi</h5>
                 <!--<h5 class="place"><b>@Resources.Language.Place :</b> @vendita.Citta</h5>-->

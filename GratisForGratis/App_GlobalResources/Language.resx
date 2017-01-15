@@ -1491,4 +1491,7 @@
   <data name="FeedbackUser" xml:space="preserve">
     <value>Affidabilità venditore</value>
   </data>
+  <data name="LblBarter" xml:space="preserve">
+    <value>Solo baratto</value>
+  </data>
 </root>
