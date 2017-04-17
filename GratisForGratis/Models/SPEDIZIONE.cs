@@ -12,24 +12,32 @@ namespace GratisForGratis.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class CORRIERE_NAZIONE
+    public partial class SPEDIZIONE
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public CORRIERE_NAZIONE()
+        public SPEDIZIONE()
         {
-            this.SPEDIZIONE = new HashSet<SPEDIZIONE>();
+            this.ANNUNCIO_SPEDIZIONE = new HashSet<ANNUNCIO_SPEDIZIONE>();
         }
     
         public int ID { get; set; }
-        public int ID_CORRIERE { get; set; }
-        public int ID_NAZIONE { get; set; }
+        public int ID_CORRIERE_NAZIONE { get; set; }
+        public string NOME_MITTENTE { get; set; }
+        public string TELEFONO_MITTENTE { get; set; }
+        public string EMAIL_MITTENTE { get; set; }
+        public int ID_INDIRIZZO_MITTENTE { get; set; }
+        public string NOME_DESTINATARIO { get; set; }
+        public string TELEFONO_DESTINATARIO { get; set; }
+        public string EMAIL_DESTINATARIO { get; set; }
+        public Nullable<int> ID_INDIRIZZO_DESTINATARIO { get; set; }
         public System.DateTime DATA_INSERIMENTO { get; set; }
         public Nullable<System.DateTime> DATA_MODIFICA { get; set; }
         public int STATO { get; set; }
     
-        public virtual CORRIERE CORRIERE { get; set; }
-        public virtual NAZIONE NAZIONE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SPEDIZIONE> SPEDIZIONE { get; set; }
+        public virtual ICollection<ANNUNCIO_SPEDIZIONE> ANNUNCIO_SPEDIZIONE { get; set; }
+        public virtual CORRIERE_NAZIONE CORRIERE_NAZIONE { get; set; }
+        public virtual INDIRIZZO INDIRIZZO { get; set; }
+        public virtual INDIRIZZO INDIRIZZO1 { get; set; }
     }
 }

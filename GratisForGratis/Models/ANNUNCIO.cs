@@ -20,12 +20,12 @@ namespace GratisForGratis.Models
             this.ANNUNCIO_CLICK = new HashSet<ANNUNCIO_CLICK>();
             this.ANNUNCIO_FEEDBACK = new HashSet<ANNUNCIO_FEEDBACK>();
             this.ANNUNCIO_FOTO = new HashSet<ANNUNCIO_FOTO>();
-            this.ANNUNCIO_SPEDIZIONE = new HashSet<ANNUNCIO_SPEDIZIONE>();
             this.ANNUNCIO_TAG = new HashSet<ANNUNCIO_TAG>();
             this.ANNUNCIO_VISUALIZZAZIONE = new HashSet<ANNUNCIO_VISUALIZZAZIONE>();
             this.OFFERTA = new HashSet<OFFERTA>();
             this.OFFERTA_BARATTO = new HashSet<OFFERTA_BARATTO>();
             this.TRANSAZIONE = new HashSet<TRANSAZIONE>();
+            this.ANNUNCIO_SPEDIZIONE = new HashSet<ANNUNCIO_SPEDIZIONE>();
         }
     
         public int ID { get; set; }
@@ -57,10 +57,7 @@ namespace GratisForGratis.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ANNUNCIO_FOTO> ANNUNCIO_FOTO { get; set; }
         public virtual OGGETTO OGGETTO { get; set; }
-        public virtual PERSONA PERSONA { get; set; }
         public virtual SERVIZIO SERVIZIO { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ANNUNCIO_SPEDIZIONE> ANNUNCIO_SPEDIZIONE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ANNUNCIO_TAG> ANNUNCIO_TAG { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -71,5 +68,8 @@ namespace GratisForGratis.Models
         public virtual ICollection<OFFERTA_BARATTO> OFFERTA_BARATTO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TRANSAZIONE> TRANSAZIONE { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ANNUNCIO_SPEDIZIONE> ANNUNCIO_SPEDIZIONE { get; set; }
+        public virtual PERSONA PERSONA { get; set; }
     }
 }

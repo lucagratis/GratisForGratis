@@ -17,10 +17,10 @@ namespace GratisForGratis.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public INDIRIZZO()
         {
-            this.ANNUNCIO_SPEDIZIONE = new HashSet<ANNUNCIO_SPEDIZIONE>();
-            this.ANNUNCIO_SPEDIZIONE1 = new HashSet<ANNUNCIO_SPEDIZIONE>();
             this.ATTIVITA_INDIRIZZO = new HashSet<ATTIVITA_INDIRIZZO>();
             this.PERSONA_INDIRIZZO = new HashSet<PERSONA_INDIRIZZO>();
+            this.SPEDIZIONE = new HashSet<SPEDIZIONE>();
+            this.SPEDIZIONE1 = new HashSet<SPEDIZIONE>();
         }
     
         public int ID { get; set; }
@@ -34,13 +34,13 @@ namespace GratisForGratis.Models
         public int STATO { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ANNUNCIO_SPEDIZIONE> ANNUNCIO_SPEDIZIONE { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ANNUNCIO_SPEDIZIONE> ANNUNCIO_SPEDIZIONE1 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ATTIVITA_INDIRIZZO> ATTIVITA_INDIRIZZO { get; set; }
         public virtual COMUNE COMUNE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PERSONA_INDIRIZZO> PERSONA_INDIRIZZO { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SPEDIZIONE> SPEDIZIONE { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SPEDIZIONE> SPEDIZIONE1 { get; set; }
     }
 }

@@ -1,9 +1,13 @@
-﻿using GratisForGratis.DataAnnotations;
+﻿using GratisForGratis.Controllers;
+using GratisForGratis.DataAnnotations;
+using SimpleCrypto;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
+using System.Web.Mvc;
 
 namespace GratisForGratis.Models
 {
@@ -44,7 +48,7 @@ namespace GratisForGratis.Models
         [DataType(DataType.Password)]
         [StringLength(150, MinimumLength = 6)]
         [Display(Name = "ConfirmPassword", ResourceType = typeof(App_GlobalResources.Language))]
-        [Compare("Password", ErrorMessageResourceName = "ErrorComparePassword", ErrorMessageResourceType = typeof(App_GlobalResources.Language))]
+        [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessageResourceName = "ErrorComparePassword", ErrorMessageResourceType = typeof(App_GlobalResources.Language))]
         public string ConfermaPassword { get; set; }
 
         [Required]
@@ -69,6 +73,81 @@ namespace GratisForGratis.Models
         [Range(typeof(bool), "true", "true", ErrorMessageResourceName = "ErrorTermsAndConditions", ErrorMessageResourceType = typeof(App_GlobalResources.Language))]
         [Display(Name = "AcceptConditions", ResourceType = typeof(App_GlobalResources.Language))]
         public bool AccettaCondizioni { get; set; }
+
+    }
+
+    public class UtenteLoginVeloceViewModel
+    {
+        [Required]
+        [DataType(DataType.EmailAddress, ErrorMessageResourceName = "ErrorFormatEmail", ErrorMessageResourceType = typeof(App_GlobalResources.Language))]
+        [StringLength(200, ErrorMessageResourceName = "ErrorLengthEmail", ErrorMessageResourceType = typeof(App_GlobalResources.Language))]
+        public string Email { get; set; }
+
+        [Required]
+        [DataType(DataType.Password)]
+        [StringLength(150, MinimumLength = 6)]
+        public string Password { get; set; }
+
+        [Required]
+        [Display(Name = "StoresUser", ResourceType = typeof(App_GlobalResources.Language))]
+        public bool RicordaLogin { get; set; }
+
+        public string ReturnUrl { get; set; }
+
+        public string ErroreLogin;
+
+        public bool SalvaRegistrazione(ControllerContext controller, DatabaseContext db)
+        {
+            CONTO_CORRENTE conto = db.CONTO_CORRENTE.Create();
+            conto.ID = Guid.NewGuid();
+            conto.TOKEN = Guid.NewGuid();
+            conto.DATA_INSERIMENTO = DateTime.Now;
+            conto.STATO = (int)Stato.ATTIVO;
+            db.CONTO_CORRENTE.Add(conto);
+            db.SaveChanges();
+            PBKDF2 crypto = new PBKDF2();
+            PERSONA persona = db.PERSONA.Create();
+            persona.TOKEN = Guid.NewGuid();
+            persona.TOKEN_PASSWORD = crypto.GenerateSalt(1, 20);
+            persona.PASSWORD = crypto.Compute(this.Password.Trim(), persona.TOKEN_PASSWORD);
+            //persona.NOME = this.Nome.Trim();
+            //persona.COGNOME = this.Cognome.Trim();
+            persona.ID_CONTO_CORRENTE = conto.ID;
+            persona.ID_ABBONAMENTO = db.ABBONAMENTO.SingleOrDefault(item => item.NOME == "BASE").ID;
+            persona.DATA_INSERIMENTO = DateTime.Now;
+            persona.STATO = (int)Stato.INATTIVO;
+            db.PERSONA.Add(persona);
+            if (db.SaveChanges() > 0)
+            {
+                PERSONA_EMAIL personaEmail = db.PERSONA_EMAIL.Create();
+                personaEmail.ID_PERSONA = persona.ID;
+                personaEmail.EMAIL = this.Email.Trim();
+                personaEmail.TIPO = (int)TipoEmail.Registrazione;
+                personaEmail.DATA_INSERIMENTO = DateTime.Now;
+                personaEmail.STATO = (int)Stato.INATTIVO;
+                db.PERSONA_EMAIL.Add(personaEmail);
+
+                if (db.SaveChanges() > 0)
+                {
+                    InvioEmail(controller, persona, personaEmail);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public void InvioEmail(ControllerContext controller, PERSONA persona, PERSONA_EMAIL personaEmail)
+        {
+            EmailModel email = new EmailModel(controller);
+            email.To.Add(new System.Net.Mail.MailAddress(personaEmail.EMAIL, personaEmail.EMAIL));
+            email.Subject = App_GlobalResources.Email.RegistrationSubject + " - " + WebConfigurationManager.AppSettings["nomeSito"];
+            email.Body = "RegistrazioneUtente";
+            email.DatiEmail = new RegistrazioneEmailModel(this)
+            {
+                PasswordCodificata = persona.PASSWORD
+            };
+            new EmailController().SendEmail(email);
+        }
 
     }
 
@@ -158,7 +237,7 @@ namespace GratisForGratis.Models
         [DataType(DataType.Password)]
         [StringLength(150, MinimumLength = 6)]
         [Display(Name = "ConfirmPassword", ResourceType = typeof(App_GlobalResources.Language))]
-        [Compare("Password", ErrorMessageResourceName = "ErrorComparePassword", ErrorMessageResourceType = typeof(App_GlobalResources.Language))]
+        [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessageResourceName = "ErrorComparePassword", ErrorMessageResourceType = typeof(App_GlobalResources.Language))]
         public string ConfermaPassword { get; set; }
 
     }
@@ -170,6 +249,15 @@ namespace GratisForGratis.Models
             foreach (System.Reflection.PropertyInfo propertyInfo in model.GetType().GetProperties())
             {
                 this.GetType().GetProperty(propertyInfo.Name).SetValue(this, propertyInfo.GetValue(model));
+            }
+        }
+
+        public RegistrazioneEmailModel(UtenteLoginVeloceViewModel model)
+        {
+            foreach (System.Reflection.PropertyInfo propertyInfo in model.GetType().GetProperties())
+            {
+                if (this.GetType().GetProperty(propertyInfo.Name)!=null)
+                    this.GetType().GetProperty(propertyInfo.Name).SetValue(this, propertyInfo.GetValue(model));
             }
         }
 

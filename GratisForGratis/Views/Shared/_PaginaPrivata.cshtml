@@ -43,6 +43,24 @@
 
     </script>
     <div id="window">
+        <div id="messaggioPerUtente">
+            
+            @if ((Session["utente"] as PersonaModel).Persona.STATO == (int)Stato.INATTIVO)
+            {
+                <div class="testo">
+                    @Html.Raw(string.Format(Language.MessaggioCompletaRegistrazione, Html.ActionLink(Language.Settings, "Impostazioni", "Utente")))
+                </div>
+            }
+
+            @if ((Session["utente"] as PersonaModel).Email.Where(e => e.TIPO == (int)TipoEmail.Registrazione && e.STATO == (int)Stato.INATTIVO).Count() > 0)
+            {
+                <div class="testo">
+                    @Html.Raw(Language.MessaggioConfermaEmail)
+                    <a class="btn btnReinvio" href="javascript:void(0);" onclick="reinvioEmailRegistrazione();">@Language.BtnResubmission</a>
+                </div>
+            }
+
+        </div>
         <div id="menuMobileOverlay"></div>
         <div id="menuMobile">
             <img class="icona" src="~/Images/icone/menu.svg" alt="Menu" />
@@ -138,7 +156,7 @@
         <ul id="linkLogin">
             <li id="cart" class="dropdown profilo">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                    @(Language.Welcome + " " + ((PersonaModel)Session["utente"]).Persona.NOME + " " + ((PersonaModel)Session["utente"]).Persona.COGNOME) -
+                    @(Language.Welcome + " " + ((PersonaModel)Session["utente"]).NomeVisibile) -
                     <span id="userPoints">@( (Session["utente"] as PersonaModel).ContoCorrente.Count(m => m.STATO == (int)StatoMoneta.ASSEGNATA) + " " + @Language.Points) </span>
                     <img class="ico" src="@Url.Content("~/Images/icone/cart.svg")" alt="@Resources.Language.Cart" title="@Resources.Language.Cart" />
                     <div class="preview"></div>

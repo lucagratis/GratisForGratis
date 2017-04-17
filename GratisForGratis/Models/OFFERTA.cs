@@ -41,8 +41,8 @@ namespace GratisForGratis.Models
         public virtual ICollection<OFFERTA_BARATTO> OFFERTA_BARATTO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OFFERTA_CONTO_CORRENTE_MONETA> OFFERTA_CONTO_CORRENTE_MONETA { get; set; }
-        public virtual PERSONA PERSONA { get; set; }
         public virtual TRANSAZIONE TRANSAZIONE { get; set; }
         public virtual ANNUNCIO ANNUNCIO { get; set; }
+        public virtual PERSONA PERSONA { get; set; }
     }
 }

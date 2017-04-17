@@ -94,14 +94,7 @@
           </Key>
           <Property Name="ID" Type="int" Nullable="false" />
           <Property Name="ID_ANNUNCIO" Type="int" Nullable="false" />
-          <Property Name="ID_CORRIERE_NAZIONE" Type="int" />
-          <Property Name="ID_INDIRIZZO_MITTENTE" Type="int" Nullable="false" />
-          <Property Name="ID_INDIRIZZO_DESTINATARIO" Type="int" Nullable="false" />
-          <Property Name="NOTE" Type="nvarchar" MaxLength="50" />
-          <Property Name="ALTEZZA" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="LARGHEZZA" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="LUNGHEZZA" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="PESO" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_SPEDIZIONE" Type="int" Nullable="false" />
           <Property Name="PREZZO" Type="money" Nullable="false" />
           <Property Name="DATA_INSERIMENTO" Type="datetime" Nullable="false" />
           <Property Name="DATA_MODIFICA" Type="datetime" />
@@ -477,6 +470,18 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
           <Property Name="DATA_MODIFICA" Type="datetime" />
           <Property Name="STATO" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="OGGETTO_APPARTENENZA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_OGGETTO" Type="int" Nullable="false" />
+          <Property Name="ID_PERSONA" Type="int" Nullable="false" />
+          <Property Name="ID_ATTIVITA" Type="int" />
+          <Property Name="TIPO" Type="int" Nullable="false" />
+          <Property Name="DATA_INSERIMENTO" Type="datetime" Nullable="false" />
+          <Property Name="STATO" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="OGGETTO_COMPUTER">
           <Key>
             <PropertyRef Name="ID" />
@@ -606,7 +611,7 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
           <Property Name="TOKEN_PASSWORD" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="FACEBOOK_TOKEN_PERMANENTE" Type="nvarchar" MaxLength="50" />
           <Property Name="FACEBOOK_TOKEN_SESSIONE" Type="nvarchar" MaxLength="50" />
-          <Property Name="NOME" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NOME" Type="nvarchar" MaxLength="50" />
           <Property Name="COGNOME" Type="nvarchar" MaxLength="50" />
           <Property Name="ID_ABBONAMENTO" Type="int" Nullable="false" />
           <Property Name="DATA_INSERIMENTO" Type="datetime" Nullable="false" />
@@ -794,6 +799,24 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
           <Property Name="NOME" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="DESCRIZIONE" Type="nvarchar" MaxLength="1000" />
           <Property Name="ID_CATEGORIA" Type="int" Nullable="false" />
+          <Property Name="DATA_INSERIMENTO" Type="datetime" Nullable="false" />
+          <Property Name="DATA_MODIFICA" Type="datetime" />
+          <Property Name="STATO" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SPEDIZIONE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_CORRIERE_NAZIONE" Type="int" Nullable="false" />
+          <Property Name="NOME_MITTENTE" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TELEFONO_MITTENTE" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="EMAIL_MITTENTE" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ID_INDIRIZZO_MITTENTE" Type="int" Nullable="false" />
+          <Property Name="NOME_DESTINATARIO" Type="nvarchar" MaxLength="50" />
+          <Property Name="TELEFONO_DESTINATARIO" Type="nvarchar" MaxLength="50" />
+          <Property Name="EMAIL_DESTINATARIO" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID_INDIRIZZO_DESTINATARIO" Type="int" />
           <Property Name="DATA_INSERIMENTO" Type="datetime" Nullable="false" />
           <Property Name="DATA_MODIFICA" Type="datetime" />
           <Property Name="STATO" Type="int" Nullable="false" />
@@ -1011,39 +1034,15 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ANNUNCIO_SPEDIZIONE_CORRIERE_NAZIONE">
-          <End Role="CORRIERE_NAZIONE" Type="Self.CORRIERE_NAZIONE" Multiplicity="0..1" />
+        <Association Name="FK_ANNUNCIO_SPEDIZIONE_SPEDIZIONE">
+          <End Role="SPEDIZIONE" Type="Self.SPEDIZIONE" Multiplicity="1" />
           <End Role="ANNUNCIO_SPEDIZIONE" Type="Self.ANNUNCIO_SPEDIZIONE" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="CORRIERE_NAZIONE">
+            <Principal Role="SPEDIZIONE">
               <PropertyRef Name="ID" />
             </Principal>
             <Dependent Role="ANNUNCIO_SPEDIZIONE">
-              <PropertyRef Name="ID_CORRIERE_NAZIONE" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ANNUNCIO_SPEDIZIONE_INDIRIZZO">
-          <End Role="INDIRIZZO" Type="Self.INDIRIZZO" Multiplicity="1" />
-          <End Role="ANNUNCIO_SPEDIZIONE" Type="Self.ANNUNCIO_SPEDIZIONE" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="INDIRIZZO">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ANNUNCIO_SPEDIZIONE">
-              <PropertyRef Name="ID_INDIRIZZO_MITTENTE" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ANNUNCIO_SPEDIZIONE_INDIRIZZO1">
-          <End Role="INDIRIZZO" Type="Self.INDIRIZZO" Multiplicity="1" />
-          <End Role="ANNUNCIO_SPEDIZIONE" Type="Self.ANNUNCIO_SPEDIZIONE" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="INDIRIZZO">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ANNUNCIO_SPEDIZIONE">
-              <PropertyRef Name="ID_INDIRIZZO_DESTINATARIO" />
+              <PropertyRef Name="ID_SPEDIZIONE" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1492,6 +1491,42 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
             </Principal>
             <Dependent Role="OFFERTA">
               <PropertyRef Name="ID_TRANSAZIONE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OGGETTO_APPARTENENZA_ATTIVITA">
+          <End Role="ATTIVITA" Type="Self.ATTIVITA" Multiplicity="0..1" />
+          <End Role="OGGETTO_APPARTENENZA" Type="Self.OGGETTO_APPARTENENZA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ATTIVITA">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OGGETTO_APPARTENENZA">
+              <PropertyRef Name="ID_ATTIVITA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OGGETTO_APPARTENENZA_OGGETTO">
+          <End Role="OGGETTO" Type="Self.OGGETTO" Multiplicity="1" />
+          <End Role="OGGETTO_APPARTENENZA" Type="Self.OGGETTO_APPARTENENZA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OGGETTO">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OGGETTO_APPARTENENZA">
+              <PropertyRef Name="ID_OGGETTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OGGETTO_APPARTENENZA_PERSONA">
+          <End Role="PERSONA" Type="Self.PERSONA" Multiplicity="1" />
+          <End Role="OGGETTO_APPARTENENZA" Type="Self.OGGETTO_APPARTENENZA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERSONA">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OGGETTO_APPARTENENZA">
+              <PropertyRef Name="ID_PERSONA" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -2169,6 +2204,42 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_SPEDIZIONE_CORRIERE_NAZIONE">
+          <End Role="CORRIERE_NAZIONE" Type="Self.CORRIERE_NAZIONE" Multiplicity="1" />
+          <End Role="SPEDIZIONE" Type="Self.SPEDIZIONE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CORRIERE_NAZIONE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SPEDIZIONE">
+              <PropertyRef Name="ID_CORRIERE_NAZIONE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SPEDIZIONE_INDIRIZZO">
+          <End Role="INDIRIZZO" Type="Self.INDIRIZZO" Multiplicity="1" />
+          <End Role="SPEDIZIONE" Type="Self.SPEDIZIONE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="INDIRIZZO">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SPEDIZIONE">
+              <PropertyRef Name="ID_INDIRIZZO_MITTENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SPEDIZIONE_INDIRIZZO1">
+          <End Role="INDIRIZZO" Type="Self.INDIRIZZO" Multiplicity="0..1" />
+          <End Role="SPEDIZIONE" Type="Self.SPEDIZIONE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="INDIRIZZO">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SPEDIZIONE">
+              <PropertyRef Name="ID_INDIRIZZO_DESTINATARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_TRANSAZIONE_ANNUNCIO">
           <End Role="ANNUNCIO" Type="Self.ANNUNCIO" Multiplicity="0..1" />
           <End Role="TRANSAZIONE" Type="Self.TRANSAZIONE" Multiplicity="*" />
@@ -2296,6 +2367,7 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
           <EntitySet Name="OFFERTA_BARATTO" EntityType="Self.OFFERTA_BARATTO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OFFERTA_CONTO_CORRENTE_MONETA" EntityType="Self.OFFERTA_CONTO_CORRENTE_MONETA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OGGETTO" EntityType="Self.OGGETTO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OGGETTO_APPARTENENZA" EntityType="Self.OGGETTO_APPARTENENZA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OGGETTO_COMPUTER" EntityType="Self.OGGETTO_COMPUTER" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OGGETTO_CONSOLE" EntityType="Self.OGGETTO_CONSOLE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OGGETTO_ELETTRODOMESTICO" EntityType="Self.OGGETTO_ELETTRODOMESTICO" Schema="dbo" store:Type="Tables" />
@@ -2325,6 +2397,7 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
           <EntitySet Name="REGISTA" EntityType="Self.REGISTA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SERVIZIO" EntityType="Self.SERVIZIO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SISTEMA_OPERATIVO" EntityType="Self.SISTEMA_OPERATIVO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SPEDIZIONE" EntityType="Self.SPEDIZIONE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TRANSAZIONE" EntityType="Self.TRANSAZIONE" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_ALIMENTAZIONE_CATEGORIA" Association="Self.FK_ALIMENTAZIONE_CATEGORIA">
             <End Role="CATEGORIA" EntitySet="CATEGORIA" />
@@ -2390,16 +2463,8 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
             <End Role="ANNUNCIO" EntitySet="ANNUNCIO" />
             <End Role="ANNUNCIO_SPEDIZIONE" EntitySet="ANNUNCIO_SPEDIZIONE" />
           </AssociationSet>
-          <AssociationSet Name="FK_ANNUNCIO_SPEDIZIONE_CORRIERE_NAZIONE" Association="Self.FK_ANNUNCIO_SPEDIZIONE_CORRIERE_NAZIONE">
-            <End Role="CORRIERE_NAZIONE" EntitySet="CORRIERE_NAZIONE" />
-            <End Role="ANNUNCIO_SPEDIZIONE" EntitySet="ANNUNCIO_SPEDIZIONE" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ANNUNCIO_SPEDIZIONE_INDIRIZZO" Association="Self.FK_ANNUNCIO_SPEDIZIONE_INDIRIZZO">
-            <End Role="INDIRIZZO" EntitySet="INDIRIZZO" />
-            <End Role="ANNUNCIO_SPEDIZIONE" EntitySet="ANNUNCIO_SPEDIZIONE" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ANNUNCIO_SPEDIZIONE_INDIRIZZO1" Association="Self.FK_ANNUNCIO_SPEDIZIONE_INDIRIZZO1">
-            <End Role="INDIRIZZO" EntitySet="INDIRIZZO" />
+          <AssociationSet Name="FK_ANNUNCIO_SPEDIZIONE_SPEDIZIONE" Association="Self.FK_ANNUNCIO_SPEDIZIONE_SPEDIZIONE">
+            <End Role="SPEDIZIONE" EntitySet="SPEDIZIONE" />
             <End Role="ANNUNCIO_SPEDIZIONE" EntitySet="ANNUNCIO_SPEDIZIONE" />
           </AssociationSet>
           <AssociationSet Name="FK_ANNUNCIO_TAG_ANNUNCIO" Association="Self.FK_ANNUNCIO_TAG_ANNUNCIO">
@@ -2549,6 +2614,18 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
           <AssociationSet Name="FK_OFFERTA_TRANSAZIONE" Association="Self.FK_OFFERTA_TRANSAZIONE">
             <End Role="TRANSAZIONE" EntitySet="TRANSAZIONE" />
             <End Role="OFFERTA" EntitySet="OFFERTA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OGGETTO_APPARTENENZA_ATTIVITA" Association="Self.FK_OGGETTO_APPARTENENZA_ATTIVITA">
+            <End Role="ATTIVITA" EntitySet="ATTIVITA" />
+            <End Role="OGGETTO_APPARTENENZA" EntitySet="OGGETTO_APPARTENENZA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OGGETTO_APPARTENENZA_OGGETTO" Association="Self.FK_OGGETTO_APPARTENENZA_OGGETTO">
+            <End Role="OGGETTO" EntitySet="OGGETTO" />
+            <End Role="OGGETTO_APPARTENENZA" EntitySet="OGGETTO_APPARTENENZA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OGGETTO_APPARTENENZA_PERSONA" Association="Self.FK_OGGETTO_APPARTENENZA_PERSONA">
+            <End Role="PERSONA" EntitySet="PERSONA" />
+            <End Role="OGGETTO_APPARTENENZA" EntitySet="OGGETTO_APPARTENENZA" />
           </AssociationSet>
           <AssociationSet Name="FK_OGGETTO_CELLULARE_MODELLO" Association="Self.FK_OGGETTO_CELLULARE_MODELLO">
             <End Role="MODELLO" EntitySet="MODELLO" />
@@ -2774,6 +2851,18 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
             <End Role="CATEGORIA" EntitySet="CATEGORIA" />
             <End Role="SISTEMA_OPERATIVO" EntitySet="SISTEMA_OPERATIVO" />
           </AssociationSet>
+          <AssociationSet Name="FK_SPEDIZIONE_CORRIERE_NAZIONE" Association="Self.FK_SPEDIZIONE_CORRIERE_NAZIONE">
+            <End Role="CORRIERE_NAZIONE" EntitySet="CORRIERE_NAZIONE" />
+            <End Role="SPEDIZIONE" EntitySet="SPEDIZIONE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SPEDIZIONE_INDIRIZZO" Association="Self.FK_SPEDIZIONE_INDIRIZZO">
+            <End Role="INDIRIZZO" EntitySet="INDIRIZZO" />
+            <End Role="SPEDIZIONE" EntitySet="SPEDIZIONE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SPEDIZIONE_INDIRIZZO1" Association="Self.FK_SPEDIZIONE_INDIRIZZO1">
+            <End Role="INDIRIZZO" EntitySet="INDIRIZZO" />
+            <End Role="SPEDIZIONE" EntitySet="SPEDIZIONE" />
+          </AssociationSet>
           <AssociationSet Name="FK_TRANSAZIONE_ANNUNCIO" Association="Self.FK_TRANSAZIONE_ANNUNCIO">
             <End Role="ANNUNCIO" EntitySet="ANNUNCIO" />
             <End Role="TRANSAZIONE" EntitySet="TRANSAZIONE" />
@@ -2816,7 +2905,6 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
           <EntitySet Name="ANNUNCIO_CLICK" EntityType="GratisForGratisModel.ANNUNCIO_CLICK" />
           <EntitySet Name="ANNUNCIO_FEEDBACK" EntityType="GratisForGratisModel.ANNUNCIO_FEEDBACK" />
           <EntitySet Name="ANNUNCIO_FOTO" EntityType="GratisForGratisModel.ANNUNCIO_FOTO" />
-          <EntitySet Name="ANNUNCIO_SPEDIZIONE" EntityType="GratisForGratisModel.ANNUNCIO_SPEDIZIONE" />
           <EntitySet Name="ANNUNCIO_TAG" EntityType="GratisForGratisModel.ANNUNCIO_TAG" />
           <EntitySet Name="ANNUNCIO_VISUALIZZAZIONE" EntityType="GratisForGratisModel.ANNUNCIO_VISUALIZZAZIONE" />
           <EntitySet Name="ARTISTA" EntityType="GratisForGratisModel.ARTISTA" />
@@ -2854,7 +2942,6 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
           <EntitySet Name="OGGETTO_VESTITO" EntityType="GratisForGratisModel.OGGETTO_VESTITO" />
           <EntitySet Name="OGGETTO_VIDEO" EntityType="GratisForGratisModel.OGGETTO_VIDEO" />
           <EntitySet Name="OGGETTO_VIDEOGAMES" EntityType="GratisForGratisModel.OGGETTO_VIDEOGAMES" />
-          <EntitySet Name="PERSONA" EntityType="GratisForGratisModel.PERSONA" />
           <EntitySet Name="PERSONA_ATTIVITA" EntityType="GratisForGratisModel.PERSONA_ATTIVITA" />
           <EntitySet Name="PERSONA_EMAIL" EntityType="GratisForGratisModel.PERSONA_EMAIL" />
           <EntitySet Name="PERSONA_FOTO" EntityType="GratisForGratisModel.PERSONA_FOTO" />
@@ -2869,10 +2956,6 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
           <EntitySet Name="REGISTA" EntityType="GratisForGratisModel.REGISTA" />
           <EntitySet Name="SERVIZIO" EntityType="GratisForGratisModel.SERVIZIO" />
           <EntitySet Name="SISTEMA_OPERATIVO" EntityType="GratisForGratisModel.SISTEMA_OPERATIVO" />
-          <AssociationSet Name="FK_PERSONA_ABBONAMENTO" Association="GratisForGratisModel.FK_PERSONA_ABBONAMENTO">
-            <End Role="ABBONAMENTO" EntitySet="ABBONAMENTO" />
-            <End Role="PERSONA" EntitySet="PERSONA" />
-          </AssociationSet>
           <AssociationSet Name="FK_ALIMENTAZIONE_CATEGORIA" Association="GratisForGratisModel.FK_ALIMENTAZIONE_CATEGORIA">
             <End Role="CATEGORIA" EntitySet="CATEGORIA" />
             <End Role="ALIMENTAZIONE" EntitySet="ALIMENTAZIONE" />
@@ -2885,40 +2968,16 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
             <End Role="BROWSER_MODELLO" EntitySet="BROWSER_MODELLO" />
             <End Role="ANNUNCIO_CLICK" EntitySet="ANNUNCIO_CLICK" />
           </AssociationSet>
-          <AssociationSet Name="FK_ANNUNCIO_CLICK_PERSONA" Association="GratisForGratisModel.FK_ANNUNCIO_CLICK_PERSONA">
-            <End Role="PERSONA" EntitySet="PERSONA" />
-            <End Role="ANNUNCIO_CLICK" EntitySet="ANNUNCIO_CLICK" />
-          </AssociationSet>
           <AssociationSet Name="FK_ANNUNCIO_CLICK_SISTEMA_OPERATIVO" Association="GratisForGratisModel.FK_ANNUNCIO_CLICK_SISTEMA_OPERATIVO">
             <End Role="SISTEMA_OPERATIVO" EntitySet="SISTEMA_OPERATIVO" />
             <End Role="ANNUNCIO_CLICK" EntitySet="ANNUNCIO_CLICK" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ANNUNCIO_FEEDBACK_PERSONA" Association="GratisForGratisModel.FK_ANNUNCIO_FEEDBACK_PERSONA">
-            <End Role="PERSONA" EntitySet="PERSONA" />
-            <End Role="ANNUNCIO_FEEDBACK" EntitySet="ANNUNCIO_FEEDBACK" />
           </AssociationSet>
           <AssociationSet Name="FK_ANNUNCIO_FOTO_FOTO" Association="GratisForGratisModel.FK_ANNUNCIO_FOTO_FOTO">
             <End Role="FOTO" EntitySet="FOTO" />
             <End Role="ANNUNCIO_FOTO" EntitySet="ANNUNCIO_FOTO" />
           </AssociationSet>
-          <AssociationSet Name="FK_ANNUNCIO_SPEDIZIONE_CORRIERE_NAZIONE" Association="GratisForGratisModel.FK_ANNUNCIO_SPEDIZIONE_CORRIERE_NAZIONE">
-            <End Role="CORRIERE_NAZIONE" EntitySet="CORRIERE_NAZIONE" />
-            <End Role="ANNUNCIO_SPEDIZIONE" EntitySet="ANNUNCIO_SPEDIZIONE" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ANNUNCIO_SPEDIZIONE_INDIRIZZO" Association="GratisForGratisModel.FK_ANNUNCIO_SPEDIZIONE_INDIRIZZO">
-            <End Role="INDIRIZZO" EntitySet="INDIRIZZO" />
-            <End Role="ANNUNCIO_SPEDIZIONE" EntitySet="ANNUNCIO_SPEDIZIONE" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ANNUNCIO_SPEDIZIONE_INDIRIZZO1" Association="GratisForGratisModel.FK_ANNUNCIO_SPEDIZIONE_INDIRIZZO1">
-            <End Role="INDIRIZZO" EntitySet="INDIRIZZO" />
-            <End Role="ANNUNCIO_SPEDIZIONE" EntitySet="ANNUNCIO_SPEDIZIONE" />
-          </AssociationSet>
           <AssociationSet Name="FK_ANNUNCIO_VISUALIZZAZIONE_MODELLO_BROWSER" Association="GratisForGratisModel.FK_ANNUNCIO_VISUALIZZAZIONE_MODELLO_BROWSER">
             <End Role="BROWSER_MODELLO" EntitySet="BROWSER_MODELLO" />
-            <End Role="ANNUNCIO_VISUALIZZAZIONE" EntitySet="ANNUNCIO_VISUALIZZAZIONE" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ANNUNCIO_VISUALIZZAZIONE_PERSONA" Association="GratisForGratisModel.FK_ANNUNCIO_VISUALIZZAZIONE_PERSONA">
-            <End Role="PERSONA" EntitySet="PERSONA" />
             <End Role="ANNUNCIO_VISUALIZZAZIONE" EntitySet="ANNUNCIO_VISUALIZZAZIONE" />
           </AssociationSet>
           <AssociationSet Name="FK_ANNUNCIO_VISUALIZZAZIONE_SISTEMA_OPERATIVO" Association="GratisForGratisModel.FK_ANNUNCIO_VISUALIZZAZIONE_SISTEMA_OPERATIVO">
@@ -3017,10 +3076,6 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
             <End Role="COMUNE" EntitySet="COMUNE" />
             <End Role="SERVIZIO" EntitySet="SERVIZIO" />
           </AssociationSet>
-          <AssociationSet Name="FK_PERSONA_CONTO_CORRENTE" Association="GratisForGratisModel.FK_PERSONA_CONTO_CORRENTE">
-            <End Role="CONTO_CORRENTE" EntitySet="CONTO_CORRENTE" />
-            <End Role="PERSONA" EntitySet="PERSONA" />
-          </AssociationSet>
           <AssociationSet Name="FK_CORRIERE_NAZIONE_CORRIERE" Association="GratisForGratisModel.FK_CORRIERE_NAZIONE_CORRIERE">
             <End Role="CORRIERE" EntitySet="CORRIERE" />
             <End Role="CORRIERE_NAZIONE" EntitySet="CORRIERE_NAZIONE" />
@@ -3084,38 +3139,6 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
           <AssociationSet Name="FK_OGGETTO_VIDEOGAMES_PIATTAFORMA" Association="GratisForGratisModel.FK_OGGETTO_VIDEOGAMES_PIATTAFORMA">
             <End Role="PIATTAFORMA" EntitySet="PIATTAFORMA" />
             <End Role="OGGETTO_VIDEOGAMES" EntitySet="OGGETTO_VIDEOGAMES" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PERSONA_ATTIVITA_PERSONA" Association="GratisForGratisModel.FK_PERSONA_ATTIVITA_PERSONA">
-            <End Role="PERSONA" EntitySet="PERSONA" />
-            <End Role="PERSONA_ATTIVITA" EntitySet="PERSONA_ATTIVITA" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PERSONA_EMAIL_PERSONA" Association="GratisForGratisModel.FK_PERSONA_EMAIL_PERSONA">
-            <End Role="PERSONA" EntitySet="PERSONA" />
-            <End Role="PERSONA_EMAIL" EntitySet="PERSONA_EMAIL" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PERSONA_FOTO_PERSONA" Association="GratisForGratisModel.FK_PERSONA_FOTO_PERSONA">
-            <End Role="PERSONA" EntitySet="PERSONA" />
-            <End Role="PERSONA_FOTO" EntitySet="PERSONA_FOTO" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PERSONA_INDIRIZZO_PERSONA" Association="GratisForGratisModel.FK_PERSONA_INDIRIZZO_PERSONA">
-            <End Role="PERSONA" EntitySet="PERSONA" />
-            <End Role="PERSONA_INDIRIZZO" EntitySet="PERSONA_INDIRIZZO" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PERSONA_PRIVACY_PERSONA" Association="GratisForGratisModel.FK_PERSONA_PRIVACY_PERSONA">
-            <End Role="PERSONA" EntitySet="PERSONA" />
-            <End Role="PERSONA_PRIVACY" EntitySet="PERSONA_PRIVACY" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PERSONA_RICERCA_PERSONA" Association="GratisForGratisModel.FK_PERSONA_RICERCA_PERSONA">
-            <End Role="PERSONA" EntitySet="PERSONA" />
-            <End Role="PERSONA_RICERCA" EntitySet="PERSONA_RICERCA" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PERSONA_SEGNALAZIONE_PERSONA" Association="GratisForGratisModel.FK_PERSONA_SEGNALAZIONE_PERSONA">
-            <End Role="PERSONA" EntitySet="PERSONA" />
-            <End Role="PERSONA_SEGNALAZIONE" EntitySet="PERSONA_SEGNALAZIONE" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PERSONA_TELEFONO_PERSONA" Association="GratisForGratisModel.FK_PERSONA_TELEFONO_PERSONA">
-            <End Role="PERSONA" EntitySet="PERSONA" />
-            <End Role="PERSONA_TELEFONO" EntitySet="PERSONA_TELEFONO" />
           </AssociationSet>
           <AssociationSet Name="FK_PROVINCIA_REGIONE" Association="GratisForGratisModel.FK_PROVINCIA_REGIONE">
             <End Role="REGIONE" EntitySet="REGIONE" />
@@ -3278,10 +3301,6 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
             <End Role="OFFERTA" EntitySet="OFFERTA" />
             <End Role="OFFERTA_CONTO_CORRENTE_MONETA" EntitySet="OFFERTA_CONTO_CORRENTE_MONETA" />
           </AssociationSet>
-          <AssociationSet Name="FK_OFFERTA_PERSONA" Association="GratisForGratisModel.FK_OFFERTA_PERSONA">
-            <End Role="PERSONA" EntitySet="PERSONA" />
-            <End Role="OFFERTA" EntitySet="OFFERTA" />
-          </AssociationSet>
           <AssociationSet Name="FK_OFFERTA_TRANSAZIONE" Association="GratisForGratisModel.FK_OFFERTA_TRANSAZIONE">
             <End Role="TRANSAZIONE" EntitySet="TRANSAZIONE" />
             <End Role="OFFERTA" EntitySet="OFFERTA" />
@@ -3340,17 +3359,9 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
             <End Role="OGGETTO" EntitySet="OGGETTO" />
             <End Role="ANNUNCIO" EntitySet="ANNUNCIO" />
           </AssociationSet>
-          <AssociationSet Name="FK_ANNUNCIO_PERSONA" Association="GratisForGratisModel.FK_ANNUNCIO_PERSONA">
-            <End Role="PERSONA" EntitySet="PERSONA" />
-            <End Role="ANNUNCIO" EntitySet="ANNUNCIO" />
-          </AssociationSet>
           <AssociationSet Name="FK_ANNUNCIO_SERVIZIO" Association="GratisForGratisModel.FK_ANNUNCIO_SERVIZIO">
             <End Role="SERVIZIO" EntitySet="SERVIZIO" />
             <End Role="ANNUNCIO" EntitySet="ANNUNCIO" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ANNUNCIO_SPEDIZIONE_ANNUNCIO" Association="GratisForGratisModel.FK_ANNUNCIO_SPEDIZIONE_ANNUNCIO">
-            <End Role="ANNUNCIO" EntitySet="ANNUNCIO" />
-            <End Role="ANNUNCIO_SPEDIZIONE" EntitySet="ANNUNCIO_SPEDIZIONE" />
           </AssociationSet>
           <AssociationSet Name="FK_ANNUNCIO_TAG_ANNUNCIO" Association="GratisForGratisModel.FK_ANNUNCIO_TAG_ANNUNCIO">
             <End Role="ANNUNCIO" EntitySet="ANNUNCIO" />
@@ -3371,6 +3382,102 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
           <AssociationSet Name="FK_TRANSAZIONE_ANNUNCIO" Association="GratisForGratisModel.FK_TRANSAZIONE_ANNUNCIO">
             <End Role="ANNUNCIO" EntitySet="ANNUNCIO" />
             <End Role="TRANSAZIONE" EntitySet="TRANSAZIONE" />
+          </AssociationSet>
+          <EntitySet Name="ANNUNCIO_SPEDIZIONE" EntityType="GratisForGratisModel.ANNUNCIO_SPEDIZIONE" />
+          <EntitySet Name="OGGETTO_APPARTENENZA" EntityType="GratisForGratisModel.OGGETTO_APPARTENENZA" />
+          <EntitySet Name="SPEDIZIONE" EntityType="GratisForGratisModel.SPEDIZIONE" />
+          <AssociationSet Name="FK_ANNUNCIO_SPEDIZIONE_ANNUNCIO" Association="GratisForGratisModel.FK_ANNUNCIO_SPEDIZIONE_ANNUNCIO">
+            <End Role="ANNUNCIO" EntitySet="ANNUNCIO" />
+            <End Role="ANNUNCIO_SPEDIZIONE" EntitySet="ANNUNCIO_SPEDIZIONE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ANNUNCIO_SPEDIZIONE_SPEDIZIONE" Association="GratisForGratisModel.FK_ANNUNCIO_SPEDIZIONE_SPEDIZIONE">
+            <End Role="SPEDIZIONE" EntitySet="SPEDIZIONE" />
+            <End Role="ANNUNCIO_SPEDIZIONE" EntitySet="ANNUNCIO_SPEDIZIONE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OGGETTO_APPARTENENZA_ATTIVITA" Association="GratisForGratisModel.FK_OGGETTO_APPARTENENZA_ATTIVITA">
+            <End Role="ATTIVITA" EntitySet="ATTIVITA" />
+            <End Role="OGGETTO_APPARTENENZA" EntitySet="OGGETTO_APPARTENENZA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SPEDIZIONE_CORRIERE_NAZIONE" Association="GratisForGratisModel.FK_SPEDIZIONE_CORRIERE_NAZIONE">
+            <End Role="CORRIERE_NAZIONE" EntitySet="CORRIERE_NAZIONE" />
+            <End Role="SPEDIZIONE" EntitySet="SPEDIZIONE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SPEDIZIONE_INDIRIZZO" Association="GratisForGratisModel.FK_SPEDIZIONE_INDIRIZZO">
+            <End Role="INDIRIZZO" EntitySet="INDIRIZZO" />
+            <End Role="SPEDIZIONE" EntitySet="SPEDIZIONE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SPEDIZIONE_INDIRIZZO1" Association="GratisForGratisModel.FK_SPEDIZIONE_INDIRIZZO1">
+            <End Role="INDIRIZZO" EntitySet="INDIRIZZO" />
+            <End Role="SPEDIZIONE" EntitySet="SPEDIZIONE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OGGETTO_APPARTENENZA_OGGETTO" Association="GratisForGratisModel.FK_OGGETTO_APPARTENENZA_OGGETTO">
+            <End Role="OGGETTO" EntitySet="OGGETTO" />
+            <End Role="OGGETTO_APPARTENENZA" EntitySet="OGGETTO_APPARTENENZA" />
+          </AssociationSet>
+          <EntitySet Name="PERSONA" EntityType="GratisForGratisModel.PERSONA" />
+          <AssociationSet Name="FK_PERSONA_ABBONAMENTO" Association="GratisForGratisModel.FK_PERSONA_ABBONAMENTO">
+            <End Role="ABBONAMENTO" EntitySet="ABBONAMENTO" />
+            <End Role="PERSONA" EntitySet="PERSONA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ANNUNCIO_PERSONA" Association="GratisForGratisModel.FK_ANNUNCIO_PERSONA">
+            <End Role="PERSONA" EntitySet="PERSONA" />
+            <End Role="ANNUNCIO" EntitySet="ANNUNCIO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ANNUNCIO_CLICK_PERSONA" Association="GratisForGratisModel.FK_ANNUNCIO_CLICK_PERSONA">
+            <End Role="PERSONA" EntitySet="PERSONA" />
+            <End Role="ANNUNCIO_CLICK" EntitySet="ANNUNCIO_CLICK" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ANNUNCIO_FEEDBACK_PERSONA" Association="GratisForGratisModel.FK_ANNUNCIO_FEEDBACK_PERSONA">
+            <End Role="PERSONA" EntitySet="PERSONA" />
+            <End Role="ANNUNCIO_FEEDBACK" EntitySet="ANNUNCIO_FEEDBACK" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ANNUNCIO_VISUALIZZAZIONE_PERSONA" Association="GratisForGratisModel.FK_ANNUNCIO_VISUALIZZAZIONE_PERSONA">
+            <End Role="PERSONA" EntitySet="PERSONA" />
+            <End Role="ANNUNCIO_VISUALIZZAZIONE" EntitySet="ANNUNCIO_VISUALIZZAZIONE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PERSONA_CONTO_CORRENTE" Association="GratisForGratisModel.FK_PERSONA_CONTO_CORRENTE">
+            <End Role="CONTO_CORRENTE" EntitySet="CONTO_CORRENTE" />
+            <End Role="PERSONA" EntitySet="PERSONA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OFFERTA_PERSONA" Association="GratisForGratisModel.FK_OFFERTA_PERSONA">
+            <End Role="PERSONA" EntitySet="PERSONA" />
+            <End Role="OFFERTA" EntitySet="OFFERTA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OGGETTO_APPARTENENZA_PERSONA" Association="GratisForGratisModel.FK_OGGETTO_APPARTENENZA_PERSONA">
+            <End Role="PERSONA" EntitySet="PERSONA" />
+            <End Role="OGGETTO_APPARTENENZA" EntitySet="OGGETTO_APPARTENENZA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PERSONA_ATTIVITA_PERSONA" Association="GratisForGratisModel.FK_PERSONA_ATTIVITA_PERSONA">
+            <End Role="PERSONA" EntitySet="PERSONA" />
+            <End Role="PERSONA_ATTIVITA" EntitySet="PERSONA_ATTIVITA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PERSONA_EMAIL_PERSONA" Association="GratisForGratisModel.FK_PERSONA_EMAIL_PERSONA">
+            <End Role="PERSONA" EntitySet="PERSONA" />
+            <End Role="PERSONA_EMAIL" EntitySet="PERSONA_EMAIL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PERSONA_FOTO_PERSONA" Association="GratisForGratisModel.FK_PERSONA_FOTO_PERSONA">
+            <End Role="PERSONA" EntitySet="PERSONA" />
+            <End Role="PERSONA_FOTO" EntitySet="PERSONA_FOTO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PERSONA_INDIRIZZO_PERSONA" Association="GratisForGratisModel.FK_PERSONA_INDIRIZZO_PERSONA">
+            <End Role="PERSONA" EntitySet="PERSONA" />
+            <End Role="PERSONA_INDIRIZZO" EntitySet="PERSONA_INDIRIZZO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PERSONA_PRIVACY_PERSONA" Association="GratisForGratisModel.FK_PERSONA_PRIVACY_PERSONA">
+            <End Role="PERSONA" EntitySet="PERSONA" />
+            <End Role="PERSONA_PRIVACY" EntitySet="PERSONA_PRIVACY" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PERSONA_RICERCA_PERSONA" Association="GratisForGratisModel.FK_PERSONA_RICERCA_PERSONA">
+            <End Role="PERSONA" EntitySet="PERSONA" />
+            <End Role="PERSONA_RICERCA" EntitySet="PERSONA_RICERCA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PERSONA_SEGNALAZIONE_PERSONA" Association="GratisForGratisModel.FK_PERSONA_SEGNALAZIONE_PERSONA">
+            <End Role="PERSONA" EntitySet="PERSONA" />
+            <End Role="PERSONA_SEGNALAZIONE" EntitySet="PERSONA_SEGNALAZIONE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PERSONA_TELEFONO_PERSONA" Association="GratisForGratisModel.FK_PERSONA_TELEFONO_PERSONA">
+            <End Role="PERSONA" EntitySet="PERSONA" />
+            <End Role="PERSONA_TELEFONO" EntitySet="PERSONA_TELEFONO" />
           </AssociationSet>
           </EntityContainer>
         <ComplexType Name="FINDSOTTOCATEGORIE_Result">
@@ -3423,9 +3530,9 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
           <Property Name="DATA_MODIFICA" Type="DateTime" Precision="3" />
           <Property Name="STATO" Type="Int32" Nullable="false" />
           <NavigationProperty Name="BROWSER_MODELLO" Relationship="GratisForGratisModel.FK_ANNUNCIO_CLICK_MODELLO_BROWSER" FromRole="ANNUNCIO_CLICK" ToRole="BROWSER_MODELLO" />
-          <NavigationProperty Name="PERSONA" Relationship="GratisForGratisModel.FK_ANNUNCIO_CLICK_PERSONA" FromRole="ANNUNCIO_CLICK" ToRole="PERSONA" />
           <NavigationProperty Name="SISTEMA_OPERATIVO" Relationship="GratisForGratisModel.FK_ANNUNCIO_CLICK_SISTEMA_OPERATIVO" FromRole="ANNUNCIO_CLICK" ToRole="SISTEMA_OPERATIVO" />
           <NavigationProperty Name="ANNUNCIO" Relationship="GratisForGratisModel.FK_ANNUNCIO_CLICK_ANNUNCIO" FromRole="ANNUNCIO_CLICK" ToRole="ANNUNCIO" />
+          <NavigationProperty Name="PERSONA" Relationship="GratisForGratisModel.FK_ANNUNCIO_CLICK_PERSONA" FromRole="ANNUNCIO_CLICK" ToRole="PERSONA" />
         </EntityType>
         <EntityType Name="ANNUNCIO_FEEDBACK">
           <Key>
@@ -3439,8 +3546,8 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
           <Property Name="DATA_INSERIMENTO" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="DATA_MODIFICA" Type="DateTime" Precision="3" />
           <Property Name="STATO" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="PERSONA" Relationship="GratisForGratisModel.FK_ANNUNCIO_FEEDBACK_PERSONA" FromRole="ANNUNCIO_FEEDBACK" ToRole="PERSONA" />
           <NavigationProperty Name="ANNUNCIO" Relationship="GratisForGratisModel.FK_ANNUNCIO_FEEDBACK_ANNUNCIO" FromRole="ANNUNCIO_FEEDBACK" ToRole="ANNUNCIO" />
+          <NavigationProperty Name="PERSONA" Relationship="GratisForGratisModel.FK_ANNUNCIO_FEEDBACK_PERSONA" FromRole="ANNUNCIO_FEEDBACK" ToRole="PERSONA" />
         </EntityType>
         <EntityType Name="ANNUNCIO_FOTO">
           <Key>
@@ -3454,29 +3561,6 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
           <Property Name="STATO" Type="Int32" Nullable="false" />
           <NavigationProperty Name="FOTO" Relationship="GratisForGratisModel.FK_ANNUNCIO_FOTO_FOTO" FromRole="ANNUNCIO_FOTO" ToRole="FOTO" />
           <NavigationProperty Name="ANNUNCIO" Relationship="GratisForGratisModel.FK_ANNUNCIO_FOTO_ANNUNCIO" FromRole="ANNUNCIO_FOTO" ToRole="ANNUNCIO" />
-        </EntityType>
-        <EntityType Name="ANNUNCIO_SPEDIZIONE">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" />
-          <Property Name="ID_ANNUNCIO" Type="Int32" Nullable="false" />
-          <Property Name="ID_CORRIERE_NAZIONE" Type="Int32" />
-          <Property Name="ID_INDIRIZZO_MITTENTE" Type="Int32" Nullable="false" />
-          <Property Name="ID_INDIRIZZO_DESTINATARIO" Type="Int32" Nullable="false" />
-          <Property Name="NOTE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ALTEZZA" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-          <Property Name="LARGHEZZA" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-          <Property Name="LUNGHEZZA" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-          <Property Name="PESO" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-          <Property Name="PREZZO" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
-          <Property Name="DATA_INSERIMENTO" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="DATA_MODIFICA" Type="DateTime" Precision="3" />
-          <Property Name="STATO" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="CORRIERE_NAZIONE" Relationship="GratisForGratisModel.FK_ANNUNCIO_SPEDIZIONE_CORRIERE_NAZIONE" FromRole="ANNUNCIO_SPEDIZIONE" ToRole="CORRIERE_NAZIONE" />
-          <NavigationProperty Name="INDIRIZZO" Relationship="GratisForGratisModel.FK_ANNUNCIO_SPEDIZIONE_INDIRIZZO" FromRole="ANNUNCIO_SPEDIZIONE" ToRole="INDIRIZZO" />
-          <NavigationProperty Name="INDIRIZZO1" Relationship="GratisForGratisModel.FK_ANNUNCIO_SPEDIZIONE_INDIRIZZO1" FromRole="ANNUNCIO_SPEDIZIONE" ToRole="INDIRIZZO" />
-          <NavigationProperty Name="ANNUNCIO" Relationship="GratisForGratisModel.FK_ANNUNCIO_SPEDIZIONE_ANNUNCIO" FromRole="ANNUNCIO_SPEDIZIONE" ToRole="ANNUNCIO" />
         </EntityType>
         <EntityType Name="ANNUNCIO_TAG">
           <Key>
@@ -3506,9 +3590,9 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
           <Property Name="DATA_MODIFICA" Type="DateTime" Precision="3" />
           <Property Name="STATO" Type="Int32" Nullable="false" />
           <NavigationProperty Name="BROWSER_MODELLO" Relationship="GratisForGratisModel.FK_ANNUNCIO_VISUALIZZAZIONE_MODELLO_BROWSER" FromRole="ANNUNCIO_VISUALIZZAZIONE" ToRole="BROWSER_MODELLO" />
-          <NavigationProperty Name="PERSONA" Relationship="GratisForGratisModel.FK_ANNUNCIO_VISUALIZZAZIONE_PERSONA" FromRole="ANNUNCIO_VISUALIZZAZIONE" ToRole="PERSONA" />
           <NavigationProperty Name="SISTEMA_OPERATIVO" Relationship="GratisForGratisModel.FK_ANNUNCIO_VISUALIZZAZIONE_SISTEMA_OPERATIVO" FromRole="ANNUNCIO_VISUALIZZAZIONE" ToRole="SISTEMA_OPERATIVO" />
           <NavigationProperty Name="ANNUNCIO" Relationship="GratisForGratisModel.FK_ANNUNCIO_VISUALIZZAZIONE_ANNUNCIO" FromRole="ANNUNCIO_VISUALIZZAZIONE" ToRole="ANNUNCIO" />
+          <NavigationProperty Name="PERSONA" Relationship="GratisForGratisModel.FK_ANNUNCIO_VISUALIZZAZIONE_PERSONA" FromRole="ANNUNCIO_VISUALIZZAZIONE" ToRole="PERSONA" />
         </EntityType>
         <EntityType Name="ARTISTA">
           <Key>
@@ -3546,6 +3630,7 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
           <NavigationProperty Name="PERSONA_ATTIVITA" Relationship="GratisForGratisModel.FK_PERSONA_ATTIVITA_ATTIVITA" FromRole="ATTIVITA" ToRole="PERSONA_ATTIVITA" />
           <NavigationProperty Name="OFFERTA" Relationship="GratisForGratisModel.FK_OFFERTA_ATTIVITA" FromRole="ATTIVITA" ToRole="OFFERTA" />
           <NavigationProperty Name="ANNUNCIO" Relationship="GratisForGratisModel.FK_ANNUNCIO_ATTIVITA" FromRole="ATTIVITA" ToRole="ANNUNCIO" />
+          <NavigationProperty Name="OGGETTO_APPARTENENZA" Relationship="GratisForGratisModel.FK_OGGETTO_APPARTENENZA_ATTIVITA" FromRole="ATTIVITA" ToRole="OGGETTO_APPARTENENZA" />
         </EntityType>
         <EntityType Name="ATTIVITA_EMAIL">
           <Key>
@@ -3699,10 +3784,10 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
           <Property Name="DATA_MODIFICA" Type="DateTime" Precision="3" />
           <Property Name="STATO" Type="Int32" Nullable="false" />
           <NavigationProperty Name="ATTIVITA" Relationship="GratisForGratisModel.FK_ATTIVITA_CONTO_CORRENTE" FromRole="CONTO_CORRENTE" ToRole="ATTIVITA" />
-          <NavigationProperty Name="PERSONA" Relationship="GratisForGratisModel.FK_PERSONA_CONTO_CORRENTE" FromRole="CONTO_CORRENTE" ToRole="PERSONA" />
           <NavigationProperty Name="TRANSAZIONE" Relationship="GratisForGratisModel.FK_TRANSAZIONE_CONTO_CORRENTE" FromRole="CONTO_CORRENTE" ToRole="TRANSAZIONE" />
           <NavigationProperty Name="TRANSAZIONE1" Relationship="GratisForGratisModel.FK_TRANSAZIONE_CONTO_CORRENTE1" FromRole="CONTO_CORRENTE" ToRole="TRANSAZIONE" />
           <NavigationProperty Name="CONTO_CORRENTE_MONETA" Relationship="GratisForGratisModel.FK_CONTO_CORRENTE_MONETA_CONTO_CORRENTE" FromRole="CONTO_CORRENTE" ToRole="CONTO_CORRENTE_MONETA" />
+          <NavigationProperty Name="PERSONA" Relationship="GratisForGratisModel.FK_PERSONA_CONTO_CORRENTE" FromRole="CONTO_CORRENTE" ToRole="PERSONA" />
         </EntityType>
         <EntityType Name="CORRIERE">
           <Key>
@@ -3730,9 +3815,9 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
           <Property Name="DATA_INSERIMENTO" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="DATA_MODIFICA" Type="DateTime" Precision="3" />
           <Property Name="STATO" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="ANNUNCIO_SPEDIZIONE" Relationship="GratisForGratisModel.FK_ANNUNCIO_SPEDIZIONE_CORRIERE_NAZIONE" FromRole="CORRIERE_NAZIONE" ToRole="ANNUNCIO_SPEDIZIONE" />
           <NavigationProperty Name="CORRIERE" Relationship="GratisForGratisModel.FK_CORRIERE_NAZIONE_CORRIERE" FromRole="CORRIERE_NAZIONE" ToRole="CORRIERE" />
           <NavigationProperty Name="NAZIONE" Relationship="GratisForGratisModel.FK_CORRIERE_NAZIONE_NAZIONE" FromRole="CORRIERE_NAZIONE" ToRole="NAZIONE" />
+          <NavigationProperty Name="SPEDIZIONE" Relationship="GratisForGratisModel.FK_SPEDIZIONE_CORRIERE_NAZIONE" FromRole="CORRIERE_NAZIONE" ToRole="SPEDIZIONE" />
         </EntityType>
         <EntityType Name="FORMATO">
           <Key>
@@ -3790,11 +3875,11 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
           <Property Name="DATA_INSERIMENTO" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="DATA_MODIFICA" Type="DateTime" Precision="3" />
           <Property Name="STATO" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="ANNUNCIO_SPEDIZIONE" Relationship="GratisForGratisModel.FK_ANNUNCIO_SPEDIZIONE_INDIRIZZO" FromRole="INDIRIZZO" ToRole="ANNUNCIO_SPEDIZIONE" />
-          <NavigationProperty Name="ANNUNCIO_SPEDIZIONE1" Relationship="GratisForGratisModel.FK_ANNUNCIO_SPEDIZIONE_INDIRIZZO1" FromRole="INDIRIZZO" ToRole="ANNUNCIO_SPEDIZIONE" />
           <NavigationProperty Name="ATTIVITA_INDIRIZZO" Relationship="GratisForGratisModel.FK_ATTIVITA_INDIRIZZO_INDIRIZZO" FromRole="INDIRIZZO" ToRole="ATTIVITA_INDIRIZZO" />
           <NavigationProperty Name="COMUNE" Relationship="GratisForGratisModel.FK_INDIRIZZO_COMUNE" FromRole="INDIRIZZO" ToRole="COMUNE" />
           <NavigationProperty Name="PERSONA_INDIRIZZO" Relationship="GratisForGratisModel.FK_PERSONA_INDIRIZZO_INDIRIZZO" FromRole="INDIRIZZO" ToRole="PERSONA_INDIRIZZO" />
+          <NavigationProperty Name="SPEDIZIONE" Relationship="GratisForGratisModel.FK_SPEDIZIONE_INDIRIZZO" FromRole="INDIRIZZO" ToRole="SPEDIZIONE" />
+          <NavigationProperty Name="SPEDIZIONE1" Relationship="GratisForGratisModel.FK_SPEDIZIONE_INDIRIZZO1" FromRole="INDIRIZZO" ToRole="SPEDIZIONE" />
         </EntityType>
         <EntityType Name="MONETA">
           <Key>
@@ -3987,40 +4072,6 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
           <NavigationProperty Name="GENERE" Relationship="GratisForGratisModel.FK_OGGETTO_VIDEOGAMES_GENERE" FromRole="OGGETTO_VIDEOGAMES" ToRole="GENERE" />
           <NavigationProperty Name="PIATTAFORMA" Relationship="GratisForGratisModel.FK_OGGETTO_VIDEOGAMES_PIATTAFORMA" FromRole="OGGETTO_VIDEOGAMES" ToRole="PIATTAFORMA" />
           <NavigationProperty Name="OGGETTO" Relationship="GratisForGratisModel.FK_OGGETTO_VIDEOGAMES_OGGETTO" FromRole="OGGETTO_VIDEOGAMES" ToRole="OGGETTO" />
-        </EntityType>
-        <EntityType Name="PERSONA">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TOKEN" Type="Guid" Nullable="false" />
-          <Property Name="ID_CONTO_CORRENTE" Type="Guid" Nullable="false" />
-          <Property Name="PASSWORD" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="TOKEN_PASSWORD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="FACEBOOK_TOKEN_PERMANENTE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="FACEBOOK_TOKEN_SESSIONE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="NOME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="COGNOME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ID_ABBONAMENTO" Type="Int32" Nullable="false" />
-          <Property Name="DATA_INSERIMENTO" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="DATA_MODIFICA" Type="DateTime" Precision="3" />
-          <Property Name="STATO" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="ABBONAMENTO" Relationship="GratisForGratisModel.FK_PERSONA_ABBONAMENTO" FromRole="PERSONA" ToRole="ABBONAMENTO" />
-          <NavigationProperty Name="ANNUNCIO_CLICK" Relationship="GratisForGratisModel.FK_ANNUNCIO_CLICK_PERSONA" FromRole="PERSONA" ToRole="ANNUNCIO_CLICK" />
-          <NavigationProperty Name="ANNUNCIO_FEEDBACK" Relationship="GratisForGratisModel.FK_ANNUNCIO_FEEDBACK_PERSONA" FromRole="PERSONA" ToRole="ANNUNCIO_FEEDBACK" />
-          <NavigationProperty Name="ANNUNCIO_VISUALIZZAZIONE" Relationship="GratisForGratisModel.FK_ANNUNCIO_VISUALIZZAZIONE_PERSONA" FromRole="PERSONA" ToRole="ANNUNCIO_VISUALIZZAZIONE" />
-          <NavigationProperty Name="CONTO_CORRENTE" Relationship="GratisForGratisModel.FK_PERSONA_CONTO_CORRENTE" FromRole="PERSONA" ToRole="CONTO_CORRENTE" />
-          <NavigationProperty Name="PERSONA_ATTIVITA" Relationship="GratisForGratisModel.FK_PERSONA_ATTIVITA_PERSONA" FromRole="PERSONA" ToRole="PERSONA_ATTIVITA" />
-          <NavigationProperty Name="PERSONA_EMAIL" Relationship="GratisForGratisModel.FK_PERSONA_EMAIL_PERSONA" FromRole="PERSONA" ToRole="PERSONA_EMAIL" />
-          <NavigationProperty Name="PERSONA_FOTO" Relationship="GratisForGratisModel.FK_PERSONA_FOTO_PERSONA" FromRole="PERSONA" ToRole="PERSONA_FOTO" />
-          <NavigationProperty Name="PERSONA_INDIRIZZO" Relationship="GratisForGratisModel.FK_PERSONA_INDIRIZZO_PERSONA" FromRole="PERSONA" ToRole="PERSONA_INDIRIZZO" />
-          <NavigationProperty Name="PERSONA_PRIVACY" Relationship="GratisForGratisModel.FK_PERSONA_PRIVACY_PERSONA" FromRole="PERSONA" ToRole="PERSONA_PRIVACY" />
-          <NavigationProperty Name="PERSONA_RICERCA" Relationship="GratisForGratisModel.FK_PERSONA_RICERCA_PERSONA" FromRole="PERSONA" ToRole="PERSONA_RICERCA" />
-          <NavigationProperty Name="PERSONA_SEGNALAZIONE" Relationship="GratisForGratisModel.FK_PERSONA_SEGNALAZIONE_PERSONA" FromRole="PERSONA" ToRole="PERSONA_SEGNALAZIONE" />
-          <NavigationProperty Name="PERSONA_TELEFONO" Relationship="GratisForGratisModel.FK_PERSONA_TELEFONO_PERSONA" FromRole="PERSONA" ToRole="PERSONA_TELEFONO" />
-          <NavigationProperty Name="OFFERTA" Relationship="GratisForGratisModel.FK_OFFERTA_PERSONA" FromRole="PERSONA" ToRole="OFFERTA" />
-          <NavigationProperty Name="ANNUNCIO" Relationship="GratisForGratisModel.FK_ANNUNCIO_PERSONA" FromRole="PERSONA" ToRole="ANNUNCIO" />
-          <Property Name="DATA_ACCESSO" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="PERSONA_ATTIVITA">
           <Key>
@@ -4234,18 +4285,6 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
           <NavigationProperty Name="OGGETTO_COMPUTER" Relationship="GratisForGratisModel.FK_OGGETTO_COMPUTER_SISTEMA_OPERATIVO" FromRole="SISTEMA_OPERATIVO" ToRole="OGGETTO_COMPUTER" />
           <NavigationProperty Name="OGGETTO_TELEFONO" Relationship="GratisForGratisModel.FK_OGGETTO_CELLULARE_SISTEMA_OPERATIVO" FromRole="SISTEMA_OPERATIVO" ToRole="OGGETTO_TELEFONO" />
         </EntityType>
-        <Association Name="FK_PERSONA_ABBONAMENTO">
-          <End Type="GratisForGratisModel.ABBONAMENTO" Role="ABBONAMENTO" Multiplicity="1" />
-          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ABBONAMENTO">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="PERSONA">
-              <PropertyRef Name="ID_ABBONAMENTO" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_ALIMENTAZIONE_CATEGORIA">
           <End Type="GratisForGratisModel.CATEGORIA" Role="CATEGORIA" Multiplicity="1" />
           <End Type="GratisForGratisModel.ALIMENTAZIONE" Role="ALIMENTAZIONE" Multiplicity="*" />
@@ -4282,18 +4321,6 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ANNUNCIO_CLICK_PERSONA">
-          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="0..1" />
-          <End Type="GratisForGratisModel.ANNUNCIO_CLICK" Role="ANNUNCIO_CLICK" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PERSONA">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ANNUNCIO_CLICK">
-              <PropertyRef Name="ID_PERSONA" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_ANNUNCIO_CLICK_SISTEMA_OPERATIVO">
           <End Type="GratisForGratisModel.SISTEMA_OPERATIVO" Role="SISTEMA_OPERATIVO" Multiplicity="1" />
           <End Type="GratisForGratisModel.ANNUNCIO_CLICK" Role="ANNUNCIO_CLICK" Multiplicity="*" />
@@ -4303,18 +4330,6 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
             </Principal>
             <Dependent Role="ANNUNCIO_CLICK">
               <PropertyRef Name="ID_SISTEMA_OPERATIVO" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ANNUNCIO_FEEDBACK_PERSONA">
-          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="1" />
-          <End Type="GratisForGratisModel.ANNUNCIO_FEEDBACK" Role="ANNUNCIO_FEEDBACK" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PERSONA">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ANNUNCIO_FEEDBACK">
-              <PropertyRef Name="ID_VOTANTE" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -4330,42 +4345,6 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ANNUNCIO_SPEDIZIONE_CORRIERE_NAZIONE">
-          <End Type="GratisForGratisModel.CORRIERE_NAZIONE" Role="CORRIERE_NAZIONE" Multiplicity="0..1" />
-          <End Type="GratisForGratisModel.ANNUNCIO_SPEDIZIONE" Role="ANNUNCIO_SPEDIZIONE" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CORRIERE_NAZIONE">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ANNUNCIO_SPEDIZIONE">
-              <PropertyRef Name="ID_CORRIERE_NAZIONE" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ANNUNCIO_SPEDIZIONE_INDIRIZZO">
-          <End Type="GratisForGratisModel.INDIRIZZO" Role="INDIRIZZO" Multiplicity="1" />
-          <End Type="GratisForGratisModel.ANNUNCIO_SPEDIZIONE" Role="ANNUNCIO_SPEDIZIONE" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="INDIRIZZO">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ANNUNCIO_SPEDIZIONE">
-              <PropertyRef Name="ID_INDIRIZZO_MITTENTE" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ANNUNCIO_SPEDIZIONE_INDIRIZZO1">
-          <End Type="GratisForGratisModel.INDIRIZZO" Role="INDIRIZZO" Multiplicity="1" />
-          <End Type="GratisForGratisModel.ANNUNCIO_SPEDIZIONE" Role="ANNUNCIO_SPEDIZIONE" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="INDIRIZZO">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ANNUNCIO_SPEDIZIONE">
-              <PropertyRef Name="ID_INDIRIZZO_DESTINATARIO" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_ANNUNCIO_VISUALIZZAZIONE_MODELLO_BROWSER">
           <End Type="GratisForGratisModel.BROWSER_MODELLO" Role="BROWSER_MODELLO" Multiplicity="1" />
           <End Type="GratisForGratisModel.ANNUNCIO_VISUALIZZAZIONE" Role="ANNUNCIO_VISUALIZZAZIONE" Multiplicity="*" />
@@ -4375,18 +4354,6 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
             </Principal>
             <Dependent Role="ANNUNCIO_VISUALIZZAZIONE">
               <PropertyRef Name="ID_MODELLO_BROWSER" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ANNUNCIO_VISUALIZZAZIONE_PERSONA">
-          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="0..1" />
-          <End Type="GratisForGratisModel.ANNUNCIO_VISUALIZZAZIONE" Role="ANNUNCIO_VISUALIZZAZIONE" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PERSONA">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ANNUNCIO_VISUALIZZAZIONE">
-              <PropertyRef Name="ID_PERSONA" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -4680,18 +4647,6 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_PERSONA_CONTO_CORRENTE">
-          <End Type="GratisForGratisModel.CONTO_CORRENTE" Role="CONTO_CORRENTE" Multiplicity="1" />
-          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CONTO_CORRENTE">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="PERSONA">
-              <PropertyRef Name="ID_CONTO_CORRENTE" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_CORRIERE_NAZIONE_CORRIERE">
           <End Type="GratisForGratisModel.CORRIERE" Role="CORRIERE" Multiplicity="1" />
           <End Type="GratisForGratisModel.CORRIERE_NAZIONE" Role="CORRIERE_NAZIONE" Multiplicity="*" />
@@ -4884,102 +4839,6 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_PERSONA_ATTIVITA_PERSONA">
-          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="1" />
-          <End Type="GratisForGratisModel.PERSONA_ATTIVITA" Role="PERSONA_ATTIVITA" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PERSONA">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="PERSONA_ATTIVITA">
-              <PropertyRef Name="ID_PERSONA" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_PERSONA_EMAIL_PERSONA">
-          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="1" />
-          <End Type="GratisForGratisModel.PERSONA_EMAIL" Role="PERSONA_EMAIL" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PERSONA">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="PERSONA_EMAIL">
-              <PropertyRef Name="ID_PERSONA" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_PERSONA_FOTO_PERSONA">
-          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="1" />
-          <End Type="GratisForGratisModel.PERSONA_FOTO" Role="PERSONA_FOTO" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PERSONA">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="PERSONA_FOTO">
-              <PropertyRef Name="ID_PERSONA" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_PERSONA_INDIRIZZO_PERSONA">
-          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="1" />
-          <End Type="GratisForGratisModel.PERSONA_INDIRIZZO" Role="PERSONA_INDIRIZZO" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PERSONA">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="PERSONA_INDIRIZZO">
-              <PropertyRef Name="ID_PERSONA" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_PERSONA_PRIVACY_PERSONA">
-          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="1" />
-          <End Type="GratisForGratisModel.PERSONA_PRIVACY" Role="PERSONA_PRIVACY" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PERSONA">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="PERSONA_PRIVACY">
-              <PropertyRef Name="ID_PERSONA" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_PERSONA_RICERCA_PERSONA">
-          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="1" />
-          <End Type="GratisForGratisModel.PERSONA_RICERCA" Role="PERSONA_RICERCA" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PERSONA">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="PERSONA_RICERCA">
-              <PropertyRef Name="ID_PERSONA" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_PERSONA_SEGNALAZIONE_PERSONA">
-          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="1" />
-          <End Type="GratisForGratisModel.PERSONA_SEGNALAZIONE" Role="PERSONA_SEGNALAZIONE" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PERSONA">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="PERSONA_SEGNALAZIONE">
-              <PropertyRef Name="ID_PERSONA" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_PERSONA_TELEFONO_PERSONA">
-          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="1" />
-          <End Type="GratisForGratisModel.PERSONA_TELEFONO" Role="PERSONA_TELEFONO" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PERSONA">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="PERSONA_TELEFONO">
-              <PropertyRef Name="ID_PERSONA" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_PROVINCIA_REGIONE">
           <End Type="GratisForGratisModel.REGIONE" Role="REGIONE" Multiplicity="0..1" />
           <End Type="GratisForGratisModel.PROVINCIA" Role="PROVINCIA" Multiplicity="*" />
@@ -5109,6 +4968,7 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
           <NavigationProperty Name="OGGETTO_VIDEO" Relationship="GratisForGratisModel.FK_OGGETTO_VIDEO_OGGETTO" FromRole="OGGETTO" ToRole="OGGETTO_VIDEO" />
           <NavigationProperty Name="OGGETTO_VIDEOGAMES" Relationship="GratisForGratisModel.FK_OGGETTO_VIDEOGAMES_OGGETTO" FromRole="OGGETTO" ToRole="OGGETTO_VIDEOGAMES" />
           <NavigationProperty Name="ANNUNCIO" Relationship="GratisForGratisModel.FK_ANNUNCIO_OGGETTO" FromRole="OGGETTO" ToRole="ANNUNCIO" />
+          <NavigationProperty Name="OGGETTO_APPARTENENZA" Relationship="GratisForGratisModel.FK_OGGETTO_APPARTENENZA_OGGETTO" FromRole="OGGETTO" ToRole="OGGETTO_APPARTENENZA" />
         </EntityType>
         <Association Name="FK_MARCA_CATEGORIA">
           <End Type="GratisForGratisModel.CATEGORIA" Role="CATEGORIA" Multiplicity="0..1" />
@@ -5472,9 +5332,9 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
           <NavigationProperty Name="ATTIVITA" Relationship="GratisForGratisModel.FK_OFFERTA_ATTIVITA" FromRole="OFFERTA" ToRole="ATTIVITA" />
           <NavigationProperty Name="OFFERTA_BARATTO" Relationship="GratisForGratisModel.FK_OFFERTA_BARATTO_OFFERTA" FromRole="OFFERTA" ToRole="OFFERTA_BARATTO" />
           <NavigationProperty Name="OFFERTA_CONTO_CORRENTE_MONETA" Relationship="GratisForGratisModel.FK_OFFERTA_CONTO_CORRENTE_MONETA_OFFERTA" FromRole="OFFERTA" ToRole="OFFERTA_CONTO_CORRENTE_MONETA" />
-          <NavigationProperty Name="PERSONA" Relationship="GratisForGratisModel.FK_OFFERTA_PERSONA" FromRole="OFFERTA" ToRole="PERSONA" />
           <NavigationProperty Name="TRANSAZIONE" Relationship="GratisForGratisModel.FK_OFFERTA_TRANSAZIONE" FromRole="OFFERTA" ToRole="TRANSAZIONE" />
           <NavigationProperty Name="ANNUNCIO" Relationship="GratisForGratisModel.FK_OFFERTA_ANNUNCIO" FromRole="OFFERTA" ToRole="ANNUNCIO" />
+          <NavigationProperty Name="PERSONA" Relationship="GratisForGratisModel.FK_OFFERTA_PERSONA" FromRole="OFFERTA" ToRole="PERSONA" />
         </EntityType>
         <Association Name="FK_OFFERTA_ATTIVITA">
           <End Type="GratisForGratisModel.ATTIVITA" Role="ATTIVITA" Multiplicity="0..1" />
@@ -5560,18 +5420,6 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_OFFERTA_PERSONA">
-          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="0..1" />
-          <End Type="GratisForGratisModel.OFFERTA" Role="OFFERTA" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PERSONA">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="OFFERTA">
-              <PropertyRef Name="ID_PERSONA" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_OFFERTA_TRANSAZIONE">
           <End Type="GratisForGratisModel.TRANSAZIONE" Role="TRANSAZIONE" Multiplicity="0..1" />
           <End Type="GratisForGratisModel.OFFERTA" Role="OFFERTA" Multiplicity="*" />
@@ -5613,14 +5461,14 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
           <NavigationProperty Name="ANNUNCIO_FEEDBACK" Relationship="GratisForGratisModel.FK_ANNUNCIO_FEEDBACK_ANNUNCIO" FromRole="ANNUNCIO" ToRole="ANNUNCIO_FEEDBACK" />
           <NavigationProperty Name="ANNUNCIO_FOTO" Relationship="GratisForGratisModel.FK_ANNUNCIO_FOTO_ANNUNCIO" FromRole="ANNUNCIO" ToRole="ANNUNCIO_FOTO" />
           <NavigationProperty Name="OGGETTO" Relationship="GratisForGratisModel.FK_ANNUNCIO_OGGETTO" FromRole="ANNUNCIO" ToRole="OGGETTO" />
-          <NavigationProperty Name="PERSONA" Relationship="GratisForGratisModel.FK_ANNUNCIO_PERSONA" FromRole="ANNUNCIO" ToRole="PERSONA" />
           <NavigationProperty Name="SERVIZIO" Relationship="GratisForGratisModel.FK_ANNUNCIO_SERVIZIO" FromRole="ANNUNCIO" ToRole="SERVIZIO" />
-          <NavigationProperty Name="ANNUNCIO_SPEDIZIONE" Relationship="GratisForGratisModel.FK_ANNUNCIO_SPEDIZIONE_ANNUNCIO" FromRole="ANNUNCIO" ToRole="ANNUNCIO_SPEDIZIONE" />
           <NavigationProperty Name="ANNUNCIO_TAG" Relationship="GratisForGratisModel.FK_ANNUNCIO_TAG_ANNUNCIO" FromRole="ANNUNCIO" ToRole="ANNUNCIO_TAG" />
           <NavigationProperty Name="ANNUNCIO_VISUALIZZAZIONE" Relationship="GratisForGratisModel.FK_ANNUNCIO_VISUALIZZAZIONE_ANNUNCIO" FromRole="ANNUNCIO" ToRole="ANNUNCIO_VISUALIZZAZIONE" />
           <NavigationProperty Name="OFFERTA" Relationship="GratisForGratisModel.FK_OFFERTA_ANNUNCIO" FromRole="ANNUNCIO" ToRole="OFFERTA" />
           <NavigationProperty Name="OFFERTA_BARATTO" Relationship="GratisForGratisModel.FK_OFFERTA_BARATTO_ANNUNCIO" FromRole="ANNUNCIO" ToRole="OFFERTA_BARATTO" />
           <NavigationProperty Name="TRANSAZIONE" Relationship="GratisForGratisModel.FK_TRANSAZIONE_ANNUNCIO" FromRole="ANNUNCIO" ToRole="TRANSAZIONE" />
+          <NavigationProperty Name="ANNUNCIO_SPEDIZIONE" Relationship="GratisForGratisModel.FK_ANNUNCIO_SPEDIZIONE_ANNUNCIO" FromRole="ANNUNCIO" ToRole="ANNUNCIO_SPEDIZIONE" />
+          <NavigationProperty Name="PERSONA" Relationship="GratisForGratisModel.FK_ANNUNCIO_PERSONA" FromRole="ANNUNCIO" ToRole="PERSONA" />
         </EntityType>
         <Association Name="FK_ANNUNCIO_ANNUNCIO">
           <End Type="GratisForGratisModel.ANNUNCIO" Role="ANNUNCIO" Multiplicity="1" />
@@ -5710,18 +5558,6 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ANNUNCIO_PERSONA">
-          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="1" />
-          <End Type="GratisForGratisModel.ANNUNCIO" Role="ANNUNCIO" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PERSONA">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ANNUNCIO">
-              <PropertyRef Name="ID_PERSONA" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_ANNUNCIO_SERVIZIO">
           <End Type="GratisForGratisModel.SERVIZIO" Role="SERVIZIO" Multiplicity="0..1" />
           <End Type="GratisForGratisModel.ANNUNCIO" Role="ANNUNCIO" Multiplicity="*" />
@@ -5731,18 +5567,6 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
             </Principal>
             <Dependent Role="ANNUNCIO">
               <PropertyRef Name="ID_SERVIZIO" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ANNUNCIO_SPEDIZIONE_ANNUNCIO">
-          <End Type="GratisForGratisModel.ANNUNCIO" Role="ANNUNCIO" Multiplicity="1" />
-          <End Type="GratisForGratisModel.ANNUNCIO_SPEDIZIONE" Role="ANNUNCIO_SPEDIZIONE" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ANNUNCIO">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ANNUNCIO_SPEDIZIONE">
-              <PropertyRef Name="ID_ANNUNCIO" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -5807,6 +5631,368 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
             </Principal>
             <Dependent Role="TRANSAZIONE">
               <PropertyRef Name="ID_ANNUNCIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ANNUNCIO_SPEDIZIONE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ID_ANNUNCIO" Type="Int32" Nullable="false" />
+          <Property Name="ID_SPEDIZIONE" Type="Int32" Nullable="false" />
+          <Property Name="PREZZO" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="DATA_INSERIMENTO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DATA_MODIFICA" Type="DateTime" Precision="3" />
+          <Property Name="STATO" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ANNUNCIO" Relationship="GratisForGratisModel.FK_ANNUNCIO_SPEDIZIONE_ANNUNCIO" FromRole="ANNUNCIO_SPEDIZIONE" ToRole="ANNUNCIO" />
+          <NavigationProperty Name="SPEDIZIONE" Relationship="GratisForGratisModel.FK_ANNUNCIO_SPEDIZIONE_SPEDIZIONE" FromRole="ANNUNCIO_SPEDIZIONE" ToRole="SPEDIZIONE" />
+        </EntityType>
+        <EntityType Name="OGGETTO_APPARTENENZA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_OGGETTO" Type="Int32" Nullable="false" />
+          <Property Name="ID_PERSONA" Type="Int32" Nullable="false" />
+          <Property Name="ID_ATTIVITA" Type="Int32" />
+          <Property Name="TIPO" Type="Int32" Nullable="false" />
+          <Property Name="DATA_INSERIMENTO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="STATO" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ATTIVITA" Relationship="GratisForGratisModel.FK_OGGETTO_APPARTENENZA_ATTIVITA" FromRole="OGGETTO_APPARTENENZA" ToRole="ATTIVITA" />
+          <NavigationProperty Name="OGGETTO" Relationship="GratisForGratisModel.FK_OGGETTO_APPARTENENZA_OGGETTO" FromRole="OGGETTO_APPARTENENZA" ToRole="OGGETTO" />
+          <NavigationProperty Name="PERSONA" Relationship="GratisForGratisModel.FK_OGGETTO_APPARTENENZA_PERSONA" FromRole="OGGETTO_APPARTENENZA" ToRole="PERSONA" />
+        </EntityType>
+        <EntityType Name="SPEDIZIONE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_CORRIERE_NAZIONE" Type="Int32" Nullable="false" />
+          <Property Name="NOME_MITTENTE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TELEFONO_MITTENTE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EMAIL_MITTENTE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID_INDIRIZZO_MITTENTE" Type="Int32" Nullable="false" />
+          <Property Name="NOME_DESTINATARIO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TELEFONO_DESTINATARIO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EMAIL_DESTINATARIO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID_INDIRIZZO_DESTINATARIO" Type="Int32" />
+          <Property Name="DATA_INSERIMENTO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DATA_MODIFICA" Type="DateTime" Precision="3" />
+          <Property Name="STATO" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ANNUNCIO_SPEDIZIONE" Relationship="GratisForGratisModel.FK_ANNUNCIO_SPEDIZIONE_SPEDIZIONE" FromRole="SPEDIZIONE" ToRole="ANNUNCIO_SPEDIZIONE" />
+          <NavigationProperty Name="CORRIERE_NAZIONE" Relationship="GratisForGratisModel.FK_SPEDIZIONE_CORRIERE_NAZIONE" FromRole="SPEDIZIONE" ToRole="CORRIERE_NAZIONE" />
+          <NavigationProperty Name="INDIRIZZO" Relationship="GratisForGratisModel.FK_SPEDIZIONE_INDIRIZZO" FromRole="SPEDIZIONE" ToRole="INDIRIZZO" />
+          <NavigationProperty Name="INDIRIZZO1" Relationship="GratisForGratisModel.FK_SPEDIZIONE_INDIRIZZO1" FromRole="SPEDIZIONE" ToRole="INDIRIZZO" />
+        </EntityType>
+        <Association Name="FK_ANNUNCIO_SPEDIZIONE_ANNUNCIO">
+          <End Type="GratisForGratisModel.ANNUNCIO" Role="ANNUNCIO" Multiplicity="1" />
+          <End Type="GratisForGratisModel.ANNUNCIO_SPEDIZIONE" Role="ANNUNCIO_SPEDIZIONE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ANNUNCIO">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ANNUNCIO_SPEDIZIONE">
+              <PropertyRef Name="ID_ANNUNCIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ANNUNCIO_SPEDIZIONE_SPEDIZIONE">
+          <End Type="GratisForGratisModel.SPEDIZIONE" Role="SPEDIZIONE" Multiplicity="1" />
+          <End Type="GratisForGratisModel.ANNUNCIO_SPEDIZIONE" Role="ANNUNCIO_SPEDIZIONE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SPEDIZIONE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ANNUNCIO_SPEDIZIONE">
+              <PropertyRef Name="ID_SPEDIZIONE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OGGETTO_APPARTENENZA_ATTIVITA">
+          <End Type="GratisForGratisModel.ATTIVITA" Role="ATTIVITA" Multiplicity="0..1" />
+          <End Type="GratisForGratisModel.OGGETTO_APPARTENENZA" Role="OGGETTO_APPARTENENZA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ATTIVITA">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OGGETTO_APPARTENENZA">
+              <PropertyRef Name="ID_ATTIVITA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SPEDIZIONE_CORRIERE_NAZIONE">
+          <End Type="GratisForGratisModel.CORRIERE_NAZIONE" Role="CORRIERE_NAZIONE" Multiplicity="1" />
+          <End Type="GratisForGratisModel.SPEDIZIONE" Role="SPEDIZIONE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CORRIERE_NAZIONE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SPEDIZIONE">
+              <PropertyRef Name="ID_CORRIERE_NAZIONE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SPEDIZIONE_INDIRIZZO">
+          <End Type="GratisForGratisModel.INDIRIZZO" Role="INDIRIZZO" Multiplicity="1" />
+          <End Type="GratisForGratisModel.SPEDIZIONE" Role="SPEDIZIONE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="INDIRIZZO">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SPEDIZIONE">
+              <PropertyRef Name="ID_INDIRIZZO_MITTENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SPEDIZIONE_INDIRIZZO1">
+          <End Type="GratisForGratisModel.INDIRIZZO" Role="INDIRIZZO" Multiplicity="0..1" />
+          <End Type="GratisForGratisModel.SPEDIZIONE" Role="SPEDIZIONE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="INDIRIZZO">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SPEDIZIONE">
+              <PropertyRef Name="ID_INDIRIZZO_DESTINATARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OGGETTO_APPARTENENZA_OGGETTO">
+          <End Type="GratisForGratisModel.OGGETTO" Role="OGGETTO" Multiplicity="1" />
+          <End Type="GratisForGratisModel.OGGETTO_APPARTENENZA" Role="OGGETTO_APPARTENENZA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OGGETTO">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OGGETTO_APPARTENENZA">
+              <PropertyRef Name="ID_OGGETTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="PERSONA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TOKEN" Type="Guid" Nullable="false" />
+          <Property Name="ID_CONTO_CORRENTE" Type="Guid" Nullable="false" />
+          <Property Name="PASSWORD" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="TOKEN_PASSWORD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FACEBOOK_TOKEN_PERMANENTE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FACEBOOK_TOKEN_SESSIONE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NOME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="COGNOME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID_ABBONAMENTO" Type="Int32" Nullable="false" />
+          <Property Name="DATA_INSERIMENTO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DATA_ACCESSO" Type="DateTime" Precision="3" />
+          <Property Name="DATA_MODIFICA" Type="DateTime" Precision="3" />
+          <Property Name="STATO" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ABBONAMENTO" Relationship="GratisForGratisModel.FK_PERSONA_ABBONAMENTO" FromRole="PERSONA" ToRole="ABBONAMENTO" />
+          <NavigationProperty Name="ANNUNCIO" Relationship="GratisForGratisModel.FK_ANNUNCIO_PERSONA" FromRole="PERSONA" ToRole="ANNUNCIO" />
+          <NavigationProperty Name="ANNUNCIO_CLICK" Relationship="GratisForGratisModel.FK_ANNUNCIO_CLICK_PERSONA" FromRole="PERSONA" ToRole="ANNUNCIO_CLICK" />
+          <NavigationProperty Name="ANNUNCIO_FEEDBACK" Relationship="GratisForGratisModel.FK_ANNUNCIO_FEEDBACK_PERSONA" FromRole="PERSONA" ToRole="ANNUNCIO_FEEDBACK" />
+          <NavigationProperty Name="ANNUNCIO_VISUALIZZAZIONE" Relationship="GratisForGratisModel.FK_ANNUNCIO_VISUALIZZAZIONE_PERSONA" FromRole="PERSONA" ToRole="ANNUNCIO_VISUALIZZAZIONE" />
+          <NavigationProperty Name="CONTO_CORRENTE" Relationship="GratisForGratisModel.FK_PERSONA_CONTO_CORRENTE" FromRole="PERSONA" ToRole="CONTO_CORRENTE" />
+          <NavigationProperty Name="OFFERTA" Relationship="GratisForGratisModel.FK_OFFERTA_PERSONA" FromRole="PERSONA" ToRole="OFFERTA" />
+          <NavigationProperty Name="OGGETTO_APPARTENENZA" Relationship="GratisForGratisModel.FK_OGGETTO_APPARTENENZA_PERSONA" FromRole="PERSONA" ToRole="OGGETTO_APPARTENENZA" />
+          <NavigationProperty Name="PERSONA_ATTIVITA" Relationship="GratisForGratisModel.FK_PERSONA_ATTIVITA_PERSONA" FromRole="PERSONA" ToRole="PERSONA_ATTIVITA" />
+          <NavigationProperty Name="PERSONA_EMAIL" Relationship="GratisForGratisModel.FK_PERSONA_EMAIL_PERSONA" FromRole="PERSONA" ToRole="PERSONA_EMAIL" />
+          <NavigationProperty Name="PERSONA_FOTO" Relationship="GratisForGratisModel.FK_PERSONA_FOTO_PERSONA" FromRole="PERSONA" ToRole="PERSONA_FOTO" />
+          <NavigationProperty Name="PERSONA_INDIRIZZO" Relationship="GratisForGratisModel.FK_PERSONA_INDIRIZZO_PERSONA" FromRole="PERSONA" ToRole="PERSONA_INDIRIZZO" />
+          <NavigationProperty Name="PERSONA_PRIVACY" Relationship="GratisForGratisModel.FK_PERSONA_PRIVACY_PERSONA" FromRole="PERSONA" ToRole="PERSONA_PRIVACY" />
+          <NavigationProperty Name="PERSONA_RICERCA" Relationship="GratisForGratisModel.FK_PERSONA_RICERCA_PERSONA" FromRole="PERSONA" ToRole="PERSONA_RICERCA" />
+          <NavigationProperty Name="PERSONA_SEGNALAZIONE" Relationship="GratisForGratisModel.FK_PERSONA_SEGNALAZIONE_PERSONA" FromRole="PERSONA" ToRole="PERSONA_SEGNALAZIONE" />
+          <NavigationProperty Name="PERSONA_TELEFONO" Relationship="GratisForGratisModel.FK_PERSONA_TELEFONO_PERSONA" FromRole="PERSONA" ToRole="PERSONA_TELEFONO" />
+        </EntityType>
+        <Association Name="FK_PERSONA_ABBONAMENTO">
+          <End Type="GratisForGratisModel.ABBONAMENTO" Role="ABBONAMENTO" Multiplicity="1" />
+          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ABBONAMENTO">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PERSONA">
+              <PropertyRef Name="ID_ABBONAMENTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ANNUNCIO_PERSONA">
+          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="1" />
+          <End Type="GratisForGratisModel.ANNUNCIO" Role="ANNUNCIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERSONA">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ANNUNCIO">
+              <PropertyRef Name="ID_PERSONA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ANNUNCIO_CLICK_PERSONA">
+          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="0..1" />
+          <End Type="GratisForGratisModel.ANNUNCIO_CLICK" Role="ANNUNCIO_CLICK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERSONA">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ANNUNCIO_CLICK">
+              <PropertyRef Name="ID_PERSONA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ANNUNCIO_FEEDBACK_PERSONA">
+          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="1" />
+          <End Type="GratisForGratisModel.ANNUNCIO_FEEDBACK" Role="ANNUNCIO_FEEDBACK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERSONA">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ANNUNCIO_FEEDBACK">
+              <PropertyRef Name="ID_VOTANTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ANNUNCIO_VISUALIZZAZIONE_PERSONA">
+          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="0..1" />
+          <End Type="GratisForGratisModel.ANNUNCIO_VISUALIZZAZIONE" Role="ANNUNCIO_VISUALIZZAZIONE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERSONA">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ANNUNCIO_VISUALIZZAZIONE">
+              <PropertyRef Name="ID_PERSONA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PERSONA_CONTO_CORRENTE">
+          <End Type="GratisForGratisModel.CONTO_CORRENTE" Role="CONTO_CORRENTE" Multiplicity="1" />
+          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CONTO_CORRENTE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PERSONA">
+              <PropertyRef Name="ID_CONTO_CORRENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OFFERTA_PERSONA">
+          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="0..1" />
+          <End Type="GratisForGratisModel.OFFERTA" Role="OFFERTA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERSONA">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OFFERTA">
+              <PropertyRef Name="ID_PERSONA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OGGETTO_APPARTENENZA_PERSONA">
+          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="1" />
+          <End Type="GratisForGratisModel.OGGETTO_APPARTENENZA" Role="OGGETTO_APPARTENENZA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERSONA">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OGGETTO_APPARTENENZA">
+              <PropertyRef Name="ID_PERSONA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PERSONA_ATTIVITA_PERSONA">
+          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="1" />
+          <End Type="GratisForGratisModel.PERSONA_ATTIVITA" Role="PERSONA_ATTIVITA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERSONA">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PERSONA_ATTIVITA">
+              <PropertyRef Name="ID_PERSONA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PERSONA_EMAIL_PERSONA">
+          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="1" />
+          <End Type="GratisForGratisModel.PERSONA_EMAIL" Role="PERSONA_EMAIL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERSONA">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PERSONA_EMAIL">
+              <PropertyRef Name="ID_PERSONA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PERSONA_FOTO_PERSONA">
+          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="1" />
+          <End Type="GratisForGratisModel.PERSONA_FOTO" Role="PERSONA_FOTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERSONA">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PERSONA_FOTO">
+              <PropertyRef Name="ID_PERSONA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PERSONA_INDIRIZZO_PERSONA">
+          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="1" />
+          <End Type="GratisForGratisModel.PERSONA_INDIRIZZO" Role="PERSONA_INDIRIZZO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERSONA">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PERSONA_INDIRIZZO">
+              <PropertyRef Name="ID_PERSONA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PERSONA_PRIVACY_PERSONA">
+          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="1" />
+          <End Type="GratisForGratisModel.PERSONA_PRIVACY" Role="PERSONA_PRIVACY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERSONA">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PERSONA_PRIVACY">
+              <PropertyRef Name="ID_PERSONA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PERSONA_RICERCA_PERSONA">
+          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="1" />
+          <End Type="GratisForGratisModel.PERSONA_RICERCA" Role="PERSONA_RICERCA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERSONA">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PERSONA_RICERCA">
+              <PropertyRef Name="ID_PERSONA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PERSONA_SEGNALAZIONE_PERSONA">
+          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="1" />
+          <End Type="GratisForGratisModel.PERSONA_SEGNALAZIONE" Role="PERSONA_SEGNALAZIONE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERSONA">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PERSONA_SEGNALAZIONE">
+              <PropertyRef Name="ID_PERSONA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PERSONA_TELEFONO_PERSONA">
+          <End Type="GratisForGratisModel.PERSONA" Role="PERSONA" Multiplicity="1" />
+          <End Type="GratisForGratisModel.PERSONA_TELEFONO" Role="PERSONA_TELEFONO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERSONA">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PERSONA_TELEFONO">
+              <PropertyRef Name="ID_PERSONA" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -5895,26 +6081,6 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
                 <ScalarProperty Name="DATA_MODIFICA" ColumnName="DATA_MODIFICA" />
                 <ScalarProperty Name="DATA_INSERIMENTO" ColumnName="DATA_INSERIMENTO" />
                 <ScalarProperty Name="ID_FOTO" ColumnName="ID_FOTO" />
-                <ScalarProperty Name="ID_ANNUNCIO" ColumnName="ID_ANNUNCIO" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ANNUNCIO_SPEDIZIONE">
-            <EntityTypeMapping TypeName="GratisForGratisModel.ANNUNCIO_SPEDIZIONE">
-              <MappingFragment StoreEntitySet="ANNUNCIO_SPEDIZIONE">
-                <ScalarProperty Name="STATO" ColumnName="STATO" />
-                <ScalarProperty Name="DATA_MODIFICA" ColumnName="DATA_MODIFICA" />
-                <ScalarProperty Name="DATA_INSERIMENTO" ColumnName="DATA_INSERIMENTO" />
-                <ScalarProperty Name="PREZZO" ColumnName="PREZZO" />
-                <ScalarProperty Name="PESO" ColumnName="PESO" />
-                <ScalarProperty Name="LUNGHEZZA" ColumnName="LUNGHEZZA" />
-                <ScalarProperty Name="LARGHEZZA" ColumnName="LARGHEZZA" />
-                <ScalarProperty Name="ALTEZZA" ColumnName="ALTEZZA" />
-                <ScalarProperty Name="NOTE" ColumnName="NOTE" />
-                <ScalarProperty Name="ID_INDIRIZZO_DESTINATARIO" ColumnName="ID_INDIRIZZO_DESTINATARIO" />
-                <ScalarProperty Name="ID_INDIRIZZO_MITTENTE" ColumnName="ID_INDIRIZZO_MITTENTE" />
-                <ScalarProperty Name="ID_CORRIERE_NAZIONE" ColumnName="ID_CORRIERE_NAZIONE" />
                 <ScalarProperty Name="ID_ANNUNCIO" ColumnName="ID_ANNUNCIO" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
@@ -6357,26 +6523,6 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="PERSONA">
-            <EntityTypeMapping TypeName="GratisForGratisModel.PERSONA">
-              <MappingFragment StoreEntitySet="PERSONA">
-                <ScalarProperty Name="DATA_ACCESSO" ColumnName="DATA_ACCESSO" />
-                <ScalarProperty Name="STATO" ColumnName="STATO" />
-                <ScalarProperty Name="DATA_MODIFICA" ColumnName="DATA_MODIFICA" />
-                <ScalarProperty Name="DATA_INSERIMENTO" ColumnName="DATA_INSERIMENTO" />
-                <ScalarProperty Name="ID_ABBONAMENTO" ColumnName="ID_ABBONAMENTO" />
-                <ScalarProperty Name="COGNOME" ColumnName="COGNOME" />
-                <ScalarProperty Name="NOME" ColumnName="NOME" />
-                <ScalarProperty Name="FACEBOOK_TOKEN_SESSIONE" ColumnName="FACEBOOK_TOKEN_SESSIONE" />
-                <ScalarProperty Name="FACEBOOK_TOKEN_PERMANENTE" ColumnName="FACEBOOK_TOKEN_PERMANENTE" />
-                <ScalarProperty Name="TOKEN_PASSWORD" ColumnName="TOKEN_PASSWORD" />
-                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
-                <ScalarProperty Name="ID_CONTO_CORRENTE" ColumnName="ID_CONTO_CORRENTE" />
-                <ScalarProperty Name="TOKEN" ColumnName="TOKEN" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="PERSONA_ATTIVITA">
             <EntityTypeMapping TypeName="GratisForGratisModel.PERSONA_ATTIVITA">
               <MappingFragment StoreEntitySet="PERSONA_ATTIVITA">
@@ -6706,6 +6852,71 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
                 <ScalarProperty Name="ID_SERVIZIO" ColumnName="ID_SERVIZIO" />
                 <ScalarProperty Name="ID_OGGETTO" ColumnName="ID_OGGETTO" />
                 <ScalarProperty Name="ID_CATEGORIA" ColumnName="ID_CATEGORIA" />
+                <ScalarProperty Name="TOKEN" ColumnName="TOKEN" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ANNUNCIO_SPEDIZIONE">
+            <EntityTypeMapping TypeName="GratisForGratisModel.ANNUNCIO_SPEDIZIONE">
+              <MappingFragment StoreEntitySet="ANNUNCIO_SPEDIZIONE">
+                <ScalarProperty Name="STATO" ColumnName="STATO" />
+                <ScalarProperty Name="DATA_MODIFICA" ColumnName="DATA_MODIFICA" />
+                <ScalarProperty Name="DATA_INSERIMENTO" ColumnName="DATA_INSERIMENTO" />
+                <ScalarProperty Name="PREZZO" ColumnName="PREZZO" />
+                <ScalarProperty Name="ID_SPEDIZIONE" ColumnName="ID_SPEDIZIONE" />
+                <ScalarProperty Name="ID_ANNUNCIO" ColumnName="ID_ANNUNCIO" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OGGETTO_APPARTENENZA">
+            <EntityTypeMapping TypeName="GratisForGratisModel.OGGETTO_APPARTENENZA">
+              <MappingFragment StoreEntitySet="OGGETTO_APPARTENENZA">
+                <ScalarProperty Name="STATO" ColumnName="STATO" />
+                <ScalarProperty Name="DATA_INSERIMENTO" ColumnName="DATA_INSERIMENTO" />
+                <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+                <ScalarProperty Name="ID_ATTIVITA" ColumnName="ID_ATTIVITA" />
+                <ScalarProperty Name="ID_PERSONA" ColumnName="ID_PERSONA" />
+                <ScalarProperty Name="ID_OGGETTO" ColumnName="ID_OGGETTO" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SPEDIZIONE">
+            <EntityTypeMapping TypeName="GratisForGratisModel.SPEDIZIONE">
+              <MappingFragment StoreEntitySet="SPEDIZIONE">
+                <ScalarProperty Name="STATO" ColumnName="STATO" />
+                <ScalarProperty Name="DATA_MODIFICA" ColumnName="DATA_MODIFICA" />
+                <ScalarProperty Name="DATA_INSERIMENTO" ColumnName="DATA_INSERIMENTO" />
+                <ScalarProperty Name="ID_INDIRIZZO_DESTINATARIO" ColumnName="ID_INDIRIZZO_DESTINATARIO" />
+                <ScalarProperty Name="EMAIL_DESTINATARIO" ColumnName="EMAIL_DESTINATARIO" />
+                <ScalarProperty Name="TELEFONO_DESTINATARIO" ColumnName="TELEFONO_DESTINATARIO" />
+                <ScalarProperty Name="NOME_DESTINATARIO" ColumnName="NOME_DESTINATARIO" />
+                <ScalarProperty Name="ID_INDIRIZZO_MITTENTE" ColumnName="ID_INDIRIZZO_MITTENTE" />
+                <ScalarProperty Name="EMAIL_MITTENTE" ColumnName="EMAIL_MITTENTE" />
+                <ScalarProperty Name="TELEFONO_MITTENTE" ColumnName="TELEFONO_MITTENTE" />
+                <ScalarProperty Name="NOME_MITTENTE" ColumnName="NOME_MITTENTE" />
+                <ScalarProperty Name="ID_CORRIERE_NAZIONE" ColumnName="ID_CORRIERE_NAZIONE" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PERSONA">
+            <EntityTypeMapping TypeName="GratisForGratisModel.PERSONA">
+              <MappingFragment StoreEntitySet="PERSONA">
+                <ScalarProperty Name="STATO" ColumnName="STATO" />
+                <ScalarProperty Name="DATA_MODIFICA" ColumnName="DATA_MODIFICA" />
+                <ScalarProperty Name="DATA_ACCESSO" ColumnName="DATA_ACCESSO" />
+                <ScalarProperty Name="DATA_INSERIMENTO" ColumnName="DATA_INSERIMENTO" />
+                <ScalarProperty Name="ID_ABBONAMENTO" ColumnName="ID_ABBONAMENTO" />
+                <ScalarProperty Name="COGNOME" ColumnName="COGNOME" />
+                <ScalarProperty Name="NOME" ColumnName="NOME" />
+                <ScalarProperty Name="FACEBOOK_TOKEN_SESSIONE" ColumnName="FACEBOOK_TOKEN_SESSIONE" />
+                <ScalarProperty Name="FACEBOOK_TOKEN_PERMANENTE" ColumnName="FACEBOOK_TOKEN_PERMANENTE" />
+                <ScalarProperty Name="TOKEN_PASSWORD" ColumnName="TOKEN_PASSWORD" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="ID_CONTO_CORRENTE" ColumnName="ID_CONTO_CORRENTE" />
                 <ScalarProperty Name="TOKEN" ColumnName="TOKEN" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>

@@ -17,6 +17,8 @@ namespace GratisForGratis.Models
 
         public PERSONA Persona { get; set; }
 
+        public string NomeVisibile { get; set; }
+
         public List<PERSONA_EMAIL> Email { get; set; }
 
         public List<PERSONA_TELEFONO> Telefono { get; set; }
@@ -39,9 +41,6 @@ namespace GratisForGratis.Models
         public PersonaModel(PERSONA model)
         {
             this.Persona = model;
-            /*foreach (PropertyInfo prop in model.GetType().GetProperties())
-                GetType().GetProperty(prop.Name).SetValue(this, prop.GetValue(model, null), null);
-                */
             this.SetValoriBase();
         }
         #endregion

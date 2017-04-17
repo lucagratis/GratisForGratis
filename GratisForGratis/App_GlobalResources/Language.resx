@@ -1111,7 +1111,7 @@
     <value>Testo</value>
   </data>
   <data name="ActivatedUser" xml:space="preserve">
-    <value>L'utente è stato &lt;strong&gt;attivato con successo con {0} di partenza!&lt;/strong&gt; Ora potrai accedere al portale e ottenere ulteriori &lt;strong&gt;{1}&lt;/strong&gt; se pubblicherai 4 vendite di tipo categoria differente. Inizia a far parte del circuito che &lt;strong&gt;cambierà il tuo modo di commerciare!&lt;/strong&gt;</value>
+    <value>Congratulazioni, hai &lt;strong&gt;confermato il tuo indirizzo email&lt;/strong&gt;. Se non l'hai già fatto, accedi al portale e &lt;strong&gt;completa i tuoi dati personali&lt;/strong&gt;, otterrai {0} per l'avvenuta registrazione. In più potrai ottenere ulteriori &lt;strong&gt;{1} se pubblicherai 4 annunci&lt;/strong&gt; di categoria differente. Inizia a far parte del circuito che &lt;strong&gt;cambierà il tuo modo di commerciare!&lt;/strong&gt;</value>
   </data>
   <data name="ErrorActiveUser1" xml:space="preserve">
     <value>L'utente &lt;strong&gt;non esiste più&lt;/strong&gt; o non è mai stato presente. Verificare di aver inserito il link correttamente.</value>
@@ -1493,5 +1493,26 @@
   </data>
   <data name="LblBarter" xml:space="preserve">
     <value>Solo baratto</value>
+  </data>
+  <data name="BtnResubmission" xml:space="preserve">
+    <value>Reinvio</value>
+  </data>
+  <data name="ImpostazioniCompletaRegistrazione" xml:space="preserve">
+    <value>Per poter attivare l'annuncio appena pubblicato, completa la tua registrazione!</value>
+  </data>
+  <data name="MessaggioCompletaRegistrazione" xml:space="preserve">
+    <value>Finisci la tua registrazione alla pagina {0} per poter acquistare e vendere. Riceverai ulteriori crediti omaggio!</value>
+  </data>
+  <data name="MessaggioConfermaEmail" xml:space="preserve">
+    <value>Conferma l'e-mail di registrazione. Clicca il seguente link per riceverla nuovamente!</value>
+  </data>
+  <data name="EnableAd" xml:space="preserve">
+    <value>Attiva annuncio</value>
+  </data>
+  <data name="ImpostazioniErroreAttivaAnnunci" xml:space="preserve">
+    <value>C'è stato un errore nell'attivare i tuoi annunci, puoi attivarli manualmente dal seguente link: {0}</value>
+  </data>
+  <data name="ImpostazioniErroreSalvaUtente" xml:space="preserve">
+    <value>C'è stato un errore nel salvataggio dell'utente, riprovare più tardi o chiamare l'assistenza.</value>
   </data>
 </root>

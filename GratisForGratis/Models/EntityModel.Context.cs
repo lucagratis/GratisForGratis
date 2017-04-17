@@ -32,7 +32,6 @@ namespace GratisForGratis.Models
         public virtual DbSet<ANNUNCIO_CLICK> ANNUNCIO_CLICK { get; set; }
         public virtual DbSet<ANNUNCIO_FEEDBACK> ANNUNCIO_FEEDBACK { get; set; }
         public virtual DbSet<ANNUNCIO_FOTO> ANNUNCIO_FOTO { get; set; }
-        public virtual DbSet<ANNUNCIO_SPEDIZIONE> ANNUNCIO_SPEDIZIONE { get; set; }
         public virtual DbSet<ANNUNCIO_TAG> ANNUNCIO_TAG { get; set; }
         public virtual DbSet<ANNUNCIO_VISUALIZZAZIONE> ANNUNCIO_VISUALIZZAZIONE { get; set; }
         public virtual DbSet<ARTISTA> ARTISTA { get; set; }
@@ -70,7 +69,6 @@ namespace GratisForGratis.Models
         public virtual DbSet<OGGETTO_VESTITO> OGGETTO_VESTITO { get; set; }
         public virtual DbSet<OGGETTO_VIDEO> OGGETTO_VIDEO { get; set; }
         public virtual DbSet<OGGETTO_VIDEOGAMES> OGGETTO_VIDEOGAMES { get; set; }
-        public virtual DbSet<PERSONA> PERSONA { get; set; }
         public virtual DbSet<PERSONA_ATTIVITA> PERSONA_ATTIVITA { get; set; }
         public virtual DbSet<PERSONA_EMAIL> PERSONA_EMAIL { get; set; }
         public virtual DbSet<PERSONA_FOTO> PERSONA_FOTO { get; set; }
@@ -93,6 +91,10 @@ namespace GratisForGratis.Models
         public virtual DbSet<CONTO_CORRENTE_MONETA> CONTO_CORRENTE_MONETA { get; set; }
         public virtual DbSet<OFFERTA> OFFERTA { get; set; }
         public virtual DbSet<ANNUNCIO> ANNUNCIO { get; set; }
+        public virtual DbSet<ANNUNCIO_SPEDIZIONE> ANNUNCIO_SPEDIZIONE { get; set; }
+        public virtual DbSet<OGGETTO_APPARTENENZA> OGGETTO_APPARTENENZA { get; set; }
+        public virtual DbSet<SPEDIZIONE> SPEDIZIONE { get; set; }
+        public virtual DbSet<PERSONA> PERSONA { get; set; }
     
         public virtual int AGGIORNAMENTO_CATEGORIE()
         {

@@ -687,6 +687,9 @@
     <Compile Include="Models\OGGETTO.cs">
       <DependentUpon>EntityModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\OGGETTO_APPARTENENZA.cs">
+      <DependentUpon>EntityModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\OGGETTO_COMPUTER.cs">
       <DependentUpon>EntityModel.tt</DependentUpon>
     </Compile>
@@ -773,6 +776,9 @@
       <DependentUpon>EntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SISTEMA_OPERATIVO.cs">
+      <DependentUpon>EntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SPEDIZIONE.cs">
       <DependentUpon>EntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TRANSAZIONE.cs">
@@ -1231,6 +1237,8 @@
     <Content Include="Views\Pubblica\Spedizione.cshtml" />
     <Content Include="Views\Home\Team.cshtml" />
     <Content Include="Views\Home\BandiRicevuti.cshtml" />
+    <Content Include="Views\Utente\LoginVeloce.cshtml" />
+    <Content Include="Views\Utente\Email\RegistrazioneUtenteReinvio.cshtml" />
     <None Include="Web References\ServizioADV\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>

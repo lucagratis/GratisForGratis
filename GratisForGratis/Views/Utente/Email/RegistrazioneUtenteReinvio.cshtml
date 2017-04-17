@@ -1,0 +1,34 @@
+﻿@model GratisForGratis.Models.PersonaModel
+@using System.Web.Configuration
+
+<tr>
+    <td style="width:50px;">&nbsp;</td>
+    <td align="center" style="padding:12px 0px 0px;line-height:12px;">
+        @string.Format(Email.Welcome, WebConfigurationManager.AppSettings["nomeSito"])
+    </td>
+    <td style="width:50px;">&nbsp;</td>
+</tr>
+<tr>
+    <td style="width:50px;">&nbsp;</td>
+    <td align="center" style="padding:14px 0px 0px;line-height:12px;">
+        @Html.Raw(Email.RegistrationTextForLink)<br /><br />
+        <div bgcolor="#178fcc" width="160" style="width:160px;background-color:#178fcc;">
+            <p>&nbsp;</p>
+            @Html.ActionLink(Language.Confirm, "Iscrizione", "Utente", null, Request.Url.Host, null, new { token = HttpUtility.UrlEncode(GratisForGratis.Controllers.Utils.Encode(Model.Email.SingleOrDefault(m => m.TIPO == (int)GratisForGratis.Models.TipoEmail.Registrazione).EMAIL + Model.Persona.PASSWORD)) }, new { style = "color:#FFF;" })
+            <p>&nbsp;</p>
+        </div>
+    </td>
+    <td style="width:50px;">&nbsp;</td>
+</tr>
+<tr>
+    <td style="width:50px;">&nbsp;</td>
+    <td align="center" style="padding:20px 0px 0px;line-height:12px;">
+        @Html.Raw(@Email.RegistrationText2)
+        <span style="font-style:italic;">Team @WebConfigurationManager.AppSettings["nomeSito"].</span>
+    </td>
+    <td style="width:50px;">&nbsp;</td>
+</tr>
+<tr>
+    <td colspan="3">&nbsp;</td>
+</tr>
+

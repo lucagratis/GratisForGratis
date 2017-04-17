@@ -409,3 +409,15 @@ function attendiInvio(pulsante) {
     }
     //};
 }
+
+function reinvioEmailRegistrazione()
+{
+    $.ajax({
+        type: "GET",
+        url: "/Utente/ReinvioEmailRegistrazione",
+        dataType: "json",
+        success: function (data) {
+            alert("Invio effettuato. Controlla anche nella tua casella di spam.");
+        }
+    });
+}

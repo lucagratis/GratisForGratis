@@ -32,6 +32,7 @@ namespace GratisForGratis.Models
             this.OGGETTO_VIDEO = new HashSet<OGGETTO_VIDEO>();
             this.OGGETTO_VIDEOGAMES = new HashSet<OGGETTO_VIDEOGAMES>();
             this.ANNUNCIO = new HashSet<ANNUNCIO>();
+            this.OGGETTO_APPARTENENZA = new HashSet<OGGETTO_APPARTENENZA>();
         }
     
         public int ID { get; set; }
@@ -81,5 +82,7 @@ namespace GratisForGratis.Models
         public virtual ICollection<OGGETTO_VIDEOGAMES> OGGETTO_VIDEOGAMES { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ANNUNCIO> ANNUNCIO { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OGGETTO_APPARTENENZA> OGGETTO_APPARTENENZA { get; set; }
     }
 }

@@ -42,6 +42,12 @@
                         </span>
                     </div>
                 </div>
+                @if (vendita.StatoVendita == StatoVendita.INATTIVO && (Session["utente"] as PersonaModel).Persona.STATO == (int)Stato.ATTIVO && (Session["utente"] as PersonaModel).Email.SingleOrDefault(m => m.TIPO == (int)TipoEmail.Registrazione && m.STATO == (int)Stato.ATTIVO) != null)
+                {
+                    <div class="cella noMandatory">
+                        <div class="btn enableSell">@Language.EnableAd</div>
+                    </div>
+                }
                 @if (vendita.TipoPagamento != TipoPagamento.Vendita && vendita.StatoVendita == StatoVendita.ATTIVO)
                 {
                 <div class="cella noMandatory">

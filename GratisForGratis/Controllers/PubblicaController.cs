@@ -116,6 +116,13 @@ namespace GratisForGratis.Controllers
         [HttpGet]
         public ActionResult Conferma(TipoAcquisto tipo)
         {
+            // se ancora la registrazione è incompleta, lo obbligo a concluderla
+            if ((Session["utente"] as PersonaModel).Persona.STATO == (int)Stato.INATTIVO)
+            {
+                TempData["completaRegistrazione"] = Language.ImpostazioniCompletaRegistrazione;
+                return RedirectToAction("Impostazioni", "Utente");
+            }
+
             PubblicaViewModel pubblicazione = null;
             try
             {
@@ -501,7 +508,11 @@ namespace GratisForGratis.Controllers
                 vendita.TOKEN = Guid.NewGuid();
                 vendita.DATA_INSERIMENTO = DateTime.Now;
                 vendita.ID_OGGETTO = oggetto.ID;
-                vendita.STATO = (int)Stato.ATTIVO;
+                // se l'utente non ha completato la registrazione lo stato non è attivo
+                vendita.STATO = (int)StatoVendita.INATTIVO;
+                if (utente.Persona.STATO == (int)Stato.ATTIVO)
+                    vendita.STATO = (int)StatoVendita.ATTIVO;
+
                 db.ANNUNCIO.Add(vendita);
                 if (db.SaveChanges() > 0)
                 {

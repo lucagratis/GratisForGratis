@@ -97,7 +97,7 @@ namespace GratisForGratis.App_GlobalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to L&apos;utente è stato &lt;strong&gt;attivato con successo con {0} di partenza!&lt;/strong&gt; Ora potrai accedere al portale e ottenere ulteriori &lt;strong&gt;{1}&lt;/strong&gt; se pubblicherai 4 vendite di tipo categoria differente. Inizia a far parte del circuito che &lt;strong&gt;cambierà il tuo modo di commerciare!&lt;/strong&gt;.
+        ///   Looks up a localized string similar to Congratulazioni, hai &lt;strong&gt;confermato il tuo indirizzo email&lt;/strong&gt;. Se non l&apos;hai già fatto, accedi al portale e &lt;strong&gt;completa i tuoi dati personali&lt;/strong&gt;, otterrai {0} per l&apos;avvenuta registrazione. In più potrai ottenere ulteriori &lt;strong&gt;{1} se pubblicherai 4 annunci&lt;/strong&gt; di categoria differente. Inizia a far parte del circuito che &lt;strong&gt;cambierà il tuo modo di commerciare!&lt;/strong&gt;.
         /// </summary>
         public static string ActivatedUser {
             get {
@@ -417,6 +417,15 @@ namespace GratisForGratis.App_GlobalResources {
         public static string Browse {
             get {
                 return ResourceManager.GetString("Browse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reinvio.
+        /// </summary>
+        public static string BtnResubmission {
+            get {
+                return ResourceManager.GetString("BtnResubmission", resourceCulture);
             }
         }
         
@@ -921,6 +930,15 @@ namespace GratisForGratis.App_GlobalResources {
         public static string EmailNotExist {
             get {
                 return ResourceManager.GetString("EmailNotExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Attiva annuncio.
+        /// </summary>
+        public static string EnableAd {
+            get {
+                return ResourceManager.GetString("EnableAd", resourceCulture);
             }
         }
         
@@ -1969,6 +1987,33 @@ namespace GratisForGratis.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Per poter attivare l&apos;annuncio appena pubblicato, completa la tua registrazione!.
+        /// </summary>
+        public static string ImpostazioniCompletaRegistrazione {
+            get {
+                return ResourceManager.GetString("ImpostazioniCompletaRegistrazione", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C&apos;è stato un errore nell&apos;attivare i tuoi annunci, puoi attivarli manualmente dal seguente link: {0}.
+        /// </summary>
+        public static string ImpostazioniErroreAttivaAnnunci {
+            get {
+                return ResourceManager.GetString("ImpostazioniErroreAttivaAnnunci", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C&apos;è stato un errore nel salvataggio dell&apos;utente, riprovare più tardi o chiamare l&apos;assistenza..
+        /// </summary>
+        public static string ImpostazioniErroreSalvaUtente {
+            get {
+                return ResourceManager.GetString("ImpostazioniErroreSalvaUtente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Suggerimento.
         /// </summary>
         public static string Improvement {
@@ -2208,6 +2253,24 @@ namespace GratisForGratis.App_GlobalResources {
         public static string MenuSearchSaved {
             get {
                 return ResourceManager.GetString("MenuSearchSaved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Finisci la tua registrazione alla pagina {0} per poter acquistare e vendere. Riceverai ulteriori crediti omaggio!.
+        /// </summary>
+        public static string MessaggioCompletaRegistrazione {
+            get {
+                return ResourceManager.GetString("MessaggioCompletaRegistrazione", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Conferma l&apos;e-mail di registrazione. Clicca il seguente link per riceverla nuovamente!.
+        /// </summary>
+        public static string MessaggioConfermaEmail {
+            get {
+                return ResourceManager.GetString("MessaggioConfermaEmail", resourceCulture);
             }
         }
         

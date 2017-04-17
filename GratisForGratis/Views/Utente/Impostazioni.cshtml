@@ -20,6 +20,12 @@
             @Html.AntiForgeryToken()
             <hr />
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            if (TempData["completaRegistrazione"] != null)
+            {
+                <h4 class="message">@TempData["completaRegistrazione"]</h4>
+            }
+            
             if (TempData["salvato"] != null && (bool)TempData["salvato"])
             {
                 <h4 class="message">@Language.SaveOK</h4>

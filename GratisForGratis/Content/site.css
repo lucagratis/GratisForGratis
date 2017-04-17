@@ -661,6 +661,19 @@ footer h6 a {
     color:#fff;
 }
 
+#messaggioPerUtente .testo{
+    padding: 5px 27px;
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+#messaggioPerUtente .testo a{
+    color: #ffffff;
+    text-decoration:underline;
+    font-weight:900;
+    text-transform:uppercase;
+}
+
 /* CSS PER SCREEN MINORI DI 940PX */
 
 @media only all and (max-width: 480px){

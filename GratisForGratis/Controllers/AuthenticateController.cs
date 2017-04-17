@@ -30,6 +30,8 @@ namespace GratisForGratis.Controllers
                 persona.Attivita.Add(new AttivitaModel(m));
             });
             persona.ContoCorrente = db.CONTO_CORRENTE_MONETA.Where(m => m.ID_CONTO_CORRENTE == persona.Persona.ID_CONTO_CORRENTE).ToList();
+            persona.NomeVisibile = (string.IsNullOrWhiteSpace(persona.Persona.NOME + persona.Persona.COGNOME) ? persona.Email
+                .Where(m => m.TIPO == (int)TipoEmail.Registrazione).SingleOrDefault().EMAIL: string.Concat(persona.Persona.NOME, " ", persona.Persona.COGNOME));
 
             sessione["utente"] = persona;
             if (persona.Attivita != null && persona.Attivita.Count > 0)
