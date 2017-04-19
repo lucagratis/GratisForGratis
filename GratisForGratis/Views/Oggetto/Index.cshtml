@@ -68,6 +68,11 @@
                 <div class="buttons">
                     @if (TempData["azione"] as string != "View" && Request.IsAuthenticated && Model.VenditoreID != ((PersonaModel)Session["utente"]).Persona.ID)
                     {
+                        if (Model.StatoVendita == StatoVendita.INATTIVO)
+                        {
+                            // pulsante per suggerire di attivare l'annuncio
+                            <a href="javascript:void(0);" onclick="suggerisciAttivazioneAnnuncio(@Model.VenditaID);">@Language.SuggestAdActivation</a>
+                        }
                         <input name="Compra" type="submit" class="btn buy" value="@Language.BuyNow" />
                     }
                     else if (!Request.IsAuthenticated)

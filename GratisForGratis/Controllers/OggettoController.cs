@@ -215,6 +215,9 @@ namespace GratisForGratis.Controllers
             if (model.Offerta.TipoOfferta == TipoOfferta.Baratto && model.Offerta.OggettiBarattati != null && model.Offerta.OggettiBarattati.Length > 4)
                 ModelState.AddModelError("ErroreOfferta", ErroreOfferta.PrezzoErrato.ToString());
 
+            if (CheckUtenteAttivo(1))
+                return RedirectToAction("Impostazioni", "Utente");
+
             string nomeView = "Index";
 
             try
@@ -451,6 +454,7 @@ namespace GratisForGratis.Controllers
             oggetto.VenditoreNominativo = vendita.PERSONA.NOME + ' ' + vendita.PERSONA.COGNOME;
             oggetto.Note = vendita.NOTE_AGGIUNTIVE;
             oggetto.Quantità = vendita.OGGETTO.NUMERO_PEZZI;
+            oggetto.StatoVendita = (StatoVendita)vendita.STATO;
         }
 
         private OggettoViewModel SetInfoCategoriaOggetto(OGGETTO oggetto, OggettoViewModel oggettoView)

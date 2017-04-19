@@ -370,6 +370,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="ClassDiagram1.cd" />
+    <Content Include="Scripts\annuncio.js" />
     <Content Include="Scripts\ColorPicker\colorpicker.js" />
     <Content Include="Scripts\ColorPicker\css\colorpicker.css" />
     <Content Include="Scripts\ColorPicker\css\layout.css" />

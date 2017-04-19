@@ -117,11 +117,8 @@ namespace GratisForGratis.Controllers
         public ActionResult Conferma(TipoAcquisto tipo)
         {
             // se ancora la registrazione è incompleta, lo obbligo a concluderla
-            if ((Session["utente"] as PersonaModel).Persona.STATO == (int)Stato.INATTIVO)
-            {
-                TempData["completaRegistrazione"] = Language.ImpostazioniCompletaRegistrazione;
+            if (CheckUtenteAttivo(0))
                 return RedirectToAction("Impostazioni", "Utente");
-            }
 
             PubblicaViewModel pubblicazione = null;
             try

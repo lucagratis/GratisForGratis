@@ -733,6 +733,7 @@ namespace GratisForGratis.Controllers
                                 U.TOKEN AS UTENTE_TOKEN, V.TOKEN, V.NOME, V.TIPO_PAGAMENTO,  
                                 V.PUNTI,V.SOLDI, V.DATA_INSERIMENTO, V.ID_CATEGORIA AS CATEGORIA_ID, 
                                 CATEGORIA.NOME AS CATEGORIA_NOME, P.ID AS ID_ATTIVITA,
+                                CATEGORIA.TIPO_VENDITA AS TIPO_ACQUISTO,
                                 P.NOME AS PARTNER_NOME, P.TOKEN AS PARTNER_TOKEN 
                                 --COMUNE.NOME AS CITTA_NOME, COMUNE.ID AS CITTA_ID,
                                 ";
@@ -800,6 +801,7 @@ namespace GratisForGratis.Controllers
                                 viewModel.DataInserimento = (DateTime)res["DATA_INSERIMENTO"];
                                 viewModel.CategoriaID = (int)res["CATEGORIA_ID"];
                                 viewModel.Categoria = res["CATEGORIA_NOME"].ToString();
+                                viewModel.TipoAcquisto = (TipoAcquisto)res["TIPO_ACQUISTO"];
                                 int venditaId = (int)res["ID"];
                                 viewModel.Foto = db.ANNUNCIO_FOTO.Where(f => f.ID_ANNUNCIO == venditaId).Select(f =>
                                     f.FOTO.FOTO1
@@ -894,7 +896,7 @@ namespace GratisForGratis.Controllers
                                 U.TOKEN AS UTENTE_TOKEN, V.TOKEN, V.NOME, V.TIPO_PAGAMENTO, COMUNE.NOME AS CITTA_NOME, V.PUNTI,V.SOLDI,
                                 O.ANNO, M.ID AS MARCA_ID, M.NOME AS MARCA_NOME, O.CONDIZIONE, V.DATA_INSERIMENTO, O.NUMERO_PEZZI,
                                 V.ID_CATEGORIA AS CATEGORIA_ID, CATEGORIA.NOME AS CATEGORIA_NOME, COMUNE.ID AS CITTA_ID,
-                                P.ID AS ID_ATTIVITA, P.NOME AS PARTNER_NOME, P.TOKEN AS PARTNER_TOKEN ";
+                                P.ID AS ID_ATTIVITA, P.NOME AS PARTNER_NOME, P.TOKEN AS PARTNER_TOKEN, V.STATO AS STATO_VENDITA ";
 
                     string schema = @"FROM ANNUNCIO AS V
                                 INNER JOIN CATEGORIA ON V.ID_CATEGORIA=CATEGORIA.ID 
@@ -961,6 +963,7 @@ namespace GratisForGratis.Controllers
                                 oggetto.Quantità = (int)res["NUMERO_PEZZI"];
                                 oggetto.CategoriaID = (int)res["CATEGORIA_ID"];
                                 oggetto.Categoria = res["CATEGORIA_NOME"].ToString();
+                                oggetto.StatoVendita = (StatoVendita)res["STATO_VENDITA"];
                                 oggetto.Foto = db.ANNUNCIO_FOTO.Where(f => f.ID_ANNUNCIO == oggetto.VenditaID).Select(f =>
                                     f.FOTO.FOTO1
                                 ).ToList();
@@ -1380,7 +1383,7 @@ namespace GratisForGratis.Controllers
                                 U.ID AS PERSONA, U.NOME + ' ' + U.COGNOME AS UTENTE_NOMINATIVO, 
                                 U.TOKEN AS UTENTE_TOKEN, V.TOKEN, V.NOME, V.TIPO_PAGAMENTO, COMUNE.NOME AS CITTA_NOME, V.PUNTI,V.SOLDI,
                                 V.DATA_INSERIMENTO, V.ID_CATEGORIA AS CATEGORIA_ID, CATEGORIA.NOME AS CATEGORIA_NOME, COMUNE.ID AS CITTA_ID,
-                                P.ID AS ID_ATTIVITA, P.NOME AS PARTNER_NOME, P.TOKEN AS PARTNER_TOKEN ";
+                                P.ID AS ID_ATTIVITA, P.NOME AS PARTNER_NOME, P.TOKEN AS PARTNER_TOKEN, V.STATO AS STATO_VENDITA ";
 
 
                     string schema = @"FROM ANNUNCIO AS V
@@ -1459,6 +1462,7 @@ namespace GratisForGratis.Controllers
                                 servizio.OraFineFestivita = (res.IsDBNull(res.GetOrdinal("ORA_FINE_FESTIVI"))) ? null : (TimeSpan?)res["ORA_FINE_FESTIVI"];
                                 servizio.RisultatiFinali = res["RISULTATI_FINALI"].ToString();
                                 servizio.ServiziOfferti = res["SERVIZI_OFFERTI"].ToString();
+                                servizio.StatoVendita = (StatoVendita)res["STATO_VENDITA"];
                                 servizio.Foto = db.ANNUNCIO_FOTO.Where(f => f.ID_ANNUNCIO == servizio.VenditaID).Select(f =>
                                     f.FOTO.FOTO1
                                 ).ToList();

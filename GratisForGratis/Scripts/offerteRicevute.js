@@ -5,6 +5,9 @@
     $('#grid .purchase .deleteSell').one('click', function (event) {
         anullaVendita(this);
     });
+    $('#grid .purchase .enableSell').one('click', function (event) {
+        attivaVendita(this);
+    });
 });
 function anullaBaratto(link) {
     $vendita = $(link).parents('.purchase');
@@ -45,6 +48,28 @@ function anullaVendita(link) {
                 anullaVendita(link);
             });
             alert("Errore annullo vendita: " + decodeURIComponent(errore.responseText));
+        }
+    });
+}
+function attivaVendita(link) {
+    $vendita = $(link).parents('.purchase');
+    var token = $vendita.attr('id');
+    $.ajax({
+        type: "POST",
+        url: '/Offerte/AttivaVendita',
+        data: {
+            token: decodeURI(token)
+        },
+        dataType: "json",
+        success: function (msg) {
+            // refresh pagina
+            location.reload(true);
+        },
+        error: function (errore, stato, messaggio) {
+            $(link).one('click', function (event) {
+                attivaVendita(link);
+            });
+            alert(decodeURIComponent(errore.responseText));
         }
     });
 }

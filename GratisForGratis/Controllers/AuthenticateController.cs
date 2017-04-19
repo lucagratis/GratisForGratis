@@ -1,4 +1,5 @@
-﻿using GratisForGratis.Models;
+﻿using GratisForGratis.App_GlobalResources;
+using GratisForGratis.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -129,6 +130,25 @@ namespace GratisForGratis.Controllers
                 db.CONTO_CORRENTE_MONETA.Add(conto);
                 db.SaveChanges();
             }
+        }
+
+        protected bool CheckUtenteAttivo(int tipoAzione)
+        {
+            PersonaModel utente = (Session["utente"] as PersonaModel);
+            bool reindirizza = false;
+            if (utente.Persona.STATO == (int)Stato.INATTIVO)
+            {
+                reindirizza = true;
+                TempData["completaRegistrazione"] = (tipoAzione==0)?Language.PubblicaAnnuncioCompletaRegistrazione: Language.AcquistaCompletaRegistrazione;
+            }
+
+            if (utente.Email.SingleOrDefault(m => m.TIPO == (int)TipoEmail.Registrazione).STATO == (int)Stato.INATTIVO)
+            {
+                reindirizza = true;
+                TempData["confermaEmail"] = (tipoAzione==0)? Language.PubblicaAnnuncioConfermaEmail: Language.AcquistaConfermaEmail;
+            }
+
+            return reindirizza;
         }
 
         #endregion

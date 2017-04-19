@@ -249,6 +249,35 @@ namespace GratisForGratis.Controllers
             return Json(App_GlobalResources.Language.ErrorReporting);
         }
 
+        // DA COMPLETARE ANCORA
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Filters.ValidateAjax]
+        public ActionResult SuggerimentoAttivazioneAnnuncio(string id)
+        {
+            try
+            {
+                using (DatabaseContext db = new DatabaseContext())
+                {
+                    // salvataggio notifica per venditore
+                    // da implementare tabella notifica
+                    return Json("Suggerimento inviato correttamente!");
+                }
+            }
+            catch (InvalidDataException ex)
+            {
+                Elmah.ErrorSignal.FromCurrentContext().Raise(ex);
+                Response.StatusCode = (int)System.Net.HttpStatusCode.BadRequest;
+                return Json(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Elmah.ErrorSignal.FromCurrentContext().Raise(ex);
+            }
+            Response.StatusCode = (int)System.Net.HttpStatusCode.BadRequest;
+            return Json(App_GlobalResources.Language.ErrorReporting);
+        }
+
         /**
         ** term: inizio parola della categoria da cercare
         ** filtroExtra: nome oggetto da cercare

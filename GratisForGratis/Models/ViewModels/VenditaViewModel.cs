@@ -199,6 +199,9 @@ namespace GratisForGratis.Models
         [Display(Name = "Note", ResourceType = typeof(App_GlobalResources.Language))]
         string Note { get; set; }
 
+        [Display(Name = "StateSelling", ResourceType = typeof(App_GlobalResources.Language))]
+        StatoVendita StatoVendita { get; set; }
+
         // tolto campo compra
     }
 
@@ -317,6 +320,9 @@ namespace GratisForGratis.Models
         public int? Quantità { get; set; }
 
         public string Note { get; set; }
+
+        [Display(Name = "StateSelling", ResourceType = typeof(App_GlobalResources.Language))]
+        public StatoVendita StatoVendita { get; set; }
 
         public OffertaOggettoViewModel Offerta { get; set; }
     }
@@ -615,6 +621,9 @@ namespace GratisForGratis.Models
         [DataType(DataType.MultilineText)]
         [Display(Name = "Note", ResourceType = typeof(App_GlobalResources.Language))]
         string Note { get; set; }
+
+        [Display(Name = "StateSelling", ResourceType = typeof(App_GlobalResources.Language))]
+        StatoVendita StatoVendita { get; set; }
     }
 
     public class ServizioViewModel : IServizio
@@ -753,5 +762,8 @@ namespace GratisForGratis.Models
         public Tariffa Tariffa { get; set; }
 
         public OffertaServizioViewModel Offerta { get; set; }
+
+        [Display(Name = "StateSelling", ResourceType = typeof(App_GlobalResources.Language))]
+        public StatoVendita StatoVendita { get; set; }
     }
 }

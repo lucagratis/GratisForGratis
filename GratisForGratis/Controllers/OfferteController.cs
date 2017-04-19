@@ -488,5 +488,37 @@ namespace GratisForGratis.Controllers
             return Json(App_GlobalResources.Language.ErrorCancelBarter);
         }
 
+        [HttpPost]
+        [Filters.ValidateAjax]
+        public ActionResult AttivaVendita(string token)
+        {
+            try
+            {
+                token = Server.UrlDecode(token);
+                Guid tokenDecriptato = Guid.Parse(Utils.DecodeToString(token.Substring(3).Substring(0, token.Length - 6)));
+                int idUtente = (Session["utente"] as PersonaModel).Persona.ID;
+                using (DatabaseContext db = new DatabaseContext())
+                {
+                    ANNUNCIO model = db.ANNUNCIO.Where(v => v.TOKEN == tokenDecriptato && v.ID_PERSONA == idUtente
+                        && (v.STATO == (int)StatoVendita.INATTIVO || v.STATO != (int)StatoVendita.ATTIVO)).SingleOrDefault();
+                    if (model != null)
+                    {
+                        model.STATO = (int)StatoVendita.ATTIVO;
+                        model.DATA_MODIFICA = DateTime.Now;
+                        if (db.SaveChanges() > 0)
+                        {
+                            return Json(true);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Elmah.ErrorSignal.FromCurrentContext().Raise(ex);
+            }
+            Response.StatusCode = (int)System.Net.HttpStatusCode.BadRequest;
+            return Json(App_GlobalResources.Language.EnableSellFailed);
+        }
+
     }
 }

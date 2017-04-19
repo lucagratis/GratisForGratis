@@ -1497,7 +1497,7 @@
   <data name="BtnResubmission" xml:space="preserve">
     <value>Reinvio</value>
   </data>
-  <data name="ImpostazioniCompletaRegistrazione" xml:space="preserve">
+  <data name="PubblicaAnnuncioCompletaRegistrazione" xml:space="preserve">
     <value>Per poter attivare l'annuncio appena pubblicato, completa la tua registrazione!</value>
   </data>
   <data name="MessaggioCompletaRegistrazione" xml:space="preserve">
@@ -1514,5 +1514,20 @@
   </data>
   <data name="ImpostazioniErroreSalvaUtente" xml:space="preserve">
     <value>C'è stato un errore nel salvataggio dell'utente, riprovare più tardi o chiamare l'assistenza.</value>
+  </data>
+  <data name="SuggestAdActivation" xml:space="preserve">
+    <value>Attiva annuncio</value>
+  </data>
+  <data name="AcquistaCompletaRegistrazione" xml:space="preserve">
+    <value>Per poter continuare l'acquisto, completa la tua registrazione!</value>
+  </data>
+  <data name="AcquistaConfermaEmail" xml:space="preserve">
+    <value>Per poter continuare l'acquisto conferma l'indirizzo email!</value>
+  </data>
+  <data name="EnableSellFailed" xml:space="preserve">
+    <value>Attivazione fallita. Contattare l'assistenza.</value>
+  </data>
+  <data name="PubblicaAnnuncioConfermaEmail" xml:space="preserve">
+    <value>Per poter pubblicare l'annuncio conferma l'indirizzo email!</value>
   </data>
 </root>

@@ -1,3 +1,4 @@
+using GratisForGratis.App_GlobalResources;
 using GratisForGratis.Components;
 using GratisForGratis.Models;
 using System;
@@ -76,6 +77,7 @@ namespace GratisForGratis.Controllers
                     servizio.VenditoreID = vendita.ID_PERSONA;
                     servizio.VenditoreNominativo = vendita.PERSONA.NOME + ' ' + vendita.PERSONA.COGNOME;
                     servizio.Tariffa = (Tariffa)vendita.SERVIZIO.TARIFFA;
+                    servizio.StatoVendita = (StatoVendita)vendita.STATO;
                     servizio = SetServizioViewModel(db, servizio);
                     SetFeedbackVenditoreServizio(db, servizio);
                     // verifico che non stia provando ad accedere il venditore stesso
@@ -149,6 +151,7 @@ namespace GratisForGratis.Controllers
                     servizio.VenditoreID = vendita.ID_PERSONA;
                     servizio.VenditoreNominativo = vendita.PERSONA.NOME + ' ' + vendita.PERSONA.COGNOME;
                     servizio.Tariffa = (Tariffa)vendita.SERVIZIO.TARIFFA;
+                    servizio.StatoVendita = (StatoVendita)vendita.STATO;
                     servizio = SetServizioViewModel(db, servizio);
                     SetFeedbackVenditoreServizio(db, servizio);
                     ViewBag.Title = App_GlobalResources.Language.Buy + " " + servizio.Nome + " " + App_GlobalResources.Language.Gratis;
@@ -170,6 +173,9 @@ namespace GratisForGratis.Controllers
 
             if (model.Offerta.TipoOfferta == TipoOfferta.Baratto && model.Offerta.ServiziBarattati != null && model.Offerta.ServiziBarattati.Length > 4)
                 ModelState.AddModelError("ErroreOfferta", ErroreOfferta.PrezzoErrato.ToString());
+
+            if (CheckUtenteAttivo(1))
+                return RedirectToAction("Impostazioni", "Utente");
 
             string nomeView = "Index";
             
@@ -252,6 +258,7 @@ namespace GratisForGratis.Controllers
                     model.VenditoreID = vendita.ID_PERSONA;
                     model.VenditoreNominativo = vendita.PERSONA.NOME + ' ' + vendita.PERSONA.COGNOME;
                     model.Tariffa = (Tariffa)vendita.SERVIZIO.TARIFFA;
+                    model.StatoVendita = (StatoVendita)vendita.STATO;
                     model = SetServizioViewModel(db, model);
                     SetFeedbackVenditoreServizio(db, model);
                 }
