@@ -1,0 +1,190 @@
+﻿<error errorId="222b3c01-31e3-40bc-b39e-40b321c7075f" host="DESKTOP-MI2VOE6" type="System.NullReferenceException" message="Riferimento a un oggetto non impostato su un'istanza di oggetto." source="GratisForGratis" detail="System.NullReferenceException: Riferimento a un oggetto non impostato su un'istanza di oggetto.&#xD;&#xA;   in GratisForGratis.Controllers.PagamentoController.Definitivo(List`1 acquisti) in E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Controllers\PagamentoController.cs:riga 471" user="38732fed-926a-4bff-be2b-d33febb3a8f7" time="2016-12-26T01:52:56.6729888Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:43&#xD;&#xA;HTTP_CONTENT_TYPE:application/x-www-form-urlencoded; charset=UTF-8&#xD;&#xA;HTTP_ACCEPT:text/html, */*; q=0.01&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3&#xD;&#xA;HTTP_COOKIE:ricerca=IDCategoria=27&amp;Categoria=Orologi-lampade-Altro&amp;TipoAcquisto=0&amp;Nome=&amp;Livello=1&amp;CategoriaPadre=Arredamento&amp;IDCategoriaPadre=3; filtro=; __RequestVerificationToken=1suGxZPxtEDpS9GhE8L5i2avGpvidk8Z0KuR50M_1g1IGOqtOvq6iV9yO8NBiPeVg4V26Bq5lSW8ACfHID8tGepf7TQ1; ASP.NET_SessionId=itbwfs4fhnaagwxk14a01qjr; GRATISFORGRATIS=5021DFBF493AA1F8FE67C25D3797521CDD6B6B9E333B179439C3ADEBA9A931A87E2BAFEBA42972A5A9B5232D98964954414FA3C873DBBB476FC3B7F30B9111293B5135C3AC5E7D4896891FA42EA4782630FDBD1C9F049BABFE2D1B4ADC2E4531583508A9FEB1CB420C38028553751E8D699A43C412E768EDB3B3E7D9A60FAE7E7D778A0C15A70C8FB13DCB55C695F0A019379C34&#xD;&#xA;HTTP_HOST:localhost:53560&#xD;&#xA;HTTP_REFERER:http://localhost:53560/Offerte/Effettuate&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0&#xD;&#xA;HTTP_X_REQUESTED_WITH:XMLHttpRequest&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Content-Length: 43&#xD;&#xA;Content-Type: application/x-www-form-urlencoded; charset=UTF-8&#xD;&#xA;Accept: text/html, */*; q=0.01&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3&#xD;&#xA;Cookie: ricerca=IDCategoria=27&amp;Categoria=Orologi-lampade-Altro&amp;TipoAcquisto=0&amp;Nome=&amp;Livello=1&amp;CategoriaPadre=Arredamento&amp;IDCategoriaPadre=3; filtro=; __RequestVerificationToken=1suGxZPxtEDpS9GhE8L5i2avGpvidk8Z0KuR50M_1g1IGOqtOvq6iV9yO8NBiPeVg4V26Bq5lSW8ACfHID8tGepf7TQ1; ASP.NET_SessionId=itbwfs4fhnaagwxk14a01qjr; GRATISFORGRATIS=5021DFBF493AA1F8FE67C25D3797521CDD6B6B9E333B179439C3ADEBA9A931A87E2BAFEBA42972A5A9B5232D98964954414FA3C873DBBB476FC3B7F30B9111293B5135C3AC5E7D4896891FA42EA4782630FDBD1C9F049BABFE2D1B4ADC2E4531583508A9FEB1CB420C38028553751E8D699A43C412E768EDB3B3E7D9A60FAE7E7D778A0C15A70C8FB13DCB55C695F0A019379C34&#xD;&#xA;Host: localhost:53560&#xD;&#xA;Referer: http://localhost:53560/Offerte/Effettuate&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0&#xD;&#xA;X-Requested-With: XMLHttpRequest&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="38732fed-926a-4bff-be2b-d33febb3a8f7" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="38732fed-926a-4bff-be2b-d33febb3a8f7" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="38732fed-926a-4bff-be2b-d33febb3a8f7" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="43" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded; charset=UTF-8" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Pagamento/Definitivo" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Pagamento\Definitivo" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="53725" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Pagamento/Definitivo" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="53560" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/Pagamento/Definitivo" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="43" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded; charset=UTF-8" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html, */*; q=0.01" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="ricerca=IDCategoria=27&amp;Categoria=Orologi-lampade-Altro&amp;TipoAcquisto=0&amp;Nome=&amp;Livello=1&amp;CategoriaPadre=Arredamento&amp;IDCategoriaPadre=3; filtro=; __RequestVerificationToken=1suGxZPxtEDpS9GhE8L5i2avGpvidk8Z0KuR50M_1g1IGOqtOvq6iV9yO8NBiPeVg4V26Bq5lSW8ACfHID8tGepf7TQ1; ASP.NET_SessionId=itbwfs4fhnaagwxk14a01qjr; GRATISFORGRATIS=5021DFBF493AA1F8FE67C25D3797521CDD6B6B9E333B179439C3ADEBA9A931A87E2BAFEBA42972A5A9B5232D98964954414FA3C873DBBB476FC3B7F30B9111293B5135C3AC5E7D4896891FA42EA4782630FDBD1C9F049BABFE2D1B4ADC2E4531583508A9FEB1CB420C38028553751E8D699A43C412E768EDB3B3E7D9A60FAE7E7D778A0C15A70C8FB13DCB55C695F0A019379C34" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:53560" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:53560/Offerte/Effettuate" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0" />
+    </item>
+    <item name="HTTP_X_REQUESTED_WITH">
+      <value string="XMLHttpRequest" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="acquisti">
+      <value string="atF2TLxfU2kYuYQGaX0Be5sVA==atF" />
+    </item>
+  </form>
+  <cookies>
+    <item name="ricerca">
+      <value string="IDCategoria=27&amp;Categoria=Orologi-lampade-Altro&amp;TipoAcquisto=0&amp;Nome=&amp;Livello=1&amp;CategoriaPadre=Arredamento&amp;IDCategoriaPadre=3" />
+      <value string="IDCategoria=27&amp;Categoria=Orologi-lampade-Altro&amp;TipoAcquisto=0&amp;Nome=&amp;Livello=1&amp;CategoriaPadre=Arredamento&amp;IDCategoriaPadre=3" />
+    </item>
+    <item name="filtro">
+      <value string="" />
+      <value string="" />
+    </item>
+    <item name="__RequestVerificationToken">
+      <value string="1suGxZPxtEDpS9GhE8L5i2avGpvidk8Z0KuR50M_1g1IGOqtOvq6iV9yO8NBiPeVg4V26Bq5lSW8ACfHID8tGepf7TQ1" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="itbwfs4fhnaagwxk14a01qjr" />
+    </item>
+    <item name="GRATISFORGRATIS">
+      <value string="5021DFBF493AA1F8FE67C25D3797521CDD6B6B9E333B179439C3ADEBA9A931A87E2BAFEBA42972A5A9B5232D98964954414FA3C873DBBB476FC3B7F30B9111293B5135C3AC5E7D4896891FA42EA4782630FDBD1C9F049BABFE2D1B4ADC2E4531583508A9FEB1CB420C38028553751E8D699A43C412E768EDB3B3E7D9A60FAE7E7D778A0C15A70C8FB13DCB55C695F0A019379C34" />
+    </item>
+  </cookies>
+</error>

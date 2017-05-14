@@ -166,7 +166,7 @@
     <value>Collegandosi al sito {0} potrai fin da subito usufruire del tuo bonus!&lt;br /&gt;In più pubblicando 4 annunci di vendita, otterrai subito ulteriori {1} punti bonus, il corrispettivo quindi di € {2}!</value>
   </data>
   <data name="RegistrationText2" xml:space="preserve">
-    <value>Conferma ed entra nel nuovo mondo del commercio online!&lt;br /&gt;</value>
+    <value>Conferma ed entra nel nuovo mondo del commercio!&lt;br /&gt;</value>
   </data>
   <data name="RegistrationTextForLink" xml:space="preserve">
     <value>Confermiamo la corretta registrazione al servizio.&lt;br /&gt;Qui di seguito troverai il link per confermare la tua adesione:</value>

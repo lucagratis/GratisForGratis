@@ -1,0 +1,205 @@
+﻿<error errorId="5ab2cd71-fb40-4b67-8aec-fd9907a804ae" host="S4BIWS087" type="System.NullReferenceException" message="Riferimento a un oggetto non impostato su un'istanza di oggetto." source="GratisForGratis" detail="System.NullReferenceException: Riferimento a un oggetto non impostato su un'istanza di oggetto.&#xD;&#xA;   in GratisForGratis.Controllers.FeedbackController.Index(FeedbackViewModel viewModel) in G:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Controllers\FeedbackController.cs:riga 77" user="38732fed-926a-4bff-be2b-d33febb3a8f7" time="2017-01-02T13:53:36.8821872Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:max-age=0&#xD;&#xA;HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:248&#xD;&#xA;HTTP_CONTENT_TYPE:application/x-www-form-urlencoded&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3&#xD;&#xA;HTTP_COOKIE:ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1&amp;Nome=&amp;Livello=1&amp;CategoriaPadre=Elettronica&amp;IDCategoriaPadre=8; filtro=; __RequestVerificationToken=gMdQJ1IjiZ-yJfwPvrcFTDrADHOWeoBr3B6jhE7O7EJveLqTyGLe3SXC1znGLW4xQ_ljOFb2hQ_VmRQkd6PEJ8fUdWI1; ASP.NET_SessionId=cbzyuvzubybvs5fxgvi12mla; GRATISFORGRATIS=E76687149626480B756588DEDE28E8E3D68B3297A9C20C5B8AE9B71E9654900E2331E5FBCA5AD2CD54A077765A8CA0F9C433A7C85E47679770648D2F80316D6DF765C9693A3478FC1C640A48F33824EA32268875FA960E07FA2FFA788FFD8830C821DBCC1EBAF0315FAE7028DE3E209C34E3CC006B2176A2F85603AC7DC22506EF12810061C119E2AEB669FC04672138DFAFF58A&#xD;&#xA;HTTP_HOST:localhost:53560&#xD;&#xA;HTTP_REFERER:http://localhost:53560/Feedback?acquisto=KPCu%252bD1CQvmgmVOwxokAifR7Q%253d%253dKPC&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0&#xD;&#xA;HTTP_DNT:1&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: max-age=0&#xD;&#xA;Connection: keep-alive&#xD;&#xA;Content-Length: 248&#xD;&#xA;Content-Type: application/x-www-form-urlencoded&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3&#xD;&#xA;Cookie: ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1&amp;Nome=&amp;Livello=1&amp;CategoriaPadre=Elettronica&amp;IDCategoriaPadre=8; filtro=; __RequestVerificationToken=gMdQJ1IjiZ-yJfwPvrcFTDrADHOWeoBr3B6jhE7O7EJveLqTyGLe3SXC1znGLW4xQ_ljOFb2hQ_VmRQkd6PEJ8fUdWI1; ASP.NET_SessionId=cbzyuvzubybvs5fxgvi12mla; GRATISFORGRATIS=E76687149626480B756588DEDE28E8E3D68B3297A9C20C5B8AE9B71E9654900E2331E5FBCA5AD2CD54A077765A8CA0F9C433A7C85E47679770648D2F80316D6DF765C9693A3478FC1C640A48F33824EA32268875FA960E07FA2FFA788FFD8830C821DBCC1EBAF0315FAE7028DE3E209C34E3CC006B2176A2F85603AC7DC22506EF12810061C119E2AEB669FC04672138DFAFF58A&#xD;&#xA;Host: localhost:53560&#xD;&#xA;Referer: http://localhost:53560/Feedback?acquisto=KPCu%252bD1CQvmgmVOwxokAifR7Q%253d%253dKPC&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0&#xD;&#xA;DNT: 1&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="G:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="38732fed-926a-4bff-be2b-d33febb3a8f7" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="38732fed-926a-4bff-be2b-d33febb3a8f7" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="38732fed-926a-4bff-be2b-d33febb3a8f7" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="248" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Feedback" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="G:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Feedback" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="14359" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Feedback" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="53560" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/Feedback" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="max-age=0" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="248" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1&amp;Nome=&amp;Livello=1&amp;CategoriaPadre=Elettronica&amp;IDCategoriaPadre=8; filtro=; __RequestVerificationToken=gMdQJ1IjiZ-yJfwPvrcFTDrADHOWeoBr3B6jhE7O7EJveLqTyGLe3SXC1znGLW4xQ_ljOFb2hQ_VmRQkd6PEJ8fUdWI1; ASP.NET_SessionId=cbzyuvzubybvs5fxgvi12mla; GRATISFORGRATIS=E76687149626480B756588DEDE28E8E3D68B3297A9C20C5B8AE9B71E9654900E2331E5FBCA5AD2CD54A077765A8CA0F9C433A7C85E47679770648D2F80316D6DF765C9693A3478FC1C640A48F33824EA32268875FA960E07FA2FFA788FFD8830C821DBCC1EBAF0315FAE7028DE3E209C34E3CC006B2176A2F85603AC7DC22506EF12810061C119E2AEB669FC04672138DFAFF58A" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:53560" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:53560/Feedback?acquisto=KPCu%252bD1CQvmgmVOwxokAifR7Q%253d%253dKPC" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0" />
+    </item>
+    <item name="HTTP_DNT">
+      <value string="1" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="__RequestVerificationToken">
+      <value string="iXLm20xJCebkCFXJwyaFvx8wu5a6yvl9riWcoTG__kFAnzfk7hynLX48aTX9qcOaCuuV28g801JlbehLYyI270-1zrFEOK3Dp0raNZti-xom5XBiprCws9BrAag1z18dWw2Mbg2" />
+    </item>
+    <item name="AcquistoID">
+      <value string="KPCu%2bD1CQvmgmVOwxokAifR7Q%3d%3dKPC" />
+    </item>
+    <item name="Voto">
+      <value string="10" />
+    </item>
+    <item name="Opinione">
+      <value string="Prova feedback" />
+    </item>
+  </form>
+  <cookies>
+    <item name="ricerca">
+      <value string="IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1&amp;Nome=&amp;Livello=1&amp;CategoriaPadre=Elettronica&amp;IDCategoriaPadre=8" />
+      <value string="IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1&amp;Nome=&amp;Livello=1&amp;CategoriaPadre=Elettronica&amp;IDCategoriaPadre=8" />
+    </item>
+    <item name="filtro">
+      <value string="" />
+      <value string="" />
+    </item>
+    <item name="__RequestVerificationToken">
+      <value string="gMdQJ1IjiZ-yJfwPvrcFTDrADHOWeoBr3B6jhE7O7EJveLqTyGLe3SXC1znGLW4xQ_ljOFb2hQ_VmRQkd6PEJ8fUdWI1" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="cbzyuvzubybvs5fxgvi12mla" />
+    </item>
+    <item name="GRATISFORGRATIS">
+      <value string="E76687149626480B756588DEDE28E8E3D68B3297A9C20C5B8AE9B71E9654900E2331E5FBCA5AD2CD54A077765A8CA0F9C433A7C85E47679770648D2F80316D6DF765C9693A3478FC1C640A48F33824EA32268875FA960E07FA2FFA788FFD8830C821DBCC1EBAF0315FAE7028DE3E209C34E3CC006B2176A2F85603AC7DC22506EF12810061C119E2AEB669FC04672138DFAFF58A" />
+    </item>
+  </cookies>
+</error>

@@ -1,0 +1,190 @@
+﻿<error errorId="f474fcee-1748-4058-a999-636e5a2fe271" host="WIN-DCU8NOQ1338" type="System.Web.HttpParseException" message="Previsto &quot;{&quot;, trovato &quot;&lt;&quot;. Le istruzioni di blocco devono essere racchiuse tra &quot;{&quot; e &quot;}&quot;. Non è possibile utilizzare istruzioni singole di flusso di controllo nelle pagine CSHTML. Ad esempio, quanto segue non è consentito:&#xD;&#xA;&#xD;&#xA;@if(isLoggedIn)&#xD;&#xA;    &lt;p&gt;Salve, @user&lt;/p&gt;&#xD;&#xA;&#xD;&#xA;Racchiudere invece i contenuti del blocco tra &quot;{}&quot;:&#xD;&#xA;&#xD;&#xA;@if(isLoggedIn) {&#xD;&#xA;    &lt;p&gt;Salve, @user&lt;/p&gt;&#xD;&#xA;}&#xD;&#xA;" source="System.Web.WebPages.Razor" detail="System.Web.HttpParseException (0x80004005): Previsto &quot;{&quot;, trovato &quot;&lt;&quot;. Le istruzioni di blocco devono essere racchiuse tra &quot;{&quot; e &quot;}&quot;. Non è possibile utilizzare istruzioni singole di flusso di controllo nelle pagine CSHTML. Ad esempio, quanto segue non è consentito:&#xD;&#xA;&#xD;&#xA;@if(isLoggedIn)&#xD;&#xA;    &lt;p&gt;Salve, @user&lt;/p&gt;&#xD;&#xA;&#xD;&#xA;Racchiudere invece i contenuti del blocco tra &quot;{}&quot;:&#xD;&#xA;&#xD;&#xA;@if(isLoggedIn) {&#xD;&#xA;    &lt;p&gt;Salve, @user&lt;/p&gt;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;   in System.Web.WebPages.Razor.RazorBuildProvider.EnsureGeneratedCode()&#xD;&#xA;   in System.Web.WebPages.Razor.RazorBuildProvider.get_CodeCompilerType()&#xD;&#xA;   in System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)&#xD;&#xA;   in System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()&#xD;&#xA;   in System.Web.Compilation.BuildProvidersCompiler.PerformBuild()&#xD;&#xA;   in System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)&#xD;&#xA;   in System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)&#xD;&#xA;   in System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)&#xD;&#xA;   in System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)&#xD;&#xA;   in System.Web.Compilation.BuildManager.GetCompiledType(VirtualPath virtualPath)&#xD;&#xA;   in System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)&#xD;&#xA;   in System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)&#xD;&#xA;   in System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   in System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   in System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   in System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   in System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)&#xD;&#xA;   in System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass21.&lt;BeginInvokeAction&gt;b__1e(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.Controller.&lt;BeginExecuteCore&gt;b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)&#xD;&#xA;   in System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.MvcHandler.&lt;BeginProcessRequest&gt;b__5(IAsyncResult asyncResult, ProcessRequestState innerState)&#xD;&#xA;   in System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   in System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" time="2016-09-21T20:18:26.9695561Z" statusCode="500" webHostHtmlMessage="&lt;!DOCTYPE html&gt;&#xD;&#xA;&lt;html&gt;&#xD;&#xA;    &lt;head&gt;&#xD;&#xA;        &lt;title&gt;Errore del parser&lt;/title&gt;&#xD;&#xA;        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;&#xD;&#xA;        &lt;style&gt;&#xD;&#xA;         body {font-family:&quot;Verdana&quot;;font-weight:normal;font-size: .7em;color:black;} &#xD;&#xA;         p {font-family:&quot;Verdana&quot;;font-weight:normal;color:black;margin-top: -5px}&#xD;&#xA;         b {font-family:&quot;Verdana&quot;;font-weight:bold;color:black;margin-top: -5px}&#xD;&#xA;         H1 { font-family:&quot;Verdana&quot;;font-weight:normal;font-size:18pt;color:red }&#xD;&#xA;         H2 { font-family:&quot;Verdana&quot;;font-weight:normal;font-size:14pt;color:maroon }&#xD;&#xA;         pre {font-family:&quot;Consolas&quot;,&quot;Lucida Console&quot;,Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}&#xD;&#xA;         .marker {font-weight: bold; color: black;text-decoration: none;}&#xD;&#xA;         .version {color: gray;}&#xD;&#xA;         .error {margin-bottom: 10px;}&#xD;&#xA;         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }&#xD;&#xA;         @media screen and (max-width: 639px) {&#xD;&#xA;          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }&#xD;&#xA;         }&#xD;&#xA;         @media screen and (max-width: 479px) {&#xD;&#xA;          pre { width: 280px; }&#xD;&#xA;         }&#xD;&#xA;        &lt;/style&gt;&#xD;&#xA;    &lt;/head&gt;&#xD;&#xA;&#xD;&#xA;    &lt;body bgcolor=&quot;white&quot;&gt;&#xD;&#xA;&#xD;&#xA;            &lt;span&gt;&lt;H1&gt;Errore server nell'applicazione '/'.&lt;hr width=100% size=1 color=silver&gt;&lt;/H1&gt;&#xD;&#xA;&#xD;&#xA;            &lt;h2&gt; &lt;i&gt;Errore del parser&lt;/i&gt; &lt;/h2&gt;&lt;/span&gt;&#xD;&#xA;&#xD;&#xA;            &lt;font face=&quot;Arial, Helvetica, Geneva, SunSans-Regular, sans-serif &quot;&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Descrizione: &lt;/b&gt;Errore durante l'analisi di una risorsa necessaria per soddisfare la richiesta. Rivedere i dettagli relativi all'errore e modificare in modo appropriato il file di origine.&#xD;&#xA;            &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; Messaggio di errore del parser: &lt;/b&gt;Previsto &amp;quot;{&amp;quot;, trovato &amp;quot;&amp;lt;&amp;quot;. Le istruzioni di blocco devono essere racchiuse tra &amp;quot;{&amp;quot; e &amp;quot;}&amp;quot;. Non &amp;#232; possibile utilizzare istruzioni singole di flusso di controllo nelle pagine CSHTML. Ad esempio, quanto segue non &amp;#232; consentito:&lt;br&gt;&lt;br&gt;@if(isLoggedIn)&lt;br&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;p&amp;gt;Salve, @user&amp;lt;/p&amp;gt;&lt;br&gt;&lt;br&gt;Racchiudere invece i contenuti del blocco tra &amp;quot;{}&amp;quot;:&lt;br&gt;&lt;br&gt;@if(isLoggedIn) {&lt;br&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;lt;p&amp;gt;Salve, @user&amp;lt;/p&amp;gt;&lt;br&gt;}&lt;br&gt;&lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt;Errore nel codice sorgente:&lt;/b&gt; &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;table width=100% bgcolor=&quot;#ffffcc&quot;&gt;&#xD;&#xA;               &lt;tr&gt;&#xD;&#xA;                  &lt;td&gt;&#xD;&#xA;                      &lt;code&gt;&lt;pre&gt;&#xD;&#xA;&#xD;&#xA;Riga 35:                     &amp;lt;h5 class=&amp;quot;state&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;@Language.StateObject :&amp;lt;/strong&amp;gt; @Model.StatoOggetto&amp;lt;/h5&amp;gt;&#xD;&#xA;Riga 36:                     &amp;lt;h5 class=&amp;quot;points&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;@Language.Moneta :&amp;lt;/strong&amp;gt; @Model.Punti = € @Model.Soldi&amp;lt;/h5&amp;gt;&#xD;&#xA;&lt;font color=red&gt;Riga 37:                     @if(Model.Anno!=null)&amp;lt;h5 class=&amp;quot;years&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;@Language.Year :&amp;lt;/strong&amp;gt; @Model.Anno&amp;lt;/h5&amp;gt;&#xD;&#xA;&lt;/font&gt;Riga 38:                     &amp;lt;h5 class=&amp;quot;place&amp;quot;&amp;gt;&amp;lt;strong&amp;gt;@Language.Place :&amp;lt;/strong&amp;gt; @Model.Citta&amp;lt;/h5&amp;gt;&#xD;&#xA;Riga 39:                     &amp;lt;h5 class=&amp;quot;insertDate&amp;quot;&amp;gt;&amp;lt;b&amp;gt;@Language.InsertDate :&amp;lt;/b&amp;gt; @Model.DataInserimento&amp;lt;/h5&amp;gt;&lt;/pre&gt;&lt;/code&gt;&#xD;&#xA;&#xD;&#xA;                  &lt;/td&gt;&#xD;&#xA;               &lt;/tr&gt;&#xD;&#xA;            &lt;/table&gt;&#xD;&#xA;&#xD;&#xA;            &lt;br&gt;&#xD;&#xA;&#xD;&#xA;            &lt;b&gt; File di origine: &lt;/b&gt; /Views/Oggetto/Pc.cshtml&lt;b&gt; &amp;nbsp;&amp;nbsp; Riga: &lt;/b&gt; 37&#xD;&#xA;            &lt;br&gt;&lt;br&gt;&#xD;&#xA;&#xD;&#xA;    &lt;/body&gt;&#xD;&#xA;&lt;/html&gt;&#xD;&#xA;">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3&#xD;&#xA;HTTP_COOKIE:cb-enabled=accepted; fbm_294838660866806=base_domain=.localhost; ricerca=IDCategoria=8&amp;Categoria=Elettronica&amp;TipoAcquisto=0; filtro=; __RequestVerificationToken=j-HzPaXrhNPzcEE0M4tPBjGRVvs97SYtv3laxZ-YqPckhOHqz9FJt1uIv_njOvPtBstSsU-NoCtPkeg6vCrQjcQCn4VznIu0kt8vkeoO28A1; ASP.NET_SessionId=j51nxsaitbj34igcfov5bxat&#xD;&#xA;HTTP_HOST:localhost:53560&#xD;&#xA;HTTP_REFERER:http://localhost:53560/Oggetti/Elettronica?categoria=8&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3&#xD;&#xA;Cookie: cb-enabled=accepted; fbm_294838660866806=base_domain=.localhost; ricerca=IDCategoria=8&amp;Categoria=Elettronica&amp;TipoAcquisto=0; filtro=; __RequestVerificationToken=j-HzPaXrhNPzcEE0M4tPBjGRVvs97SYtv3laxZ-YqPckhOHqz9FJt1uIv_njOvPtBstSsU-NoCtPkeg6vCrQjcQCn4VznIu0kt8vkeoO28A1; ASP.NET_SessionId=j51nxsaitbj34igcfov5bxat&#xD;&#xA;Host: localhost:53560&#xD;&#xA;Referer: http://localhost:53560/Oggetti/Elettronica?categoria=8&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\Users\Davide\Documents\Visual Studio 2015\Projects\GratisForGratis\GratisForGratis\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Oggetto/Acquista" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\Users\Davide\Documents\Visual Studio 2015\Projects\GratisForGratis\GratisForGratis\Oggetto\Acquista" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="nome=mouse+trust&amp;token=M5u04c8bd86-fb8e-440a-bac2-4961a1bcf975M5u" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="63719" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Oggetto/Acquista" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="53560" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/Oggetto/Acquista" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="cb-enabled=accepted; fbm_294838660866806=base_domain=.localhost; ricerca=IDCategoria=8&amp;Categoria=Elettronica&amp;TipoAcquisto=0; filtro=; __RequestVerificationToken=j-HzPaXrhNPzcEE0M4tPBjGRVvs97SYtv3laxZ-YqPckhOHqz9FJt1uIv_njOvPtBstSsU-NoCtPkeg6vCrQjcQCn4VznIu0kt8vkeoO28A1; ASP.NET_SessionId=j51nxsaitbj34igcfov5bxat" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:53560" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:53560/Oggetti/Elettronica?categoria=8" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+  </serverVariables>
+  <queryString>
+    <item name="nome">
+      <value string="mouse trust" />
+    </item>
+    <item name="token">
+      <value string="M5u04c8bd86-fb8e-440a-bac2-4961a1bcf975M5u" />
+    </item>
+  </queryString>
+  <cookies>
+    <item name="cb-enabled">
+      <value string="accepted" />
+    </item>
+    <item name="fbm_294838660866806">
+      <value string="base_domain=.localhost" />
+    </item>
+    <item name="ricerca">
+      <value string="IDCategoria=8&amp;Categoria=Elettronica&amp;TipoAcquisto=0" />
+      <value string="IDCategoria=8&amp;Categoria=Elettronica&amp;TipoAcquisto=0" />
+    </item>
+    <item name="filtro">
+      <value string="" />
+      <value string="" />
+    </item>
+    <item name="__RequestVerificationToken">
+      <value string="j-HzPaXrhNPzcEE0M4tPBjGRVvs97SYtv3laxZ-YqPckhOHqz9FJt1uIv_njOvPtBstSsU-NoCtPkeg6vCrQjcQCn4VznIu0kt8vkeoO28A1" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="j51nxsaitbj34igcfov5bxat" />
+    </item>
+  </cookies>
+</error>

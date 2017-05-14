@@ -1,0 +1,182 @@
+﻿<error errorId="f669ac67-469a-41a2-b8c8-31686afc17c8" host="WIN-DCU8NOQ1338" type="System.ArgumentOutOfRangeException" message="Index non compreso nell'intervallo. Richiesto valore non negativo e minore della dimensione della raccolta.&#xD;&#xA;Nome parametro: index" source="mscorlib" detail="System.ArgumentOutOfRangeException: Index non compreso nell'intervallo. Richiesto valore non negativo e minore della dimensione della raccolta.&#xD;&#xA;Nome parametro: index&#xD;&#xA;   in System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)&#xD;&#xA;   in System.Collections.Generic.List`1.get_Item(Int32 index)&#xD;&#xA;   in ASP._Page_Views_Offerte_Ricevute_cshtml.Execute() in C:\Users\Davide\Documents\Visual Studio 2015\Projects\GratisForGratis\GratisForGratis\Views\Offerte\Ricevute.cshtml:riga 20&#xD;&#xA;   in System.Web.WebPages.WebPageBase.ExecutePageHierarchy()&#xD;&#xA;   in System.Web.Mvc.WebViewPage.ExecutePageHierarchy()&#xD;&#xA;   in System.Web.WebPages.StartPage.ExecutePageHierarchy()&#xD;&#xA;   in System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)&#xD;&#xA;   in System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)&#xD;&#xA;   in System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   in System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   in System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   in System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   in System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)&#xD;&#xA;   in System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass21.&lt;BeginInvokeAction&gt;b__1e(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.Controller.&lt;BeginExecuteCore&gt;b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)&#xD;&#xA;   in System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.MvcHandler.&lt;BeginProcessRequest&gt;b__5(IAsyncResult asyncResult, ProcessRequestState innerState)&#xD;&#xA;   in System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   in System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="j-tiger90@hotmail.it" time="2016-08-19T07:42:29.0283243Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3&#xD;&#xA;HTTP_COOKIE:cb-enabled=accepted; fbm_294838660866806=base_domain=.localhost; ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1&amp;Nome=; filtro=; __RequestVerificationToken=A1BtWMsHW8B2HB0AW1WoZgjojptsxCNiF_AyhUG4R7qLuxW4sLElDDUDWWwAEjCSFenp7Gy8VHpMkguaZ_UspNHuNgKc7pKanrssrmxJK881; ASP.NET_SessionId=bu0y5uvlxvowpoo2xqbk352f; GRATISFORGRATIS=6480D92E5893274CC09E1E835A85DFDC48EEB9EE190CF3BA23DCEB322E9A58B2284A6FDF31D6F515B2024CDC564D955ED559BA0AB632C9D11341D047F3BB56C96878D01D67C8C4748F1BFE6AEECFBDA0D1DBDCC6AE161F9ED99147ABB7123189F2D8F7A8C3F15B892B8D68580DF1CD993929F8042ED9CC87D67F7738D5D9B6D6&#xD;&#xA;HTTP_HOST:localhost:53560&#xD;&#xA;HTTP_REFERER:http://localhost:53560/it-IT/Pubblica/Oggetto&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3&#xD;&#xA;Cookie: cb-enabled=accepted; fbm_294838660866806=base_domain=.localhost; ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1&amp;Nome=; filtro=; __RequestVerificationToken=A1BtWMsHW8B2HB0AW1WoZgjojptsxCNiF_AyhUG4R7qLuxW4sLElDDUDWWwAEjCSFenp7Gy8VHpMkguaZ_UspNHuNgKc7pKanrssrmxJK881; ASP.NET_SessionId=bu0y5uvlxvowpoo2xqbk352f; GRATISFORGRATIS=6480D92E5893274CC09E1E835A85DFDC48EEB9EE190CF3BA23DCEB322E9A58B2284A6FDF31D6F515B2024CDC564D955ED559BA0AB632C9D11341D047F3BB56C96878D01D67C8C4748F1BFE6AEECFBDA0D1DBDCC6AE161F9ED99147ABB7123189F2D8F7A8C3F15B892B8D68580DF1CD993929F8042ED9CC87D67F7738D5D9B6D6&#xD;&#xA;Host: localhost:53560&#xD;&#xA;Referer: http://localhost:53560/it-IT/Pubblica/Oggetto&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\Users\Davide\Documents\Visual Studio 2015\Projects\GratisForGratis\GratisForGratis\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="j-tiger90@hotmail.it" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="j-tiger90@hotmail.it" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="j-tiger90@hotmail.it" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/it-IT/Offerte/Ricevute" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\Users\Davide\Documents\Visual Studio 2015\Projects\GratisForGratis\GratisForGratis\it-IT\Offerte\Ricevute" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="127.0.0.1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="53693" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/it-IT/Offerte/Ricevute" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="53560" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/it-IT/Offerte/Ricevute" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="cb-enabled=accepted; fbm_294838660866806=base_domain=.localhost; ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1&amp;Nome=; filtro=; __RequestVerificationToken=A1BtWMsHW8B2HB0AW1WoZgjojptsxCNiF_AyhUG4R7qLuxW4sLElDDUDWWwAEjCSFenp7Gy8VHpMkguaZ_UspNHuNgKc7pKanrssrmxJK881; ASP.NET_SessionId=bu0y5uvlxvowpoo2xqbk352f; GRATISFORGRATIS=6480D92E5893274CC09E1E835A85DFDC48EEB9EE190CF3BA23DCEB322E9A58B2284A6FDF31D6F515B2024CDC564D955ED559BA0AB632C9D11341D047F3BB56C96878D01D67C8C4748F1BFE6AEECFBDA0D1DBDCC6AE161F9ED99147ABB7123189F2D8F7A8C3F15B892B8D68580DF1CD993929F8042ED9CC87D67F7738D5D9B6D6" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:53560" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:53560/it-IT/Pubblica/Oggetto" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="cb-enabled">
+      <value string="accepted" />
+    </item>
+    <item name="fbm_294838660866806">
+      <value string="base_domain=.localhost" />
+    </item>
+    <item name="ricerca">
+      <value string="IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1&amp;Nome=" />
+      <value string="IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1&amp;Nome=" />
+    </item>
+    <item name="filtro">
+      <value string="" />
+      <value string="" />
+    </item>
+    <item name="__RequestVerificationToken">
+      <value string="A1BtWMsHW8B2HB0AW1WoZgjojptsxCNiF_AyhUG4R7qLuxW4sLElDDUDWWwAEjCSFenp7Gy8VHpMkguaZ_UspNHuNgKc7pKanrssrmxJK881" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="bu0y5uvlxvowpoo2xqbk352f" />
+    </item>
+    <item name="GRATISFORGRATIS">
+      <value string="6480D92E5893274CC09E1E835A85DFDC48EEB9EE190CF3BA23DCEB322E9A58B2284A6FDF31D6F515B2024CDC564D955ED559BA0AB632C9D11341D047F3BB56C96878D01D67C8C4748F1BFE6AEECFBDA0D1DBDCC6AE161F9ED99147ABB7123189F2D8F7A8C3F15B892B8D68580DF1CD993929F8042ED9CC87D67F7738D5D9B6D6" />
+    </item>
+  </cookies>
+</error>

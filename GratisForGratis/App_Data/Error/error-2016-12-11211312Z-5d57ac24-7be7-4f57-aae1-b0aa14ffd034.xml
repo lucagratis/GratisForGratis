@@ -1,0 +1,205 @@
+﻿<error errorId="5d57ac24-7be7-4f57-aae1-b0aa14ffd034" host="DESKTOP-MI2VOE6" type="System.IO.InvalidDataException" message="Formato file non consentito" source="GratisForGratis" detail="System.IO.InvalidDataException: Formato file non consentito&#xD;&#xA;   in GratisForGratis.Controllers.Utils.CheckFormatoFile(HttpPostedFileBase file, TipoMedia formato) in E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Controllers\Utils.cs:riga 470&#xD;&#xA;   in GratisForGratis.Controllers.HomeController.UploadFile(HttpPostedFileBase file) in E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Controllers\HomeController.cs:riga 676&#xD;&#xA;   in GratisForGratis.Controllers.HomeController.Segnalazione(SegnalazioneViewModel viewModel) in E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Controllers\HomeController.cs:riga 208" user="38732fed-926a-4bff-be2b-d33febb3a8f7" time="2016-12-11T21:13:12.5782298Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:33717&#xD;&#xA;HTTP_CONTENT_TYPE:multipart/form-data; boundary=---------------------------23573033813922&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3&#xD;&#xA;HTTP_COOKIE:GRATISFORGRATIS=796E84B4A9844DEE5501D419BCFFF365B3E03C7A4B574A8D2798E96F61072664CC8BAFAD4124AEB194F3216430F04AEF2CE56C93AE1D526436661206EA560B70DA02428D30E05536080A89224A60778A8BF8C760929D10E9011A326BE7E2C23C36276728E3B2625D77B54899111307C27455B607D5C210A1888F04C0F5FE68526DD87B81FAB6A3928D2AF9686E68AEF99D824EC1; ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1; filtro=; __RequestVerificationToken=Pd5BjMmpFjAmXP08PDkBW449Am_9s05X7d3awRhw9xZu7VtOA57et8_NT2fvS5lpRI48Cai061b7zmEAVthTpuaQ7781; ASP.NET_SessionId=t20zf1wfun5jsxifh5ewofi5&#xD;&#xA;HTTP_HOST:localhost:53560&#xD;&#xA;HTTP_REFERER:http://localhost:53560/&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Content-Length: 33717&#xD;&#xA;Content-Type: multipart/form-data; boundary=---------------------------23573033813922&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3&#xD;&#xA;Cookie: GRATISFORGRATIS=796E84B4A9844DEE5501D419BCFFF365B3E03C7A4B574A8D2798E96F61072664CC8BAFAD4124AEB194F3216430F04AEF2CE56C93AE1D526436661206EA560B70DA02428D30E05536080A89224A60778A8BF8C760929D10E9011A326BE7E2C23C36276728E3B2625D77B54899111307C27455B607D5C210A1888F04C0F5FE68526DD87B81FAB6A3928D2AF9686E68AEF99D824EC1; ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1; filtro=; __RequestVerificationToken=Pd5BjMmpFjAmXP08PDkBW449Am_9s05X7d3awRhw9xZu7VtOA57et8_NT2fvS5lpRI48Cai061b7zmEAVthTpuaQ7781; ASP.NET_SessionId=t20zf1wfun5jsxifh5ewofi5&#xD;&#xA;Host: localhost:53560&#xD;&#xA;Referer: http://localhost:53560/&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="38732fed-926a-4bff-be2b-d33febb3a8f7" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="38732fed-926a-4bff-be2b-d33febb3a8f7" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="38732fed-926a-4bff-be2b-d33febb3a8f7" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="33717" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="multipart/form-data; boundary=---------------------------23573033813922" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Home/Segnalazione" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Home\Segnalazione" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="52669" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Home/Segnalazione" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="53560" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/Home/Segnalazione" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="33717" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="multipart/form-data; boundary=---------------------------23573033813922" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="GRATISFORGRATIS=796E84B4A9844DEE5501D419BCFFF365B3E03C7A4B574A8D2798E96F61072664CC8BAFAD4124AEB194F3216430F04AEF2CE56C93AE1D526436661206EA560B70DA02428D30E05536080A89224A60778A8BF8C760929D10E9011A326BE7E2C23C36276728E3B2625D77B54899111307C27455B607D5C210A1888F04C0F5FE68526DD87B81FAB6A3928D2AF9686E68AEF99D824EC1; ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1; filtro=; __RequestVerificationToken=Pd5BjMmpFjAmXP08PDkBW449Am_9s05X7d3awRhw9xZu7VtOA57et8_NT2fvS5lpRI48Cai061b7zmEAVthTpuaQ7781; ASP.NET_SessionId=t20zf1wfun5jsxifh5ewofi5" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:53560" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:53560/" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="__RequestVerificationToken">
+      <value string="_1HhMZRnYu0AS44KMPXf9mGlMCGwxGYKVhki2ourWoalO8RnoQbx0AIgtxNvL_VubKh_VpSkgSp1X7-FrB9jioUvlfehgZCfgtG7UX0ZxY18vfqisQxKH6aETmngoqwtmQl7fQ2" />
+    </item>
+    <item name="Tipologia">
+      <value string="0" />
+    </item>
+    <item name="EmailRisposta">
+      <value string="test@gratisforgratis.com" />
+    </item>
+    <item name="Oggetto">
+      <value string="test" />
+    </item>
+    <item name="Testo">
+      <value string="test testtest testtest testtest testtest testtest testtest testtest testtest testtest testtest testtest testtest testtest testtest testtest test" />
+    </item>
+    <item name="Controller">
+      <value string="Home" />
+    </item>
+    <item name="Vista">
+      <value string="Index" />
+    </item>
+  </form>
+  <cookies>
+    <item name="GRATISFORGRATIS">
+      <value string="796E84B4A9844DEE5501D419BCFFF365B3E03C7A4B574A8D2798E96F61072664CC8BAFAD4124AEB194F3216430F04AEF2CE56C93AE1D526436661206EA560B70DA02428D30E05536080A89224A60778A8BF8C760929D10E9011A326BE7E2C23C36276728E3B2625D77B54899111307C27455B607D5C210A1888F04C0F5FE68526DD87B81FAB6A3928D2AF9686E68AEF99D824EC1" />
+    </item>
+    <item name="ricerca">
+      <value string="IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1" />
+      <value string="IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1" />
+    </item>
+    <item name="filtro">
+      <value string="" />
+      <value string="" />
+    </item>
+    <item name="__RequestVerificationToken">
+      <value string="Pd5BjMmpFjAmXP08PDkBW449Am_9s05X7d3awRhw9xZu7VtOA57et8_NT2fvS5lpRI48Cai061b7zmEAVthTpuaQ7781" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="t20zf1wfun5jsxifh5ewofi5" />
+    </item>
+  </cookies>
+</error>

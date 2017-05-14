@@ -1,0 +1,199 @@
+﻿<error errorId="d3547639-3fe6-498a-b319-81f747e2df5c" host="DESKTOP-MI2VOE6" type="System.IO.FileNotFoundException" message="Impossibile trovare il file 'E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Temp\Images\um2kauzc1ga3iybd1ia04cvj\Original\181b9d90-1fa0-4ab8-93df-0f0f5eae0d8d.jpg'." source="mscorlib" detail="System.IO.FileNotFoundException: Impossibile trovare il file 'E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Temp\Images\um2kauzc1ga3iybd1ia04cvj\Original\181b9d90-1fa0-4ab8-93df-0f0f5eae0d8d.jpg'.&#xD;&#xA;Nome file: 'E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Temp\Images\um2kauzc1ga3iybd1ia04cvj\Original\181b9d90-1fa0-4ab8-93df-0f0f5eae0d8d.jpg'&#xD;&#xA;   in System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)&#xD;&#xA;   in System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)&#xD;&#xA;   in System.IO.File.Move(String sourceFileName, String destFileName)&#xD;&#xA;   in GratisForGratis.Models.AnnuncioFoto.Add(DatabaseContext db, HttpServerUtilityBase server, String sessione, Guid tokenUtente, Int32 idAnnuncio, String nome) in E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Models\AnnuncioFoto.cs:riga 32" user="38732fed-926a-4bff-be2b-d33febb3a8f7" time="2016-12-10T10:43:08.3901970Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:max-age=0&#xD;&#xA;HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:501&#xD;&#xA;HTTP_CONTENT_TYPE:multipart/form-data; boundary=---------------------------23281168279961&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3&#xD;&#xA;HTTP_COOKIE:GRATISFORGRATIS=ACE5B8C36D45CD0CCD9A1665E849523986A27DE073D12B18EDFEC3FAEC9BB5EC472A03A611191C9A37259E09E8622844C76129B8129FF31172813FE8D5E88CD31AEF11511E3833466E2DD64F5E9E5B04011A5A61B95C929573CFC84D90A736C5F07246BFAA01789092E3BF548327193546066712267B191C73C383941F323C993DE5DF1AD37A8931A5B7B2426757D2A815153ED6; ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1; filtro=; __RequestVerificationToken=27-slp8JAKhCgDjyzcoRVOQxeNrGZz2L9g2zcEE4vLuo1eNArHsQw4ul1HspO1VivAIsy7b025Vu9nk73Tx6u3kPaDo1; ASP.NET_SessionId=um2kauzc1ga3iybd1ia04cvj&#xD;&#xA;HTTP_HOST:localhost:53560&#xD;&#xA;HTTP_REFERER:http://localhost:53560/Pubblica/Oggetto&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: max-age=0&#xD;&#xA;Connection: keep-alive&#xD;&#xA;Content-Length: 501&#xD;&#xA;Content-Type: multipart/form-data; boundary=---------------------------23281168279961&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3&#xD;&#xA;Cookie: GRATISFORGRATIS=ACE5B8C36D45CD0CCD9A1665E849523986A27DE073D12B18EDFEC3FAEC9BB5EC472A03A611191C9A37259E09E8622844C76129B8129FF31172813FE8D5E88CD31AEF11511E3833466E2DD64F5E9E5B04011A5A61B95C929573CFC84D90A736C5F07246BFAA01789092E3BF548327193546066712267B191C73C383941F323C993DE5DF1AD37A8931A5B7B2426757D2A815153ED6; ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1; filtro=; __RequestVerificationToken=27-slp8JAKhCgDjyzcoRVOQxeNrGZz2L9g2zcEE4vLuo1eNArHsQw4ul1HspO1VivAIsy7b025Vu9nk73Tx6u3kPaDo1; ASP.NET_SessionId=um2kauzc1ga3iybd1ia04cvj&#xD;&#xA;Host: localhost:53560&#xD;&#xA;Referer: http://localhost:53560/Pubblica/Oggetto&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="38732fed-926a-4bff-be2b-d33febb3a8f7" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="38732fed-926a-4bff-be2b-d33febb3a8f7" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="38732fed-926a-4bff-be2b-d33febb3a8f7" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="501" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="multipart/form-data; boundary=---------------------------23281168279961" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Pubblica/Gioco" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Pubblica\Gioco" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="53673" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Pubblica/Gioco" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="53560" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/Pubblica/Gioco" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="max-age=0" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="501" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="multipart/form-data; boundary=---------------------------23281168279961" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="GRATISFORGRATIS=ACE5B8C36D45CD0CCD9A1665E849523986A27DE073D12B18EDFEC3FAEC9BB5EC472A03A611191C9A37259E09E8622844C76129B8129FF31172813FE8D5E88CD31AEF11511E3833466E2DD64F5E9E5B04011A5A61B95C929573CFC84D90A736C5F07246BFAA01789092E3BF548327193546066712267B191C73C383941F323C993DE5DF1AD37A8931A5B7B2426757D2A815153ED6; ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1; filtro=; __RequestVerificationToken=27-slp8JAKhCgDjyzcoRVOQxeNrGZz2L9g2zcEE4vLuo1eNArHsQw4ul1HspO1VivAIsy7b025Vu9nk73Tx6u3kPaDo1; ASP.NET_SessionId=um2kauzc1ga3iybd1ia04cvj" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:53560" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:53560/Pubblica/Oggetto" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="__RequestVerificationToken">
+      <value string="Y0AoYzRCLWyUG7z6_g174sYY9Mf7-NrJ3JD9H1oJQb3hkrNC_tX9QHPEbKubYYL9ZAy7_jJH6BGELB7otJvqGm20C808YLKUUuf_490naptUkBtITx2XoE-gZOLcn_zrf-H_NA2" />
+    </item>
+    <item name="Modello">
+      <value string="nessuno" />
+    </item>
+    <item name="ModelloID">
+      <value string="" />
+    </item>
+  </form>
+  <cookies>
+    <item name="GRATISFORGRATIS">
+      <value string="ACE5B8C36D45CD0CCD9A1665E849523986A27DE073D12B18EDFEC3FAEC9BB5EC472A03A611191C9A37259E09E8622844C76129B8129FF31172813FE8D5E88CD31AEF11511E3833466E2DD64F5E9E5B04011A5A61B95C929573CFC84D90A736C5F07246BFAA01789092E3BF548327193546066712267B191C73C383941F323C993DE5DF1AD37A8931A5B7B2426757D2A815153ED6" />
+    </item>
+    <item name="ricerca">
+      <value string="IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1" />
+      <value string="IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1" />
+    </item>
+    <item name="filtro">
+      <value string="" />
+      <value string="" />
+    </item>
+    <item name="__RequestVerificationToken">
+      <value string="27-slp8JAKhCgDjyzcoRVOQxeNrGZz2L9g2zcEE4vLuo1eNArHsQw4ul1HspO1VivAIsy7b025Vu9nk73Tx6u3kPaDo1" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="um2kauzc1ga3iybd1ia04cvj" />
+    </item>
+  </cookies>
+</error>

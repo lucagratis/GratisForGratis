@@ -1,0 +1,232 @@
+﻿<error errorId="5eed34dd-5dee-4d83-8a6a-403022548364" host="DESKTOP-MI2VOE6" type="System.NullReferenceException" message="Riferimento a un oggetto non impostato su un'istanza di oggetto." source="GratisForGratis" detail="System.NullReferenceException: Riferimento a un oggetto non impostato su un'istanza di oggetto.&#xD;&#xA;   in GratisForGratis.Controllers.PubblicaController.Oggetto(PubblicaOggettoViewModel model) in E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Controllers\PubblicaController.cs:riga 50" user="c099a9ec-0dad-41aa-b1f2-b727b6908332" time="2016-12-27T23:26:37.7441031Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:no-cache&#xD;&#xA;HTTP_CONNECTION:Keep-Alive&#xD;&#xA;HTTP_CONTENT_LENGTH:1935&#xD;&#xA;HTTP_CONTENT_TYPE:multipart/form-data; boundary=---------------------------7e011d258037c&#xD;&#xA;HTTP_ACCEPT:text/html, application/xhtml+xml, image/jxr, */*&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:it-IT&#xD;&#xA;HTTP_COOKIE:ASP.NET_SessionId=wcuvani31m0ynzmjv1rgpr3i; ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1; filtro=; __RequestVerificationToken=daoxrtaqsJAeT0DrZkxpGWjf9Og5p7uTamPmZcIC-IHUtzB_nsuaexm3yYBCsEnBEEfrSG7F6X-cbyefwn2loHZNhiI1; GRATISFORGRATIS=B9C003D0C6A80084E4B8CEFED844CF066C54A3D7BAB638FEFF37608FA3045F0CDD181CF3A4C3C2B50274188E6B2B923CD6DD4471769E29E33FE59D12B08901BA0CDC6B470C8E14318DEAF721C8EFEE522D924825F00C12C96597932CD607612A9A594C8112FF96DFED5F1E683D39942200236541B0FBCD359B7D5CCFD1C5A56D3ED5C3DFD8E79A2C6DED48E422FC601EE2DCC642&#xD;&#xA;HTTP_HOST:localhost:53560&#xD;&#xA;HTTP_REFERER:http://localhost:53560/Pubblica/Oggetto&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: no-cache&#xD;&#xA;Connection: Keep-Alive&#xD;&#xA;Content-Length: 1935&#xD;&#xA;Content-Type: multipart/form-data; boundary=---------------------------7e011d258037c&#xD;&#xA;Accept: text/html, application/xhtml+xml, image/jxr, */*&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: it-IT&#xD;&#xA;Cookie: ASP.NET_SessionId=wcuvani31m0ynzmjv1rgpr3i; ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1; filtro=; __RequestVerificationToken=daoxrtaqsJAeT0DrZkxpGWjf9Og5p7uTamPmZcIC-IHUtzB_nsuaexm3yYBCsEnBEEfrSG7F6X-cbyefwn2loHZNhiI1; GRATISFORGRATIS=B9C003D0C6A80084E4B8CEFED844CF066C54A3D7BAB638FEFF37608FA3045F0CDD181CF3A4C3C2B50274188E6B2B923CD6DD4471769E29E33FE59D12B08901BA0CDC6B470C8E14318DEAF721C8EFEE522D924825F00C12C96597932CD607612A9A594C8112FF96DFED5F1E683D39942200236541B0FBCD359B7D5CCFD1C5A56D3ED5C3DFD8E79A2C6DED48E422FC601EE2DCC642&#xD;&#xA;Host: localhost:53560&#xD;&#xA;Referer: http://localhost:53560/Pubblica/Oggetto&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="c099a9ec-0dad-41aa-b1f2-b727b6908332" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="c099a9ec-0dad-41aa-b1f2-b727b6908332" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="c099a9ec-0dad-41aa-b1f2-b727b6908332" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="1935" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="multipart/form-data; boundary=---------------------------7e011d258037c" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Pubblica/Oggetto" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Pubblica\Oggetto" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="55006" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Pubblica/Oggetto" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="53560" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/Pubblica/Oggetto" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="no-cache" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="Keep-Alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="1935" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="multipart/form-data; boundary=---------------------------7e011d258037c" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html, application/xhtml+xml, image/jxr, */*" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="it-IT" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="ASP.NET_SessionId=wcuvani31m0ynzmjv1rgpr3i; ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1; filtro=; __RequestVerificationToken=daoxrtaqsJAeT0DrZkxpGWjf9Og5p7uTamPmZcIC-IHUtzB_nsuaexm3yYBCsEnBEEfrSG7F6X-cbyefwn2loHZNhiI1; GRATISFORGRATIS=B9C003D0C6A80084E4B8CEFED844CF066C54A3D7BAB638FEFF37608FA3045F0CDD181CF3A4C3C2B50274188E6B2B923CD6DD4471769E29E33FE59D12B08901BA0CDC6B470C8E14318DEAF721C8EFEE522D924825F00C12C96597932CD607612A9A594C8112FF96DFED5F1E683D39942200236541B0FBCD359B7D5CCFD1C5A56D3ED5C3DFD8E79A2C6DED48E422FC601EE2DCC642" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:53560" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:53560/Pubblica/Oggetto" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="__RequestVerificationToken">
+      <value string="dqhwq1ijCvpzAkyvwXHOtc4j8bo_Sauu4uUd7TIjzUpNSP8bgFcMqxgSlVE-oprrsU6JsQT7Fn4REK84qmxwsYTPE5YDiub-y6SITAm41_Z1wsnDeMTp8QfLSUnYR0N5BDHIwg2" />
+    </item>
+    <item name="TokenOK">
+      <value string="" />
+    </item>
+    <item name="CategoriaId">
+      <value string="0" />
+    </item>
+    <item name="Nome">
+      <value string="Saga completa star wars" />
+    </item>
+    <item name="TipoPagamento">
+      <value string="1" />
+    </item>
+    <item name="CondizioneOggetto">
+      <value string="2" />
+    </item>
+    <item name="Punti">
+      <value string="25" />
+    </item>
+    <item name="Anno">
+      <value string="2016" />
+    </item>
+    <item name="Foto">
+      <value string="00Star_Wars_Saga.jpg" />
+    </item>
+    <item name="Citta">
+      <value string="Novate Milanese (20026)" />
+    </item>
+    <item name="IDCitta">
+      <value string="4976" />
+    </item>
+    <item name="Marca">
+      <value string="LucasFilm" />
+    </item>
+    <item name="CategoriaMarca">
+      <value string="-1" />
+    </item>
+    <item name="MarcaID">
+      <value string="" />
+    </item>
+    <item name="NoteAggiuntive">
+      <value string="Saga dei primi 6 episodi di star wars!!!" />
+    </item>
+  </form>
+  <cookies>
+    <item name="ASP.NET_SessionId">
+      <value string="wcuvani31m0ynzmjv1rgpr3i" />
+    </item>
+    <item name="ricerca">
+      <value string="IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1" />
+      <value string="IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1" />
+    </item>
+    <item name="filtro">
+      <value string="" />
+      <value string="" />
+    </item>
+    <item name="__RequestVerificationToken">
+      <value string="daoxrtaqsJAeT0DrZkxpGWjf9Og5p7uTamPmZcIC-IHUtzB_nsuaexm3yYBCsEnBEEfrSG7F6X-cbyefwn2loHZNhiI1" />
+    </item>
+    <item name="GRATISFORGRATIS">
+      <value string="B9C003D0C6A80084E4B8CEFED844CF066C54A3D7BAB638FEFF37608FA3045F0CDD181CF3A4C3C2B50274188E6B2B923CD6DD4471769E29E33FE59D12B08901BA0CDC6B470C8E14318DEAF721C8EFEE522D924825F00C12C96597932CD607612A9A594C8112FF96DFED5F1E683D39942200236541B0FBCD359B7D5CCFD1C5A56D3ED5C3DFD8E79A2C6DED48E422FC601EE2DCC642" />
+    </item>
+  </cookies>
+</error>

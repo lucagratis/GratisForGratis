@@ -1,0 +1,226 @@
+﻿<error errorId="c14e24c2-fadb-4893-9d45-74b1429c833e" host="DESKTOP-MI2VOE6" type="System.InvalidOperationException" message="Member 'IsModified' cannot be called for property 'TELEFONO' because the entity of type 'PERSONA_TELEFONO' does not exist in the context. To add an entity to the context call the Add or Attach method of DbSet&lt;PERSONA_TELEFONO&gt;." source="EntityFramework" detail="System.InvalidOperationException: Member 'IsModified' cannot be called for property 'TELEFONO' because the entity of type 'PERSONA_TELEFONO' does not exist in the context. To add an entity to the context call the Add or Attach method of DbSet&lt;PERSONA_TELEFONO&gt;.&#xD;&#xA;   in System.Data.Entity.Internal.InternalPropertyEntry.ValidateNotDetachedAndInModel(String method)&#xD;&#xA;   in System.Data.Entity.Internal.InternalPropertyEntry.set_IsModified(Boolean value)&#xD;&#xA;   in System.Data.Entity.Infrastructure.DbPropertyEntry.set_IsModified(Boolean value)&#xD;&#xA;   in GratisForGratis.Controllers.UtenteController.Impostazioni(UtenteImpostazioniViewModel model) in E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Controllers\UtenteController.cs:riga 280&#xD;&#xA;   in lambda_method(Closure , ControllerBase , Object[] )&#xD;&#xA;   in System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)&#xD;&#xA;   in System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)&#xD;&#xA;   in System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)&#xD;&#xA;   in System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;BeginInvokeSynchronousActionMethod&gt;b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)&#xD;&#xA;   in System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   in System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__3d()&#xD;&#xA;   in System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass46.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__3f()&#xD;&#xA;   in System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass46.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__3f()&#xD;&#xA;   in System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass33.&lt;BeginInvokeActionMethodWithFilters&gt;b__32(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   in System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass21.&lt;&gt;c__DisplayClass2b.&lt;BeginInvokeAction&gt;b__1c()&#xD;&#xA;   in System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass21.&lt;BeginInvokeAction&gt;b__1e(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   in System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.Controller.&lt;BeginExecuteCore&gt;b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)&#xD;&#xA;   in System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   in System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.Controller.&lt;BeginExecute&gt;b__15(IAsyncResult asyncResult, Controller controller)&#xD;&#xA;   in System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   in System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.MvcHandler.&lt;BeginProcessRequest&gt;b__5(IAsyncResult asyncResult, ProcessRequestState innerState)&#xD;&#xA;   in System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   in System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   in System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   in System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   in System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="38732fed-926a-4bff-be2b-d33febb3a8f7" time="2016-12-07T17:32:00.6074894Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:344&#xD;&#xA;HTTP_CONTENT_TYPE:application/x-www-form-urlencoded&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3&#xD;&#xA;HTTP_COOKIE:ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1; filtro=; __RequestVerificationToken=g4pEdZ6flGMyS0coVx3UyYJaFhtifb9giqIp36IbVvcBfLFfkgKZrRBlckAqfbQqn5yelbvTu1uRUboEwiYW1GLr9L41; ASP.NET_SessionId=oyyznpqtrsftzxwwreomtmt1; GRATISFORGRATIS=96A4281A25F44698FC16D8395E3AC984CF38658FE570520E917F1177F672FD00942445A52A57DEB25669B816B6FA733E098A9A80B7BA29C51F6824EF92450FEC1E889E380072EE5CB1B1C737C3D3E2CC11D41F04D7C5C0FBA65408244FD9A8EAF88857AE0C1A3DBA361CA93FB6E2F5AA2EF6432F7D4B3C0860DD7FE385020F141C7788136A65F0DC46BD95F4D791A83A25085270&#xD;&#xA;HTTP_HOST:localhost:53560&#xD;&#xA;HTTP_REFERER:http://localhost:53560/Utente/Impostazioni&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Content-Length: 344&#xD;&#xA;Content-Type: application/x-www-form-urlencoded&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3&#xD;&#xA;Cookie: ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1; filtro=; __RequestVerificationToken=g4pEdZ6flGMyS0coVx3UyYJaFhtifb9giqIp36IbVvcBfLFfkgKZrRBlckAqfbQqn5yelbvTu1uRUboEwiYW1GLr9L41; ASP.NET_SessionId=oyyznpqtrsftzxwwreomtmt1; GRATISFORGRATIS=96A4281A25F44698FC16D8395E3AC984CF38658FE570520E917F1177F672FD00942445A52A57DEB25669B816B6FA733E098A9A80B7BA29C51F6824EF92450FEC1E889E380072EE5CB1B1C737C3D3E2CC11D41F04D7C5C0FBA65408244FD9A8EAF88857AE0C1A3DBA361CA93FB6E2F5AA2EF6432F7D4B3C0860DD7FE385020F141C7788136A65F0DC46BD95F4D791A83A25085270&#xD;&#xA;Host: localhost:53560&#xD;&#xA;Referer: http://localhost:53560/Utente/Impostazioni&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="38732fed-926a-4bff-be2b-d33febb3a8f7" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="38732fed-926a-4bff-be2b-d33febb3a8f7" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="38732fed-926a-4bff-be2b-d33febb3a8f7" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="344" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Utente/Impostazioni" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Utente\Impostazioni" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="49872" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Utente/Impostazioni" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="53560" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/Utente/Impostazioni" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="344" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1; filtro=; __RequestVerificationToken=g4pEdZ6flGMyS0coVx3UyYJaFhtifb9giqIp36IbVvcBfLFfkgKZrRBlckAqfbQqn5yelbvTu1uRUboEwiYW1GLr9L41; ASP.NET_SessionId=oyyznpqtrsftzxwwreomtmt1; GRATISFORGRATIS=96A4281A25F44698FC16D8395E3AC984CF38658FE570520E917F1177F672FD00942445A52A57DEB25669B816B6FA733E098A9A80B7BA29C51F6824EF92450FEC1E889E380072EE5CB1B1C737C3D3E2CC11D41F04D7C5C0FBA65408244FD9A8EAF88857AE0C1A3DBA361CA93FB6E2F5AA2EF6432F7D4B3C0860DD7FE385020F141C7788136A65F0DC46BD95F4D791A83A25085270" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:53560" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:53560/Utente/Impostazioni" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="__RequestVerificationToken">
+      <value string="mGH_See959MBd4ytcPTnT3rxIJSSXZXyuyESiU1FLqVC-zZ4lxAOdKUzCnIkCrn6UFf_G28ExMbhctVpyKAjrMIfpFDnvlTt-S1SI6arLrRmxJFLp7fKEGw5MgGwYm94UTbC7w2" />
+    </item>
+    <item name="Email">
+      <value string="j-tiger90@hotmail.it" />
+    </item>
+    <item name="Nome">
+      <value string="gigi" />
+    </item>
+    <item name="Cognome">
+      <value string="gigi" />
+    </item>
+    <item name="Citta">
+      <value string="" />
+    </item>
+    <item name="IDCitta">
+      <value string="" />
+    </item>
+    <item name="Indirizzo">
+      <value string="" />
+    </item>
+    <item name="Civico">
+      <value string="" />
+    </item>
+    <item name="Telefono">
+      <value string="3492240521" />
+    </item>
+    <item name="CittaSpedizione">
+      <value string="" />
+    </item>
+    <item name="IDCittaSpedizione">
+      <value string="" />
+    </item>
+    <item name="IndirizzoSpedizione">
+      <value string="" />
+    </item>
+    <item name="CivicoSpedizione">
+      <value string="" />
+    </item>
+  </form>
+  <cookies>
+    <item name="ricerca">
+      <value string="IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1" />
+      <value string="IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1" />
+    </item>
+    <item name="filtro">
+      <value string="" />
+      <value string="" />
+    </item>
+    <item name="__RequestVerificationToken">
+      <value string="g4pEdZ6flGMyS0coVx3UyYJaFhtifb9giqIp36IbVvcBfLFfkgKZrRBlckAqfbQqn5yelbvTu1uRUboEwiYW1GLr9L41" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="oyyznpqtrsftzxwwreomtmt1" />
+    </item>
+    <item name="GRATISFORGRATIS">
+      <value string="96A4281A25F44698FC16D8395E3AC984CF38658FE570520E917F1177F672FD00942445A52A57DEB25669B816B6FA733E098A9A80B7BA29C51F6824EF92450FEC1E889E380072EE5CB1B1C737C3D3E2CC11D41F04D7C5C0FBA65408244FD9A8EAF88857AE0C1A3DBA361CA93FB6E2F5AA2EF6432F7D4B3C0860DD7FE385020F141C7788136A65F0DC46BD95F4D791A83A25085270" />
+    </item>
+  </cookies>
+</error>

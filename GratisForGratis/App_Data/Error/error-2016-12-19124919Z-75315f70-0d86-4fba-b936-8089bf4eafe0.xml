@@ -1,0 +1,215 @@
+﻿<error errorId="75315f70-0d86-4fba-b936-8089bf4eafe0" host="S4BIWS087" type="System.Net.Sockets.SocketException" message="Impossibile stabilire la connessione. Risposta non corretta della parte connessa dopo l'intervallo di tempo oppure mancata risposta dall'host collegato 5.134.124.238:25" source="System" detail="System.Net.Mail.SmtpException: Errore durante l'invio della posta. ---&gt; System.Net.WebException: Impossibile effettuare la connessione al server remoto. ---&gt; System.Net.Sockets.SocketException: Impossibile stabilire la connessione. Risposta non corretta della parte connessa dopo l'intervallo di tempo oppure mancata risposta dall'host collegato 5.134.124.238:25&#xD;&#xA;   in System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)&#xD;&#xA;   in System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket&amp; socket, IPAddress&amp; address, ConnectSocketState state, IAsyncResult asyncResult, Exception&amp; exception)&#xD;&#xA;   --- Fine della traccia dello stack dell'eccezione interna ---&#xD;&#xA;   in System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress&amp; address, Socket&amp; abortSocket, Socket&amp; abortSocket6)&#xD;&#xA;   in System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)&#xD;&#xA;   in System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)&#xD;&#xA;   in System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)&#xD;&#xA;   in System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)&#xD;&#xA;   in System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)&#xD;&#xA;   in System.Net.Mail.SmtpClient.GetConnection()&#xD;&#xA;   in System.Net.Mail.SmtpClient.Send(MailMessage message)&#xD;&#xA;   --- Fine della traccia dello stack dell'eccezione interna ---&#xD;&#xA;   in System.Net.Mail.SmtpClient.Send(MailMessage message)&#xD;&#xA;   in GratisForGratis.Controllers.EmailController.SendEmail(EmailModel model) in G:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Controllers\EmailController.cs:riga 51" time="2016-12-19T12:49:19.4865992Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:no-cache&#xD;&#xA;HTTP_CONNECTION:Keep-Alive&#xD;&#xA;HTTP_CONTENT_LENGTH:277&#xD;&#xA;HTTP_CONTENT_TYPE:application/x-www-form-urlencoded&#xD;&#xA;HTTP_ACCEPT:application/x-ms-application, image/jpeg, application/xaml+xml, image/gif, image/pjpeg, application/x-ms-xbap, */*&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:it-IT&#xD;&#xA;HTTP_COOKIE:jquery-ui-theme=redmond; ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1; filtro=; __RequestVerificationToken=VGekEmCAyF7Q2uLM8wxMOmpHA888Nqxch9i_CQdzmiLcYdat2aec_OyQpomAmKmmP85f7jg2t5Id7_GhAn7RrzsZHTI1; ASP.NET_SessionId=lwbd1xxr1qtutfkc1kqotgip&#xD;&#xA;HTTP_HOST:localhost:53560&#xD;&#xA;HTTP_REFERER:http://localhost:53560/Utente/Registrazione&#xD;&#xA;HTTP_USER_AGENT:Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)&#xD;&#xA;HTTP_DNT:1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: no-cache&#xD;&#xA;Connection: Keep-Alive&#xD;&#xA;Content-Length: 277&#xD;&#xA;Content-Type: application/x-www-form-urlencoded&#xD;&#xA;Accept: application/x-ms-application, image/jpeg, application/xaml+xml, image/gif, image/pjpeg, application/x-ms-xbap, */*&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: it-IT&#xD;&#xA;Cookie: jquery-ui-theme=redmond; ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1; filtro=; __RequestVerificationToken=VGekEmCAyF7Q2uLM8wxMOmpHA888Nqxch9i_CQdzmiLcYdat2aec_OyQpomAmKmmP85f7jg2t5Id7_GhAn7RrzsZHTI1; ASP.NET_SessionId=lwbd1xxr1qtutfkc1kqotgip&#xD;&#xA;Host: localhost:53560&#xD;&#xA;Referer: http://localhost:53560/Utente/Registrazione&#xD;&#xA;User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)&#xD;&#xA;DNT: 1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="G:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="277" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Utente/Registrazione" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="G:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Utente\Registrazione" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="53997" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Utente/Registrazione" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="53560" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/Utente/Registrazione" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="no-cache" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="Keep-Alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="277" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="application/x-ms-application, image/jpeg, application/xaml+xml, image/gif, image/pjpeg, application/x-ms-xbap, */*" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="it-IT" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="jquery-ui-theme=redmond; ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1; filtro=; __RequestVerificationToken=VGekEmCAyF7Q2uLM8wxMOmpHA888Nqxch9i_CQdzmiLcYdat2aec_OyQpomAmKmmP85f7jg2t5Id7_GhAn7RrzsZHTI1; ASP.NET_SessionId=lwbd1xxr1qtutfkc1kqotgip" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:53560" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:53560/Utente/Registrazione" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)" />
+    </item>
+    <item name="HTTP_DNT">
+      <value string="1" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="__RequestVerificationToken">
+      <value string="7UNTE7Lnyok45vpj1jdKJhqdu-Kh2nV1zMuyhOVKhlUlAX8401Iwv3UzNMbC-0838h6cZAWwiYwfodJgciPMmQSTLPc1" />
+    </item>
+    <item name="Email">
+      <value string="davidemilitano@hotmail.it" />
+    </item>
+    <item name="Password">
+      <value string="gigi1987" />
+    </item>
+    <item name="ConfermaPassword">
+      <value string="gigi1987" />
+    </item>
+    <item name="Nome">
+      <value string="Gigi" />
+    </item>
+    <item name="Cognome">
+      <value string="Daremo" />
+    </item>
+    <item name="Telefono">
+      <value string="" />
+    </item>
+    <item name="AccettaCondizioni">
+      <value string="true" />
+      <value string="false" />
+    </item>
+  </form>
+  <cookies>
+    <item name="jquery-ui-theme">
+      <value string="redmond" />
+    </item>
+    <item name="ricerca">
+      <value string="IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1" />
+      <value string="IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1" />
+    </item>
+    <item name="filtro">
+      <value string="" />
+      <value string="" />
+    </item>
+    <item name="__RequestVerificationToken">
+      <value string="VGekEmCAyF7Q2uLM8wxMOmpHA888Nqxch9i_CQdzmiLcYdat2aec_OyQpomAmKmmP85f7jg2t5Id7_GhAn7RrzsZHTI1" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="lwbd1xxr1qtutfkc1kqotgip" />
+    </item>
+  </cookies>
+</error>

@@ -1,0 +1,196 @@
+﻿<error errorId="c6460ded-8bab-4acc-af66-b56f5f111f56" host="DESKTOP-MI2VOE6" type="System.InvalidCastException" message="Impossibile eseguire il cast di oggetti di tipo 'GratisForGratis.Models.PersonaModel' sul tipo 'GratisForGratis.Models.PERSONA'." source="GratisForGratis" detail="System.InvalidCastException: Impossibile eseguire il cast di oggetti di tipo 'GratisForGratis.Models.PersonaModel' sul tipo 'GratisForGratis.Models.PERSONA'.&#xD;&#xA;   in GratisForGratis.Controllers.PubblicaController.SaveInformazioniBase(DatabaseContext db, PubblicaOggettoViewModel model, List`1 fotoCaricate, ANNUNCIO vendita) in E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Controllers\PubblicaController.cs:riga 444&#xD;&#xA;   in GratisForGratis.Controllers.PubblicaController.SaveVenditaOggetto(SaveDettaglio funzione, IPubblicaOggetto iModel) in E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Controllers\PubblicaController.cs:riga 410" user="38732fed-926a-4bff-be2b-d33febb3a8f7" time="2016-12-10T10:23:46.0473103Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:501&#xD;&#xA;HTTP_CONTENT_TYPE:multipart/form-data; boundary=---------------------------23281168279961&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3&#xD;&#xA;HTTP_COOKIE:GRATISFORGRATIS=5D0B0617E96AB61A9774F30F11B642C9377C8C410994749EEB6EF206F3181C6E874A5C2166F427230C5E4F9C2ECD0E8459C481C21D47C9D7E29C4AB323AD8C44919950C2F0D3DBA62CD6FACDBD63BA9A23885BEB3CC1A4FE76D48E3EF7C5CD4BC2218480F3AE767633CDB8AA9149EAF6F9ACF16E5E469E251AC4E6AC689C05F897274F26C354F468071C8087C3D5E33EC193691A; ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1; filtro=; __RequestVerificationToken=-CLzz-VPloW9hg1hBPOxsVS-Jm_ksat7OnWhgyDIZsQXH81DjwYNEVey3mxc8IlpYKo36UHYeM-N_0pP-G0ylQdFdqs1; ASP.NET_SessionId=jtld12y1nr2od31250v4b4ud&#xD;&#xA;HTTP_HOST:localhost:53560&#xD;&#xA;HTTP_REFERER:http://localhost:53560/Pubblica/Oggetto&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Content-Length: 501&#xD;&#xA;Content-Type: multipart/form-data; boundary=---------------------------23281168279961&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3&#xD;&#xA;Cookie: GRATISFORGRATIS=5D0B0617E96AB61A9774F30F11B642C9377C8C410994749EEB6EF206F3181C6E874A5C2166F427230C5E4F9C2ECD0E8459C481C21D47C9D7E29C4AB323AD8C44919950C2F0D3DBA62CD6FACDBD63BA9A23885BEB3CC1A4FE76D48E3EF7C5CD4BC2218480F3AE767633CDB8AA9149EAF6F9ACF16E5E469E251AC4E6AC689C05F897274F26C354F468071C8087C3D5E33EC193691A; ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1; filtro=; __RequestVerificationToken=-CLzz-VPloW9hg1hBPOxsVS-Jm_ksat7OnWhgyDIZsQXH81DjwYNEVey3mxc8IlpYKo36UHYeM-N_0pP-G0ylQdFdqs1; ASP.NET_SessionId=jtld12y1nr2od31250v4b4ud&#xD;&#xA;Host: localhost:53560&#xD;&#xA;Referer: http://localhost:53560/Pubblica/Oggetto&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="38732fed-926a-4bff-be2b-d33febb3a8f7" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="38732fed-926a-4bff-be2b-d33febb3a8f7" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="38732fed-926a-4bff-be2b-d33febb3a8f7" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="501" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="multipart/form-data; boundary=---------------------------23281168279961" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Pubblica/Gioco" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Pubblica\Gioco" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="53208" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Pubblica/Gioco" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="53560" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/Pubblica/Gioco" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="501" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="multipart/form-data; boundary=---------------------------23281168279961" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="GRATISFORGRATIS=5D0B0617E96AB61A9774F30F11B642C9377C8C410994749EEB6EF206F3181C6E874A5C2166F427230C5E4F9C2ECD0E8459C481C21D47C9D7E29C4AB323AD8C44919950C2F0D3DBA62CD6FACDBD63BA9A23885BEB3CC1A4FE76D48E3EF7C5CD4BC2218480F3AE767633CDB8AA9149EAF6F9ACF16E5E469E251AC4E6AC689C05F897274F26C354F468071C8087C3D5E33EC193691A; ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1; filtro=; __RequestVerificationToken=-CLzz-VPloW9hg1hBPOxsVS-Jm_ksat7OnWhgyDIZsQXH81DjwYNEVey3mxc8IlpYKo36UHYeM-N_0pP-G0ylQdFdqs1; ASP.NET_SessionId=jtld12y1nr2od31250v4b4ud" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:53560" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:53560/Pubblica/Oggetto" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="__RequestVerificationToken">
+      <value string="t1poOf29T7j5dLOLc4k94bsNX3FzofucayfOMHZm2R8nN3XFUSxGNe-NBHAy_g2wplDFscn1YF4lkivkSjXqL0xeaQHjECXJdbT0fSu4J7qjiP-DxGcQ-PPk_HZqnljag3NMPA2" />
+    </item>
+    <item name="Modello">
+      <value string="nessuno" />
+    </item>
+    <item name="ModelloID">
+      <value string="" />
+    </item>
+  </form>
+  <cookies>
+    <item name="GRATISFORGRATIS">
+      <value string="5D0B0617E96AB61A9774F30F11B642C9377C8C410994749EEB6EF206F3181C6E874A5C2166F427230C5E4F9C2ECD0E8459C481C21D47C9D7E29C4AB323AD8C44919950C2F0D3DBA62CD6FACDBD63BA9A23885BEB3CC1A4FE76D48E3EF7C5CD4BC2218480F3AE767633CDB8AA9149EAF6F9ACF16E5E469E251AC4E6AC689C05F897274F26C354F468071C8087C3D5E33EC193691A" />
+    </item>
+    <item name="ricerca">
+      <value string="IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1" />
+      <value string="IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1" />
+    </item>
+    <item name="filtro">
+      <value string="" />
+      <value string="" />
+    </item>
+    <item name="__RequestVerificationToken">
+      <value string="-CLzz-VPloW9hg1hBPOxsVS-Jm_ksat7OnWhgyDIZsQXH81DjwYNEVey3mxc8IlpYKo36UHYeM-N_0pP-G0ylQdFdqs1" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="jtld12y1nr2od31250v4b4ud" />
+    </item>
+  </cookies>
+</error>

@@ -1,0 +1,185 @@
+﻿<error errorId="3b1e9b31-4c60-40e7-a932-cc2660c34f52" host="WIN-DCU8NOQ1338" type="System.NullReferenceException" message="Riferimento a un oggetto non impostato su un'istanza di oggetto." source="GratisForGratis" detail="System.NullReferenceException: Riferimento a un oggetto non impostato su un'istanza di oggetto.&#xD;&#xA;   in GratisForGratis.Controllers.CercaController.SetOggettoViewModel(DatabaseContext db, OggettoViewModel oggetto) in C:\Users\Davide\Documents\Visual Studio 2015\Projects\GratisForGratis\GratisForGratis\Controllers\CercaController.cs:riga 788&#xD;&#xA;   in GratisForGratis.Controllers.CercaController.FindOggetti(HttpCookie ricerca, HttpCookie filtro, Int32 pagina, Int32&amp; pagineTotali) in C:\Users\Davide\Documents\Visual Studio 2015\Projects\GratisForGratis\GratisForGratis\Controllers\CercaController.cs:riga 729" user="davidemilitano@hotmail.it" time="2016-08-25T21:55:28.2311967Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, sdch&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:it-IT,it;q=0.8,en-US;q=0.6,en;q=0.4&#xD;&#xA;HTTP_COOKIE:cb-enabled=accepted; _ga=GA1.1.835413310.1471706878; ASP.NET_SessionId=yhg1f4s5130xkdsk3lm3tkru; __RequestVerificationToken=IE4uykq-06e-exYXz1zl1zPaxjmhdNpX0AntygF8R_sg3Dqe9er7X30jdpk2Rk0zSVYReC2loyElQf3eaclUhCcA-9eXmygIhu7uwboNOBE1; GRATISFORGRATIS=0D6859D663820D1EFD6CA0795544865C1E01A76B5B9237C2C5C0A0F9FE0386486B64DB53A2029B85C8491BE4F1616A5987363196911E60412A30C1A9BE9E466211AEEC393F364DB32A86405E499FB03BB2AD4DC042F3B285A49D93E01EF1813193E8C39C92C5FD1B13E2E1DF3B2026109C253845019763A8818FE37FFEB3D96C; ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=0&amp;Nome=; filtro=&#xD;&#xA;HTTP_HOST:localhost:53560&#xD;&#xA;HTTP_REFERER:http://localhost:53560/IT-it/Offerte/Ricevute&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate, sdch&#xD;&#xA;Accept-Language: it-IT,it;q=0.8,en-US;q=0.6,en;q=0.4&#xD;&#xA;Cookie: cb-enabled=accepted; _ga=GA1.1.835413310.1471706878; ASP.NET_SessionId=yhg1f4s5130xkdsk3lm3tkru; __RequestVerificationToken=IE4uykq-06e-exYXz1zl1zPaxjmhdNpX0AntygF8R_sg3Dqe9er7X30jdpk2Rk0zSVYReC2loyElQf3eaclUhCcA-9eXmygIhu7uwboNOBE1; GRATISFORGRATIS=0D6859D663820D1EFD6CA0795544865C1E01A76B5B9237C2C5C0A0F9FE0386486B64DB53A2029B85C8491BE4F1616A5987363196911E60412A30C1A9BE9E466211AEEC393F364DB32A86405E499FB03BB2AD4DC042F3B285A49D93E01EF1813193E8C39C92C5FD1B13E2E1DF3B2026109C253845019763A8818FE37FFEB3D96C; ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=0&amp;Nome=; filtro=&#xD;&#xA;Host: localhost:53560&#xD;&#xA;Referer: http://localhost:53560/IT-it/Offerte/Ricevute&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\Users\Davide\Documents\Visual Studio 2015\Projects\GratisForGratis\GratisForGratis\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="davidemilitano@hotmail.it" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="davidemilitano@hotmail.it" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="davidemilitano@hotmail.it" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/IT-it/Oggetti/Tutti" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\Users\Davide\Documents\Visual Studio 2015\Projects\GratisForGratis\GratisForGratis\IT-it\Oggetti\Tutti" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="60485" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/IT-it/Oggetti/Tutti" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="53560" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/IT-it/Oggetti/Tutti" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, sdch" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="it-IT,it;q=0.8,en-US;q=0.6,en;q=0.4" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="cb-enabled=accepted; _ga=GA1.1.835413310.1471706878; ASP.NET_SessionId=yhg1f4s5130xkdsk3lm3tkru; __RequestVerificationToken=IE4uykq-06e-exYXz1zl1zPaxjmhdNpX0AntygF8R_sg3Dqe9er7X30jdpk2Rk0zSVYReC2loyElQf3eaclUhCcA-9eXmygIhu7uwboNOBE1; GRATISFORGRATIS=0D6859D663820D1EFD6CA0795544865C1E01A76B5B9237C2C5C0A0F9FE0386486B64DB53A2029B85C8491BE4F1616A5987363196911E60412A30C1A9BE9E466211AEEC393F364DB32A86405E499FB03BB2AD4DC042F3B285A49D93E01EF1813193E8C39C92C5FD1B13E2E1DF3B2026109C253845019763A8818FE37FFEB3D96C; ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=0&amp;Nome=; filtro=" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:53560" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:53560/IT-it/Offerte/Ricevute" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="cb-enabled">
+      <value string="accepted" />
+    </item>
+    <item name="_ga">
+      <value string="GA1.1.835413310.1471706878" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="yhg1f4s5130xkdsk3lm3tkru" />
+    </item>
+    <item name="__RequestVerificationToken">
+      <value string="IE4uykq-06e-exYXz1zl1zPaxjmhdNpX0AntygF8R_sg3Dqe9er7X30jdpk2Rk0zSVYReC2loyElQf3eaclUhCcA-9eXmygIhu7uwboNOBE1" />
+    </item>
+    <item name="GRATISFORGRATIS">
+      <value string="0D6859D663820D1EFD6CA0795544865C1E01A76B5B9237C2C5C0A0F9FE0386486B64DB53A2029B85C8491BE4F1616A5987363196911E60412A30C1A9BE9E466211AEEC393F364DB32A86405E499FB03BB2AD4DC042F3B285A49D93E01EF1813193E8C39C92C5FD1B13E2E1DF3B2026109C253845019763A8818FE37FFEB3D96C" />
+    </item>
+    <item name="ricerca">
+      <value string="IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=0&amp;Nome=" />
+      <value string="IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1&amp;Nome=" />
+    </item>
+    <item name="filtro">
+      <value string="" />
+      <value string="" />
+    </item>
+  </cookies>
+</error>

@@ -1,0 +1,199 @@
+﻿<error errorId="64ae3177-5474-4250-b955-9e62ec348d51" host="DESKTOP-MI2VOE6" type="System.InvalidCastException" message="Impossibile eseguire il cast di oggetti di tipo 'GratisForGratis.Models.PersonaModel' sul tipo 'GratisForGratis.Models.PERSONA'." source="GratisForGratis" detail="System.InvalidCastException: Impossibile eseguire il cast di oggetti di tipo 'GratisForGratis.Models.PersonaModel' sul tipo 'GratisForGratis.Models.PERSONA'.&#xD;&#xA;   in GratisForGratis.Controllers.OggettoController.Acquista(OggettoViewModel model) in E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Controllers\OggettoController.cs:riga 185" user="38732fed-926a-4bff-be2b-d33febb3a8f7" time="2016-12-20T21:59:53.2351810Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:261&#xD;&#xA;HTTP_CONTENT_TYPE:application/x-www-form-urlencoded&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3&#xD;&#xA;HTTP_COOKIE:ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1&amp;Nome=&amp;Livello=-1; filtro=; __RequestVerificationToken=lcasYDOuU_0lWbPbIjnYnrH7gKCZW2MtsdE5x4UsVSRXOms_0ERxCp8oFi1OEyC1BeS829RnCj0ve0m-zHPLFnzYHcI1; ASP.NET_SessionId=fe1tsvlvedifupuftcdqhumq; GRATISFORGRATIS=CB85269544E2C8720EC58DF7D15F2D2EA0D9BA6ED2F202AB47E150C047CD9E8E7F8BC606877A773B42587EBD90951288A5F52590929112E13D8CA3232A5A9AC7476C19D7246FC9C548DEC4CDBF81550813820BE6BA77F22144362CC852C3917EDE12BCC715C661331F7DE19B5665F34D923B9384C897B76321835EF90DE1CDD5DDEE3FC64E6495741B698F863409D6DAB9E07A78&#xD;&#xA;HTTP_HOST:localhost:53560&#xD;&#xA;HTTP_REFERER:http://localhost:53560/Oggetto/Acquista?nome=Nokia+5330&amp;token=Hrv31a0692b-0536-4982-9686-db039ffd13d8Hrv&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Content-Length: 261&#xD;&#xA;Content-Type: application/x-www-form-urlencoded&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3&#xD;&#xA;Cookie: ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1&amp;Nome=&amp;Livello=-1; filtro=; __RequestVerificationToken=lcasYDOuU_0lWbPbIjnYnrH7gKCZW2MtsdE5x4UsVSRXOms_0ERxCp8oFi1OEyC1BeS829RnCj0ve0m-zHPLFnzYHcI1; ASP.NET_SessionId=fe1tsvlvedifupuftcdqhumq; GRATISFORGRATIS=CB85269544E2C8720EC58DF7D15F2D2EA0D9BA6ED2F202AB47E150C047CD9E8E7F8BC606877A773B42587EBD90951288A5F52590929112E13D8CA3232A5A9AC7476C19D7246FC9C548DEC4CDBF81550813820BE6BA77F22144362CC852C3917EDE12BCC715C661331F7DE19B5665F34D923B9384C897B76321835EF90DE1CDD5DDEE3FC64E6495741B698F863409D6DAB9E07A78&#xD;&#xA;Host: localhost:53560&#xD;&#xA;Referer: http://localhost:53560/Oggetto/Acquista?nome=Nokia+5330&amp;token=Hrv31a0692b-0536-4982-9686-db039ffd13d8Hrv&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="38732fed-926a-4bff-be2b-d33febb3a8f7" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="38732fed-926a-4bff-be2b-d33febb3a8f7" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="38732fed-926a-4bff-be2b-d33febb3a8f7" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="261" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Oggetto/Acquista" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Oggetto\Acquista" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="64957" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Oggetto/Acquista" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="53560" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/Oggetto/Acquista" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="261" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="ricerca=IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1&amp;Nome=&amp;Livello=-1; filtro=; __RequestVerificationToken=lcasYDOuU_0lWbPbIjnYnrH7gKCZW2MtsdE5x4UsVSRXOms_0ERxCp8oFi1OEyC1BeS829RnCj0ve0m-zHPLFnzYHcI1; ASP.NET_SessionId=fe1tsvlvedifupuftcdqhumq; GRATISFORGRATIS=CB85269544E2C8720EC58DF7D15F2D2EA0D9BA6ED2F202AB47E150C047CD9E8E7F8BC606877A773B42587EBD90951288A5F52590929112E13D8CA3232A5A9AC7476C19D7246FC9C548DEC4CDBF81550813820BE6BA77F22144362CC852C3917EDE12BCC715C661331F7DE19B5665F34D923B9384C897B76321835EF90DE1CDD5DDEE3FC64E6495741B698F863409D6DAB9E07A78" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:53560" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:53560/Oggetto/Acquista?nome=Nokia+5330&amp;token=Hrv31a0692b-0536-4982-9686-db039ffd13d8Hrv" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="__RequestVerificationToken">
+      <value string="wc5B7_hl7zWiEI2ygyKiQ24Mex3gKZlRvSSVNQnN9HcXCYXl2MCOnPcyzScayvx30W46LMlWp4nLL2p6HAOyMRWZxsJoGh_J9wttm4sG4LDaRFaFN-KS3eA_KM7-vEX_xDvIFA2" />
+    </item>
+    <item name="Token">
+      <value string="Hrv31a0692b-0536-4982-9686-db039ffd13d8Hrv" />
+    </item>
+    <item name="Offerta.TipoOfferta">
+      <value string="Punti" />
+    </item>
+    <item name="Compra">
+      <value string="Compra subito!" />
+    </item>
+  </form>
+  <cookies>
+    <item name="ricerca">
+      <value string="IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1&amp;Nome=&amp;Livello=-1" />
+      <value string="IDCategoria=1&amp;Categoria=Tutti&amp;TipoAcquisto=-1&amp;Nome=&amp;Livello=-1" />
+    </item>
+    <item name="filtro">
+      <value string="" />
+      <value string="" />
+    </item>
+    <item name="__RequestVerificationToken">
+      <value string="lcasYDOuU_0lWbPbIjnYnrH7gKCZW2MtsdE5x4UsVSRXOms_0ERxCp8oFi1OEyC1BeS829RnCj0ve0m-zHPLFnzYHcI1" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="fe1tsvlvedifupuftcdqhumq" />
+    </item>
+    <item name="GRATISFORGRATIS">
+      <value string="CB85269544E2C8720EC58DF7D15F2D2EA0D9BA6ED2F202AB47E150C047CD9E8E7F8BC606877A773B42587EBD90951288A5F52590929112E13D8CA3232A5A9AC7476C19D7246FC9C548DEC4CDBF81550813820BE6BA77F22144362CC852C3917EDE12BCC715C661331F7DE19B5665F34D923B9384C897B76321835EF90DE1CDD5DDEE3FC64E6495741B698F863409D6DAB9E07A78" />
+    </item>
+  </cookies>
+</error>

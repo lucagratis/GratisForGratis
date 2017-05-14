@@ -1,0 +1,178 @@
+﻿<error errorId="843d3aaa-5675-4d52-b5b4-f3a6730e7a3b" host="DESKTOP-MI2VOE6" type="System.NullReferenceException" message="Riferimento a un oggetto non impostato su un'istanza di oggetto." source="App_Web_3uhex05i" detail="System.NullReferenceException: Riferimento a un oggetto non impostato su un'istanza di oggetto.&#xD;&#xA;   in ASP._Page_Views_Cerca_Email_SalvataggioRicerca_cshtml.Execute() in E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Views\Cerca\Email\SalvataggioRicerca.cshtml:riga 20&#xD;&#xA;   in System.Web.WebPages.WebPageBase.ExecutePageHierarchy()&#xD;&#xA;   in System.Web.Mvc.WebViewPage.ExecutePageHierarchy()&#xD;&#xA;   in System.Web.WebPages.StartPage.RunPage()&#xD;&#xA;   in System.Web.WebPages.StartPage.ExecutePageHierarchy()&#xD;&#xA;   in System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)&#xD;&#xA;   in System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)&#xD;&#xA;   in System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)&#xD;&#xA;   in GratisForGratis.Controllers.EmailController.RenderRazorViewToString(ControllerContext context, String viewName, String masterView, Object model) in E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Controllers\EmailController.cs:riga 103&#xD;&#xA;   in GratisForGratis.Controllers.EmailController.SendEmail(EmailModel model) in E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Controllers\EmailController.cs:riga 38" user="j-tiger90@hotmail.it" time="2016-11-06T14:03:30.1869286Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3&#xD;&#xA;HTTP_COOKIE:GRATISFORGRATIS=B7FA7C542F79797E2E5CA480ECDCD5A56D65A2AA41301EA3613032105317EFC0ADAC4D95D7FABD0C6E9659FD8602607138E01D26E694B7F5C7DA71E3E400B5992F281DF183304033A30A0E1D7375C45A973A3E79F5CA6700DA3E652655CAF57CC759536BF42FB8841D1998486D8D70E6124B1C39; ricerca=IDCategoria=5&amp;Categoria=Giochi&amp;TipoAcquisto=0&amp;Nome=tesoro&amp;Livello=0; filtro=modelloID=&amp;modello=&amp;StatoOggetto=Nuovo&amp;Marca=&amp;MarcaID=&amp;AnnoMin=0&amp;AnnoMax=2016&amp;Colore=&amp;TipoPagamento=&amp;Citta=&amp;IDCitta=&amp;PuntiMin=2000&amp;PuntiMax=10000&amp;Categoria=&amp;IDCategoria=1&amp;Nome=&amp;Submit=&amp;Pagina=1; __RequestVerificationToken=vHqQGirJWJpSTsDuS8g7J4KNaIBVp5NJNLNKMJSk4RDas6AbVqo6_EkepC3IHFHfapGJ4QvMbsAGJkMr3DFE9n4mP3g1; ASP.NET_SessionId=uewy3wcy2im5beeojra2sfga&#xD;&#xA;HTTP_HOST:localhost:53560&#xD;&#xA;HTTP_REFERER:http://localhost:53560/Oggetti/Giochi?categoria=5&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3&#xD;&#xA;Cookie: GRATISFORGRATIS=B7FA7C542F79797E2E5CA480ECDCD5A56D65A2AA41301EA3613032105317EFC0ADAC4D95D7FABD0C6E9659FD8602607138E01D26E694B7F5C7DA71E3E400B5992F281DF183304033A30A0E1D7375C45A973A3E79F5CA6700DA3E652655CAF57CC759536BF42FB8841D1998486D8D70E6124B1C39; ricerca=IDCategoria=5&amp;Categoria=Giochi&amp;TipoAcquisto=0&amp;Nome=tesoro&amp;Livello=0; filtro=modelloID=&amp;modello=&amp;StatoOggetto=Nuovo&amp;Marca=&amp;MarcaID=&amp;AnnoMin=0&amp;AnnoMax=2016&amp;Colore=&amp;TipoPagamento=&amp;Citta=&amp;IDCitta=&amp;PuntiMin=2000&amp;PuntiMax=10000&amp;Categoria=&amp;IDCategoria=1&amp;Nome=&amp;Submit=&amp;Pagina=1; __RequestVerificationToken=vHqQGirJWJpSTsDuS8g7J4KNaIBVp5NJNLNKMJSk4RDas6AbVqo6_EkepC3IHFHfapGJ4QvMbsAGJkMr3DFE9n4mP3g1; ASP.NET_SessionId=uewy3wcy2im5beeojra2sfga&#xD;&#xA;Host: localhost:53560&#xD;&#xA;Referer: http://localhost:53560/Oggetti/Giochi?categoria=5&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="Forms" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="j-tiger90@hotmail.it" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="j-tiger90@hotmail.it" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="j-tiger90@hotmail.it" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/Cerca/SaveRicerca" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="E:\PROGETTO\GratisForGratis\Codice\GratisForGratis\GratisForGratis\Cerca\SaveRicerca" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="49828" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/Cerca/SaveRicerca" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="53560" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/Cerca/SaveRicerca" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="GRATISFORGRATIS=B7FA7C542F79797E2E5CA480ECDCD5A56D65A2AA41301EA3613032105317EFC0ADAC4D95D7FABD0C6E9659FD8602607138E01D26E694B7F5C7DA71E3E400B5992F281DF183304033A30A0E1D7375C45A973A3E79F5CA6700DA3E652655CAF57CC759536BF42FB8841D1998486D8D70E6124B1C39; ricerca=IDCategoria=5&amp;Categoria=Giochi&amp;TipoAcquisto=0&amp;Nome=tesoro&amp;Livello=0; filtro=modelloID=&amp;modello=&amp;StatoOggetto=Nuovo&amp;Marca=&amp;MarcaID=&amp;AnnoMin=0&amp;AnnoMax=2016&amp;Colore=&amp;TipoPagamento=&amp;Citta=&amp;IDCitta=&amp;PuntiMin=2000&amp;PuntiMax=10000&amp;Categoria=&amp;IDCategoria=1&amp;Nome=&amp;Submit=&amp;Pagina=1; __RequestVerificationToken=vHqQGirJWJpSTsDuS8g7J4KNaIBVp5NJNLNKMJSk4RDas6AbVqo6_EkepC3IHFHfapGJ4QvMbsAGJkMr3DFE9n4mP3g1; ASP.NET_SessionId=uewy3wcy2im5beeojra2sfga" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:53560" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:53560/Oggetti/Giochi?categoria=5" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="GRATISFORGRATIS">
+      <value string="B7FA7C542F79797E2E5CA480ECDCD5A56D65A2AA41301EA3613032105317EFC0ADAC4D95D7FABD0C6E9659FD8602607138E01D26E694B7F5C7DA71E3E400B5992F281DF183304033A30A0E1D7375C45A973A3E79F5CA6700DA3E652655CAF57CC759536BF42FB8841D1998486D8D70E6124B1C39" />
+    </item>
+    <item name="ricerca">
+      <value string="IDCategoria=5&amp;Categoria=Giochi&amp;TipoAcquisto=0&amp;Nome=tesoro&amp;Livello=0" />
+      <value string="IDCategoria=1&amp;Categoria=Tutti" />
+    </item>
+    <item name="filtro">
+      <value string="modelloID=&amp;modello=&amp;StatoOggetto=Nuovo&amp;Marca=&amp;MarcaID=&amp;AnnoMin=0&amp;AnnoMax=2016&amp;Colore=&amp;TipoPagamento=&amp;Citta=&amp;IDCitta=&amp;PuntiMin=2000&amp;PuntiMax=10000&amp;Categoria=&amp;IDCategoria=1&amp;Nome=&amp;Submit=&amp;Pagina=1" />
+    </item>
+    <item name="__RequestVerificationToken">
+      <value string="vHqQGirJWJpSTsDuS8g7J4KNaIBVp5NJNLNKMJSk4RDas6AbVqo6_EkepC3IHFHfapGJ4QvMbsAGJkMr3DFE9n4mP3g1" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="uewy3wcy2im5beeojra2sfga" />
+    </item>
+  </cookies>
+</error>
